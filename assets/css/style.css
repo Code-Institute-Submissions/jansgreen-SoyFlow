@@ -270,7 +270,7 @@ footer {
 display: block;
    }
 
-/* ----------------------------------------Personal Info */
+/* ----------------------------------------Genders Info and menu */
 .genres-info-item{
   margin-bottom: 20px;
   display: block;
@@ -302,25 +302,159 @@ position:relative;
 width: 60%;
 }
 
-ul, ol{
+#menu ul, ol{
 list-style: none;
 }
-.gen li a {
-  color: black;
-  text-decoration: none;
-  padding: absolute 15px;
-  display: block;
+
+
+#menu {
+    padding: absolute;
+    margin: 0;
+    border: 0; 
 }
 
-.gen LI UL{
-  display:none;
-  position: absolute;
-  min-width: 140px;
-}
-.gen LI:hover>ul{
-  display: block;
  
+#menu ul, li {
+    list-style: none;
+    margin: 0;
+    padding: absolute; 
+    border: 0;
+   
 }
+ 
+#menu ul {
+    position: relative;
+    z-index: 597;
+    float: left; 
+}
+ 
+#menu ul li {
+    float: left;
+    min-height: 1px;
+    line-height: 1em;
+    vertical-align: middle; 
+}
+ 
+#menu ul li.hover,
+#menu ul li:hover {
+    position: relative;
+    z-index: 599;
+    cursor: default; 
+}
+ 
+#menu ul ul {
+    visibility: hidden;
+    position:absolute;
+    top: 100%;
+    left: 10;
+    z-index: 598;
+    width: 100%;
+    margin: 3px; 
+    border-left: 3px solid;
+    border-left-color: #e67e22;
+    border-left-style: outset;
+    
+}
+ 
+#menu ul ul li {
+    float: none; 
+}
+ 
+#menu ul li:hover > ul {
+    visibility: visible; 
+}
+ 
+#menu ul ul {
+    top: 0;
+    left: 100%; 
+}
+ 
+#menu ul li {
+    float: none; 
+}
+ 
+#menu {
+    width: 255px; 
+}
+ 
+#menu span, #menu a {
+    display: inline-block;
+    text-decoration: none; 
+}
+ 
+#menu:after, #menu ul:after {
+    content: '';
+    display: block;
+    clear: both; 
+}
+ 
+#menu ul {
+    width: 70%; 
+}
+
+#menu li {
+    width: 120%; 
+}
+
+#menu li {
+    background: #f4f4f4;
+}
+#menu li:hover {
+    background: #f4f4f4; 
+}
+#menu a {
+    color: black;
+    line-height: 160%;
+    padding: absolute 28px;
+    width: absolute; 
+}
+
+#menu ul ul li {
+    background: #f4f4f4; 
+}
+#menu ul ul li:hover {
+    background: #f4f4f4; 
+}
+#menu ul ul li:hover a {
+    color:#e67e22; 
+}
+#menu a:hover {
+    color:#e67e22; 
+}
+
+#menu ul ul li ul li {
+    background: #f4f4f4; 
+}
+#menu ul ul li ul li:hover {
+    background: #f4f4f4; 
+}
+#menu {
+    position: relative; 
+}
+ 
+#menu .has-sub:after, #menu .has-sub > ul > .has-sub:hover:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 9px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -5px;
+}
+ 
+#menu .genres-info-item {
+    float: right;
+}
+
+#menu .hr {
+    size:"1px";
+}
+#menu .Big{
+    size:"50px";
+}
+
+  
 
 /* ----------------------------------------Skills */
 
@@ -425,3 +559,9 @@ background-color: #e84610;
 }
 
 }
+
+
+/*-------------------------------------------------------Experimento menu*/
+
+Source code	   
+
