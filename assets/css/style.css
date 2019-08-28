@@ -4,7 +4,7 @@
 /*--------------------------------------------Colors*/
 
 .bg-color-name-title {
-    background-color: #676767;
+    background-color: #1406db;
 }
 
 .bg-color-three-reasons{
@@ -16,7 +16,7 @@
 }
 
 .bg-color-work-history{
-  background-color: #9b59b6;
+  background-color: #fefaff;
 
 }
 
@@ -25,17 +25,17 @@
 }
 
 .ui-menu-color-home{
-  background-color: #fda557;
+  background-color: #cc0505;
 
 }
 .ui-menu-color-resume{
-  background-color: #9b59b6;
+  background-color: #077e1b;
 }
 .ui-menu-color-contact{
-  background-color: #3498db;
+  background-color: #bbb807;
 }
 .ui-menu-color-download{
-  background-color: #525252;
+  background-color: #6e4517;
 }
 
 .row-table {
@@ -254,7 +254,7 @@ footer {
 
 .three-reasons-icon {
     font-size: 26px;
-    color: #e67e22;
+    color: #1406db;
 }
 
 .three-reasons-heading {
@@ -268,6 +268,7 @@ footer {
 
    .hpar {
 display: block;
+
    }
 
 /* ----------------------------------------Genders Info and menu */
@@ -351,7 +352,7 @@ list-style: none;
     width: 100%;
     margin: 3px; 
     border-left: 3px solid;
-    border-left-color: #e67e22;
+    border-left-color: #1406db;
     border-left-style: outset;
     
 }
@@ -416,10 +417,10 @@ list-style: none;
     background: #f4f4f4; 
 }
 #menu ul ul li:hover a {
-    color:#e67e22; 
+    color:#cc0505; 
 }
 #menu a:hover {
-    color:#e67e22; 
+    color:#cc0505; 
 }
 
 #menu ul ul li ul li {
@@ -563,5 +564,4 @@ background-color: #e84610;
 
 /*-------------------------------------------------------Experimento menu*/
 
-Source code	   
-
+#more {display: none;}
