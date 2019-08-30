@@ -2,59 +2,75 @@
 <html lang="en">
 
 <head>
-
-    <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+    <link rel="stylesheet" href="/lib/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-tree-list/0.0.11/ion-tree-list.min.css"
         type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="assets/js/app.js"></script>
     <title>SoyFlow</title>
-
-    <title>Document</title>
 </head>
 
 <body>
+
     <header>
         <div class="row no-gutters">
-            <a href="index.html" class="col-md-4 logo"></a>
+            <div class="col-md-4 box">
+
+                <div class="container-search">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Search..." />
+                </div>
+            </div>
+
             <div class="col-md-8">
-                <div class="row no-gutters bg-color-name-title">
-                    <div class="col heading">
+                <ul id="nav" class="list-inline menucontainer">
+                    <li class="col-6 col-sm-3 ui-menu-color-home list-inline-item menuitem">
+                        <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa fa-music"
+                                aria-hidden="true"></i><span>HOME</span></a>
+                    </li>
+
+                    <li class="col-6 col-sm-3 ui-menu-color-resume list-inline-item menuitem">
+                        <a href="resume.html" class="hvr-sweep-to-bottom"><i class="fa fa-users" aria-hidden="true"></i>
+                            <span>ARTISTS</span> </a>
+                    </li>
+
+                    <li class="col-6 col-sm-3 ui-menu-color-contact list-inline-item menuitem">
+                        <a href="contact.html" class="hvr-sweep-to-bottom"><i class="fa fa-play"
+                                aria-hidden="true"></i><span>ALBUMS</span> </a>
+                    </li>
+
+                    <li class="col-6 col-sm-3 ui-menu-color-download list-inline-item menuitem">
+                        <a href="assets/cv/sample-cv.pdf" class="hvr-sweep-to-bottom"><i class="fa fa-television"
+                                aria-hidden="true"></i><span>OTHER</span> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <a href="index.html" class="col-md-4 logo"></a>
+            <div class="col-md-8 ">
+                <div class="row no-gutters bg-color-name-title ">
+                    <div class="col heading ">
                         <h1 class="name">DominicanMusic</h1>
                         <h2 class="title">KING MUSIC IN THE DOMINICAN REPUBLIC!</h2>
+
                     </div>
                 </div>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <ul id="nav" class="list-inline menucontainer">
-
-                            <li class="col-6 col-sm-3 ui-menu-color-home list-inline-item menuitem">
-                                <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa fa-music"
-                                        aria-hidden="true"></i><span>HOME</span></a>
-                            </li>
-
-                            <li class="col-6 col-sm-3 ui-menu-color-resume list-inline-item menuitem">
-                                <a href="resume.html" class="hvr-sweep-to-bottom"><i class="fa fa-users"
-                                        aria-hidden="true"></i> <span>ARTISTS</span> </a>
-                            </li>
-                            <li class="col-6 col-sm-3 ui-menu-color-contact list-inline-item menuitem">
-                                <a href="contact.html" class="hvr-sweep-to-bottom"><i class="fa fa-play"
-                                        aria-hidden="true"></i><span>ALBUMS</span> </a>
-                            </li>
-                            <li class="col-6 col-sm-3 ui-menu-color-download list-inline-item menuitem">
-                                <a href="assets/cv/sample-cv.pdf" class="hvr-sweep-to-bottom"><i
-                                        class="fa fa-television" aria-hidden="true"></i><span>OTHER</span> </a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="menuitem">
+                    <ul>
+                        <li>
+                            <h3 class=" section-heading uppercase">ABOUT BACHATA</h3>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -89,10 +105,10 @@
                     </div>
                     <hr>
                     <div class="genres-info-item">
-                            <div class="key">
-                                <div id="menu">
-                                    <ul>
-                                        <Li > <a href="#">
+                        <div class="key">
+                            <div id="menu">
+                                <ul>
+                                    <Li> <a href="#">
                                             <p class="uppercase"> URBANS </p>
                                         </a>
                                         <UL class="has-sub">
@@ -114,10 +130,10 @@
                     </div>
                     <hr>
                     <div class="genres-info-item">
-                            <div class="key">
-                                <div id="menu">
-                                    <ul>
-                                        <Li> <a href="#">
+                        <div class="key">
+                            <div id="menu">
+                                <ul>
+                                    <Li> <a href="#">
                                             <p class="uppercase"> MERENGUE </p>
                                         </a>
                                         <Ul>
@@ -139,27 +155,20 @@
                     </div>
                     <hr>
                     <div class="genres-info-item">
-                            <div class="key">
-                                <div id="menu">
-                                    <ul>
-                                        <Li> <a href="#">
+                        <div class="key">
+                            <div id="menu">
+                                <ul>
+                                    <Li> <a href="#">
                                             <p class="uppercase"> SALSA </p>
                                         </a>
                                     </Li>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
             <div class="col-md-8 bg-color-three-reasons section-column">
-                <div class="row">
-                    <div class="col">
-                        <h3 class="section-heading uppercase">About MUSIC</h3>
-                    </div>
-                </div>
+            
                 <div class="row">
                     <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-sm-6">
                         <div class="row">
@@ -169,47 +178,35 @@
                             </div>
                             <div class="col-10 ">
                                 <h4 class="three-reasons-heading uppercase ">WHAT IS BACHATA?</h4>
-                                
+
                                 <p> In the early 1920s in Cuba, the term "bachata" was used to define a type of festive
                                     social gathering. Etymologically, the word bachata is of African origin and
                                     designates the spree, the revelry and the party, according to Fernando Ortiz
-                                    FernÃ¡ndez. <span id="dots">...</span>
-                                    
-                    <span id="more">The bachata was synonymous with popular recreation, patio or street party, and     
-                                            this links it with its African background. On the other hand, its connection
-                                            with Spain is noted in the fandango, a cultural manifestation to which in
-                                            the
-                                            words of Marcio Veloz Maggiolo "Almost all chroniclers who play this theme
-                                            refer
-                                            to an open holiday and not to music". [Citation needed ]
+                                    FernÃ¡ndez. <button type="button" class="btn btn-light" onclick="I_vermas('mas');"
+                                        id="mas">Read more</button>
+                                </p>
+                                <p id="desplegar" style="display:none;">The bachata was synonymous with popular
+                                    recreation, patio or street
+                                    party, and
+                                    this links it with its African background. On the other hand, its connection
+                                    with Spain is noted in the fandango, a cultural manifestation to which in
+                                    the
+                                    words of Marcio Veloz Maggiolo "Almost all chroniclers who play this theme
+                                    refer
+                                    to an open holiday and not to music". [Citation needed ]
 
-                                            In Santo Domingo, the oldest reference about bachata as a name to designate
-                                            parties of any kind of music - and not as a musical genre - is found in
-                                            documents dating from 1922 and 1927. The 19224 report refers to the man
-                                            common
-                                            of the town of Sabaneta, in the Northwest Line and describes in this way
-                                            what we
-                                            can find there:</span>
-                                    </p>
-                                    <button onclick="myFunction()" id="myBtn">Read more</button>
+                                    In Santo Domingo, the oldest reference about bachata as a name to designate
+                                    parties of any kind of music - and not as a musical genre - is found in
+                                    documents dating from 1922 and 1927. The 19224 report refers to the man
+                                    common
+                                    of the town of Sabaneta, in the Northwest Line and describes in this way
+                                    what we
+                                    can find there:<button type="button" class="btn btn-light"
+                                        onclick="I_vermas('menos');" id="menos">Read less</button>
 
-                                    <script>
-                                            function myFunction() {
-                                              var dots = document.getElementById("dots");
-                                              var moreText = document.getElementById("more");
-                                              var btnText = document.getElementById("myBtn");
-                                            
-                                              if (dots.style.display === "none") {
-                                                dots.style.display = "inline";
-                                                btnText.innerHTML = "Read more"; 
-                                                moreText.style.display = "none";
-                                              } else {
-                                                dots.style.display = "none";
-                                                btnText.innerHTML = "Read less"; 
-                                                moreText.style.display = "inline";
-                                              }
-                                            }
-                                            </script>
+                                </p>
+
+
                             </div>
                         </div>
                     </div>
@@ -225,22 +222,34 @@
 
                                     Bachata is a dance music genre originally from the Dominican Republic, in what is
                                     called urban folklore. It is considered as a derivative of the rhythmic bolero, with
-                                    influences from other styles such as the Cuban son and the merengue.<span id="dots">...</span>
-
-                                    <span id="more"> In the execution of the traditional bachata, the bolero maracas were replaced by the
-                                    gÃ¼ira, the virtuous and free execution of the bongÃ³ proper to the Cuban son was
+                                    influences from other styles such as the Cuban son and the merengue.<button
+                                        type="button" class="btn btn-light" onclick="II_vermas('II_mas');" id="II_mas">Read
+                                        more</button>
+                                </p>
+                                <p id="II_desplegar" style="display:none;">In the execution of the traditional bachata, the
+                                    bolero maracas
+                                    were replaced by the
+                                    gÃ¼ira, the virtuous and free execution of the bongÃ³ proper to the Cuban son
+                                    was
                                     assumed and guitars were incorporated in the style of the Latin American trios
-                                    popular in Mexico, Cuba and Puerto Rico. At first, this crude way of interpretation
+                                    popular in Mexico, Cuba and Puerto Rico. At first, this crude way of
+                                    interpretation
                                     was known as "guitar bolerito".
 
-                                    Bachata arose in the urban marginality of the bars and brothels of Santo Domingo.
-                                    During the 1960s and early 1970s, scorned as music of the poor classes, it was known
+                                    Bachata arose in the urban marginality of the bars and brothels of Santo
+                                    Domingo.
+                                    During the 1960s and early 1970s, scorned as music of the poor classes, it was
+                                    known
                                     as "bitter music." This concept referred to the state of melancholy caused by
                                     heartbreak, always reflected in the theme of his compositions. Its diffusion by
                                     those years, was limited to few stations, since it was considered like a vulgar
-                                    music. Massive interest in rhythm emerged from the 1980s, with the importance that
-                                    rhythm reached in the media. 
-                                </p><button onclick="myFunction()" id="myBtn">Read more</button>
+                                    music. Massive interest in rhythm emerged from the 1980s, with the importance
+                                    that.
+                                    <button type="button" class="btn btn-light" onclick="II_vermas('II_menos');"
+                                        id="II_menos">Read less</button>
+
+
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -252,32 +261,57 @@
                             <div class="col-10">
                                 <h4 class="three-reasons-heading uppercase">HOW DANCED IT?</h4>
                                 <p>El movimiento bÃ¡sico del baile es una serie de pasos simples que produce un
-                                    movimiento de adelante para atrÃ¡s, o de costado a costado.<span id="dots">...</span>
+                                    movimiento de adelante para atrÃ¡s, o de costado a costado.
 
-                                    <span id="more">Un posible esquema serÃ­a el siguiente: Contando que el paso bÃ¡sico son 4 tiempos.
-                                    Con el pie derecho se hace un chassÃ© hacia la derecha, el 1 (comenzando con pies
-                                    juntos simplemente abrimos con pie derecho al lado derecho). El 2 pie izquierdo se
-                                    junta con el derecho otra vez. El 3 repetimos el primer paso (abrir pie derecho). Y
-                                    el 4 volvemos a juntar (la mujer junta el pie izquierdo en punta) dando un golpe de
+                                    Un posible esquema serÃ­a el siguiente: Contando que el paso bÃ¡sico
+                                    son 4 tiempos.
+                                    Con el pie derecho se hace un chassÃ© hacia la derecha, el 1 (comenzando con
+                                    pies
+                                    juntos simplemente abrimos con pie derecho al lado derecho). 
+                                    
+                                    <button
+                                        type="button" class="btn btn-light" onclick="III_vermas('III_mas');" id="III_mas">Read
+                                        more</button> </p>
+                                        <p id="III_desplegar" style="display:none;">El 2 pie izquierdo
+                                    se
+                                    junta con el derecho otra vez. El 3 repetimos el primer paso (abrir pie
+                                    derecho). Y
+                                    el 4 volvemos a juntar (la mujer junta el pie izquierdo en punta) dando un golpe
+                                    de
                                     cadera hacia arriba al lado de donde venimos (en este caso lo darÃ­amos a la
-                                    izquierda), la mujer lo harÃ¡ mÃ¡s pronunciado. Y se repite la misma secuencia hacia
+                                    izquierda), la mujer lo harÃ¡ mÃ¡s pronunciado. Y se repite la misma secuencia
+                                    hacia
                                     el otro lado, pero como ahora vamos hacia el lado izquierdo, abrimos con pie
-                                    izquierdo. Podemos imaginar que nos movemos todo el rato en la misma lÃ­nea pero no
+                                    izquierdo. Podemos imaginar que nos movemos todo el rato en la misma lÃ­nea pero
+                                    no
                                     hacia delante y hacia atrÃ¡s, sino de lado a lado.
 
                                     El paso bÃ¡sico es simple, la dificultad se encuentra en mantener el paso de
                                     piernas,
-                                    mientras se mueven los brazos (este movimiento de brazos tiene un amplio repertorio
-                                    pues el hombre indicarÃ¡ a la mujer giros, pases de brazos por delante, por detrÃ¡s,
-                                    enroscamientos, lanzamiento de brazos) al mismo tiempo que bailas con una persona,
-                                    pues es un baile de dos. La mujer deberÃ¡ aprender a hacer determinadas figuras con
-                                    los brazos. En bachata la figura de las manos es la misma que en salsa, pues en este
-                                    sentido vienen muy de la mano. El hombre dirige a la mujer con movimientos de brazos
-                                    y manos y no es tarea fÃ¡cil, pues debe saber guiarla. Un hombre que no guie bien no
-                                    serÃ¡ bueno en bachata, asÃ­ como ocurre en salsa o en tango. La mujer debe saber
-                                    seguir al hombre e interpretar lo que le indica con cada movimiento de brazos. La
-                                    bachata es un baile sensual y de seducciÃ³n al igual que el tango, la kizomba.</p></span>
-                                    <button onclick="myFunction()" id="myBtn">Read more</button>
+                                    mientras se mueven los brazos (este movimiento de brazos tiene un amplio
+                                    repertorio
+                                    pues el hombre indicarÃ¡ a la mujer giros, pases de brazos por delante, por
+                                    detrÃ¡s,
+                                    enroscamientos, lanzamiento de brazos) al mismo tiempo que bailas con una
+                                    persona,
+                                    pues es un baile de dos. La mujer deberÃ¡ aprender a hacer determinadas figuras
+                                    con
+                                    los brazos. En bachata la figura de las manos es la misma que en salsa, pues en
+                                    este
+                                    sentido vienen muy de la mano. El hombre dirige a la mujer con movimientos de
+                                    brazos
+                                    y manos y no es tarea fÃ¡cil, pues debe saber guiarla. Un hombre que no guie
+                                    bien no
+                                    serÃ¡ bueno en bachata, asÃ­ como ocurre en salsa o en tango. La mujer debe
+                                    saber
+                                    seguir al hombre e interpretar lo que le indica con cada movimiento de brazos.
+                                    La
+                                    bachata es un baile sensual y de seducciÃ³n al igual que el tango, la kizomba.
+                                    <button type="button" class="btn btn-light" onclick="III_vermas('III_menos');"
+                                    id="III_menos">Read less</button>
+
+                                </p>
+
                             </div>
                         </div>
                     </div>
