@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|exo:100,200,300,400,500,600,700&display=swap');
 
 
+ 
+/* ----------------------------------------HOME----------------------------------------*/
+/* ----------------------------------------HOME----------------------------------------*/
+/* ----------------------------------------HOME----------------------------------------*/
+/* ----------------------------------------HOME----------------------------------------*/
+
+
 /*--------------------------------------------Colors*/
 
 .bg-color-name-title {
     background-color: #1406db;
 }
 
-.bg-color-three-reasons{
+.bg-color-boddy-side{
   background-color: #fff;
 }
 
-.bg-color-personal-info{
+.bg-color-music-info{
   background-color: #f4f4f4;
 }
 
@@ -24,23 +31,27 @@
   background-color: #fff;
 }
 
-.ui-menu-color-home{
+.ui-main-menu-color-home{
   background-color: #cc0505;
 
 }
 
-.ui-menu-color-search{
+.ui-main-menu-color-search{
     background-color: #000000;
 
 }
-.ui-menu-color-resume{
+.ui-main-menu-color-artists{
   background-color: #077e1b;
 }
-.ui-menu-color-contact{
+.ui-main-menu-color-albums{
   background-color: #bbb807;
 }
-.ui-menu-color-download{
+.ui-main-menu-color-other{
   background-color: #6e4517;
+}
+
+.ui-main-menu-color-artname{
+    background: #ffffff;
 }
 
 .row-table {
@@ -95,6 +106,7 @@ padding: 0 30px 30px;
 float: none;
 margin-top: 5%;
 }
+
 
 .section-heading{
   font-family: "Exo" sans-serif;
@@ -197,6 +209,67 @@ header {
     height: 120px;
 }
 
+/*------------------------------------------------------Search UI*/
+
+.container-search{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    left: 20%;
+    margin-top: 5%;
+  }
+   
+  .container-search input#search{
+    width: 300px;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #262626;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .container-search input#search::-webkit-input-placeholder {
+    color: #65737e;
+ }
+  
+ .container-search input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;  
+ }
+  
+ .container-search input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;  
+ }
+  
+ .container-search input#search:-ms-input-placeholder {  
+    color: #65737e;  
+ }
+
+ .container-search .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #4f5b66;
+   
+     -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  .box{
+
+    background-color: #000000;    
+  }
+
 /*--------------------------------------------Hover.css*/
 
 .hvr-sweep-to-bottom:before {
@@ -204,74 +277,14 @@ header {
     height: 120px;
 }
 
-/* ----------------------------------------Footer */
+/* ----------------------------------------Boddy Side */
 
-footer {
-    background-color: #000000;
-    color: #fafafa;
-    min-height: 120px;
-    margin: 0;
-}
-
-.cv-pdf i {
-
-    font-size: 18px;
-    color: #fafafa;
-    text-align: center;
-    padding-left: 5px;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
-.cv-pdf i:hover {
-    color: #e84610;
-
-}
-
-.social-links {
-    padding-bottom: 50px;
-}
-
-.social-links li a i {
-    width: 32px;
-    height: 32px;
-    padding: 12px 0;
-    border-radius: 50%;
-    font-size: 13px;
-    line-height: 7px;
-    text-align: center;
-    color: #fafafa;
-    background: #8f8f8f;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
-.social-links li a i:hover {
-    background: #e84610;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-
-#footer-details {
-    padding: 20px;
-}
-
-/* ----------------------------------------Three Reasons */
-
-.three-reasons-icon {
+.boddy-side-icon {
     font-size: 26px;
     color: #1406db;
 }
 
-.three-reasons-heading {
+.boddy-side-heading {
     margin-bottom: 15px;
 }
 
@@ -280,7 +293,7 @@ footer {
   color: black;
    }
 
-   .hpar {
+.hpar {
 display: block;
 
    }
@@ -469,9 +482,84 @@ list-style: none;
     size:"50px";
 }
 
-  
 
-/* ----------------------------------------Skills */
+/* ----------------------------------------Footer */
+
+footer {
+    background-color: #000000;
+    color: #fafafa;
+    min-height: 120px;
+    margin: 0;
+}
+
+.cv-pdf i {
+
+    font-size: 18px;
+    color: #fafafa;
+    text-align: center;
+    padding-left: 5px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.cv-pdf i:hover {
+    color: #cc0505;
+
+}
+
+.social-links {
+    padding-bottom: 50px;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #cc0505;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+#footer-details {
+    padding: 20px;
+}
+
+ 
+/* ----------------------------------------HOME AND----------------------------------------*/
+/* ----------------------------------------HOME AND----------------------------------------*/
+/* ----------------------------------------HOME AND----------------------------------------*/
+/* ----------------------------------------HOME AND----------------------------------------*/
+
+/* ----------------------------------------ARTISTS----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+
+.card{
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+   
+}
 
 .progress {
     position: relative;
@@ -576,87 +664,13 @@ background-color: #e84610;
 }
 
 
-/*------------------------------------------------------Search UI*/
-
-.container-search{
-    width: 300px;
-    vertical-align: middle;
-    white-space: nowrap;
-    position: relative;
-    left: 20%;
-    margin-top: 5%;
-  }
-   
-  .container-search input#search{
-    width: 300px;
-    height: 50px;
-    background: #2b303b;
-    border: none;
-    font-size: 10pt;
-    float: left;
-    color: #262626;
-    padding-left: 45px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    color: #fff;
-  }
-
-  .container-search input#search::-webkit-input-placeholder {
-    color: #65737e;
- }
-  
- .container-search input#search:-moz-placeholder { /* Firefox 18- */
-    color: #65737e;  
- }
-  
- .container-search input#search::-moz-placeholder {  /* Firefox 19+ */
-    color: #65737e;  
- }
-  
- .container-search input#search:-ms-input-placeholder {  
-    color: #65737e;  
- }
-
- .container-search .icon{
-    position: absolute;
-    top: 50%;
-    margin-left: 17px;
-    margin-top: 17px;
-    z-index: 1;
-    color: #4f5b66;
-   
-     -webkit-transition: all .55s ease;
-    -moz-transition: all .55s ease;
-    -ms-transition: all .55s ease;
-    -o-transition: all .55s ease;
-    transition: all .55s ease;
-  }
-  .box{
-
-    background-color: #000000;    
-  }
 
   /*-------------------------------------------------------Experimento menu*/
 
-#more {display: none;}
-
-.ui-menu-color-artname{
-    background: #ffffff;
-}
 .artname{
     color: #1406db;
     position: absolute;
      
 }
 
-#dots{
-    color: #1406db;
-    font-size: 18px;
-    
-}
 
-.col-10 {
-
-    margin-bottom: %;
-}
