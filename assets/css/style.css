@@ -58,7 +58,7 @@
     background: #dd06d2;
 }
 .ui-main-menu-color-contract:hover{
-    background: #81037b;
+    background: #cc0505;
 }
 
 .row-table {
@@ -517,22 +517,6 @@ footer {
     margin: 0;
 }
 
-.cv-pdf i {
-
-    font-size: 18px;
-    color: #fafafa;
-    text-align: center;
-    padding-left: 5px;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
-.cv-pdf i:hover {
-    color: #cc0505;
-
-}
 
 .social-links {
     padding-bottom: 50px;
@@ -736,7 +720,7 @@ button [type="submit"]{
 margin-top: 15px;
 margin-bottom: 20px;
 color: #fafafa;
-background-color: #e84610;
+background-color: #cc0505;
 }
 
 /* ----------------------------------------Media Queries */
@@ -779,7 +763,7 @@ padding-left: auto;
 margin-right: auto;
 margin-left: auto;
 width: 80%;
-border: 1px solid red;
+
 display: table;
 
 
@@ -811,12 +795,12 @@ display: table;
     }
 
 
-.registrer-form{
-    margin-top: 5%;
-    text-align: left;
-    color:#f4f4f4;
+.registrer-form-boddy{
+margin-top: 0%;
+text-align: left;
+color:#f4f4f4;
 height: 166px;
-width: 80%;
+width: 70%;
 margin-left: auto;
 margin-right: auto;
 background: #65737e;
@@ -824,29 +808,113 @@ background: #65737e;
 }
 
 .registrer-form-footer{
-    margin-bottom: 15%;
-    text-align: center;
-    color:#f4f4f4;
+color: #000000;
+margin-bottom: 15%;
+text-align: center;
 height: 166px;
-width: 80%;
+width: 70%;
 margin-left: auto;
 margin-right: auto;
-
 background-color: #f4f4f4;
 }
+
+.registrer-form-header{
+    margin-top: 5%;
+    color:#f4f4f4;
+    height: 166px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f4f4f4;
+    }
+
+
 .electronic-info-1, .electronic-info-2{
 background-color: #f4f4f4;
     width: 20%;
+    color: #000000;
+    font-family: "Exo", sans-serif;
 }
 
-.electronic-info-2{
-
-}
-.form-control, .form-text{
+.contract-field{
     margin-left: 15%;
-    width: 300%;
+    width: 300%; 
 }
+
 
 .label{
     margin-left: 5%;
 }
+
+
+
+/*---------------------------------------------------------------------login*/
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-logo{
+    position: relative;
+    margin-left: -41.5%;
+}
+.login-logo img{
+    position: absolute;
+    width: 20%;
+    margin-top: 19%;
+    background: #282726;
+    border-radius: 4.5rem;
+    padding: 5%;
+}
+.login-form-1{
+    padding: 9%;
+    background:#282726;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color:#fff;
+}
+.login-form-2{
+    padding: 9%;
+    background: #cc0505;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color: #fff;
+}
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+}
+.btnForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btnForgetPwd:hover{
+    text-decoration:none;
+    color:#fff;
+}
+
+.access-field{
+    margin-left: 5%;
+    width: 200%;
+    margin-bottom: 5%;
+    }
+
+
+
+
+            .buttom-cell{
+                display: inline;
+                margin-left: 3%;
+            }

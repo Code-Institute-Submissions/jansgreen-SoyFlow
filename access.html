@@ -11,11 +11,14 @@
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="assets/js/app.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=1962382320673178&autoLogAppEvents=1"></script>
+
+
     <title>SoyFlow</title>
 </head>
 
@@ -25,7 +28,7 @@
         <div class="row no-gutters">
             <div class="col-md-4 box">
                 <div class="container-user">
-                    <a href="access.html"><span class="icon"><i class="fa fa-user" aria-hidden="true"> Access</i></span></a>
+                        <a href="access.html"><span class="icon"><i class="fa fa-user" aria-hidden="true"> Access</i></span></a>
                 </div>
                 <div class="container-search">
                     <span class="icon"><i class="fa fa-search"></i></span>
@@ -69,78 +72,67 @@
                     </div>
                 </div>
                 <div class="menuitem">
-                        <ul>
-                            <h3 class="section-heading uppercase">hold an event</h3>
-                        </ul>
-                    </div>
+                    <ul>
+                        <h3 class="section-heading uppercase">Your Accaunt</h3>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
     <section class="container-fluid">
-        <table class="registrer-form-header">
-            <form>
-                <tbody>
-                    <tr class="shadow-lg">
-                        <td class="electronic-info-header">
-                            <div class="form-group"><img src="/assets/images/contract.jpg"  alt="" style="width: 100%">
-                        </td>
-                        </div>
-                    </tr>
-                </table>
-                <table class="registrer-form-boddy">
-                    <tr class="shadow-lg">
-                        <td class="electronic-info-1">
-                            <div class="form-group">
-                                <label for="User-name" class="label">User or Company name</label>
-                                <input type="text" class="form-text contract-field" aria-describedby="User-name"
-                                    placeholder="User or Company name">
-                                <label for="name" class="label">Full Name</label>
-                                <input type="text" class="form-text contract-field" aria-describedby="full-name"
-                                    placeholder="Full Name">
-                                <label for="Addres" class="label">Address</label>
-                                <input type="address" class="form-text contract-field" aria-describedby="address"
-                                    placeholder="Your Addres">
-                                    <label for="Addres" class="label">Event Address</label>
-                                    <input type="addres" class="form-text contract-field" aria-describedby="addres"
-                                        placeholder="the address where the event will take place.">
-                            </div>
+        <div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3 class="uppercase">Sing in</h3>
 
-                        </td>
+                    <div class="form-group">
+                        <input type="text" class="form-control access-field" placeholder="Your Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control access-field" placeholder="Your Password *"
+                            value="" />
+                    </div>
+                    <div class="form-group  ">
+                        <input type="submit" class="btnSubmit" value="Sing In" />
+                    </div>
+                    <br>
+                    <div class=" form-group buttom-cell">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-facebook" aria-hidden="true"></i>
+                            Sign in with Facebook</button>
+                    </div>
 
-                        <td class="electronic-info-2">
-                            <div class="form-group">
-                                <label for="email" class="label">Email</label>
-                                <input type="email" class="form-text contract-field" aria-describedby="Email"
-                                    placeholder="your or company Email">
-                                <label for="Password" class="label">Password</label>
-                                <input type="password" class="form-text contract-field" aria-describedby="Password"   
-                                    placeholder="Confirmed Password">
-                                <label for="phone" class="label">Phone Number</label>
-                                <input type="number" class="form-text contract-field" aria-describedby="phone"
-                                    placeholder="Your number phone"></div>
-                        </td>
-                    </tr>
+                    <div class="form-group buttom-cell">
+                        <a href="#" class="btnForgetPwd">Forget Password?</a>
+                    </div>
 
-                </tbody>
-        </table>
-        <table class="registrer-form-footer">
-            <tbody>
-                <tr class="shadow-lg">
-                    <td>
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <div class="login-logo">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.lG-_ZwD3THZdIscrphv-QAHaKI&pid=Api&rs=1" alt="" />
+                    </div>
+                    <h3>Login</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control access-field" placeholder="Your Email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control access-field" placeholder="Your Password *"
+                            value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login" />
+                    </div>
+                    <br>
+                    <div class=" form-group buttom-cell">
+                        <button type="button" class="btn btn-primary"><i class="fa fa-facebook" aria-hidden="true"></i>
+                            Sign in with Facebook</button>
+                    </div>
 
-                        <div>
-                            <small id="emailHelp" class="form-text">We'll never share your email with anyone
-                                else.</small>
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">By checking this box you are accepting the terms and conditions.</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Continue</button>
-
-                    </td>
-                </tr>
-            </tbody>
-            </form>
-        </table>
+                    <div class="form-group buttom-cell">
+                        <a href="#" class="btnForgetPwd">Forget Password?</a>
+                    </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
     <footer class="container-fluid">
