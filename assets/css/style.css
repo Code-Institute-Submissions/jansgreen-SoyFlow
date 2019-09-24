@@ -10,6 +10,7 @@
 
 /*--------------------------------------------Colors*/
 
+
 .bg-color-name-title {
     background-color: #1406db;
 }
@@ -388,7 +389,7 @@ list-style: none;
     vertical-align: middle; 
 }
  
-#menu ul li.hover,
+#menu ul li:hover,
 #menu ul li:hover {
     position: relative;
     z-index: 599;
@@ -884,3 +885,5 @@ background-color: #f4f4f4;
                 display: inline;
                 margin-left: 3%;
             }
+            */
+/*---------------------------------------------------new template*/
