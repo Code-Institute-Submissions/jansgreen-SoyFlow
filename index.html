@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <link rel="stylesheet" href="/lib/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-tree-list/0.0.11/ion-tree-list.min.css"
         type="text/css" />
@@ -10,322 +11,134 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/temporal.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <title>SoyFlow</title>
+
 </head>
 
 <body>
-    <p>prueba</p>
     <header>
-        <div class="row no-gutters">
-            <div class="col-md-4 box">
-                <div class="container-user">
-                    <a href="access.html"><span class="icon"><i class="fa fa-user" aria-hidden="true">
-                                Access</i></span></a>
-                </div>
-                <div class="container-search">
-                    <span class="icon"><i class="fa fa-search"></i></span>
-                    <input type="search" id="search" placeholder="Search..." />
-                </div>
-            </div>
-            <div class="col-md-8">
-                <ul id="nav" class="list-inline menucontainer">
-                    <li class="col-6 col-sm-3 ui-main-menu-color-home list-inline-item menuitem">
-                        <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa fa-music"
-                                aria-hidden="true"></i><span>HOME</span></a></li>
-
-                    <li class="col-6 col-sm-3 ui-main-menu-color-artists list-inline-item menuitem">
-                        <a href="artists.html" class="hvr-sweep-to-bottom"><i class="fa fa-users"
-                                aria-hidden="true"></i>
-                            <span>ARTISTS</span> </a>
-                    </li>
-
-                    <li class="col-6 col-sm-3 ui-main-menu-color-albums list-inline-item menuitem">
-                        <a href="albums.html" class="hvr-sweep-to-bottom"><i class="fa fa-play"
-                                aria-hidden="true"></i><span>ALBUMS</span> </a>
-                    </li>
-
-                    <li class="col-6 col-sm-3 ui-main-menu-color-other list-inline-item menuitem">
-                        <a href="radio.html" class="hvr-sweep-to-bottom"><i class="fa fa-headphones"
-                                aria-hidden="true"></i><span>RADIO</span> </a>
+        <!---------------------------------------------------------------------NavBar and menus-->
+        <nav class="navegation">
+            <div id="mainmenu">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist.html">Arts</a></li>
+                    <li><a href="albums.html">Arbum</a></li>
+                    <li><a href="info.html">Info</a>
+                        <ul>
+                            <li><a href="salsa.html">Salsa</a></li>
+                            <li><a href="bachata.html">Bachata</a></li>
+                            <li><a href="merengue.html">Merengue</a>
+                                <ul>
+                                    <li><a href="pericoripiao.html">Perico Ripiao</a></li>
+                                    <li><a href="mambo.html">Mambo</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="urbans.html">Urban Music</a>
+                                <ul>
+                                    <li><a href="rap.html">Dominican Rap</a></li>
+                                    <li><a href="dembow.html">Dembow</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
+        </nav>
+        <div class="header-logo">
+            <a href="index.html" class="Logo-00"></a>
         </div>
-
-        <div class="row no-gutters">
-            <a href="index.html" class="col-md-4 logo"></a>
-            <div class="col-md-8 ">
-                <div class="row no-gutters bg-color-name-title ">
-                    <div class="col heading ">
-                        <h1 class="name">DominicanMusic</h1>
-                        <h2 class="title">KING MUSIC IN THE DOMINICAN REPUBLIC!</h2>
-
-                    </div>
-                </div>
-                <div class="menuitem">
-                    <h3 class="section-heading uppercase">ABOUT DOMINICAN MUSIC</h3>
-                </div>
-            </div>
-        </div>
-</header>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 bg-color-music-info">
-                <div class="row">
-                    <div class="col-12">
-                        <h3 class="section-heading uppercase">MUSICAL GENRES</h3>
-                    </div>
-                </div>
-
-                <div class="genres-info-item">
-                    <div class="key">
-                        <div id="menu">
-                            <ul>
-                                <Li> <a href="bachata.html">
-                                        <p class="uppercase"> BACHATA </p>
-                                    </a>
-                                </Li>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="genres-info-item">
-                        <div class="key">
-                            <div id="menu">
-                                <ul>
-                                    <Li> <a href="urbans.html">
-                                            <p class="uppercase"> URBANS </p>
-                                        </a>
-                                        <UL class="has-sub">
-                                            <LI>
-                                                <a href="dembow.html">
-                                                    <p class="uppercase"> DEMBOW </p>
-                                                </a>
-                                            </LI>
-                                            <LI>
-                                                <hr>
-                                                <a href="rap.html">
-                                                    <p class="uppercase"> DOMINICAN RAP </p>
-                                                </a>
-                                            </LI>
-                                        </UL>
-                                    </Li>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="genres-info-item">
-                        <div class="key">
-                            <div id="menu">
-                                <ul>
-                                    <Li> <a href="merengue.html">
-                                            <p class="uppercase"> MERENGUE </p>
-                                        </a>
-                                        <Ul>
-                                            <LI>
-                                                <a href="mambo.html">
-                                                    <p class="uppercase"> MAMBO </p>
-                                                </a>
-                                                <hr class="Big">
-                                            </LI>
-                                            <LI>
-                                                <a href="pericoripiao.html">
-                                                    <p class="uppercase"> PERICO RIPIAO </p>
-                                                </a>
-                                            </LI>
-                                        </UL>
-                                    </Li>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="genres-info-item">
-                        <div class="key">
-                            <div id="menu">
-                                <ul>
-                                    <Li> <a href="salsa.html">
-                                            <p class="uppercase"> SALSA </p>
-                                        </a>
-                                    </Li>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 bg-color-boddy-side section-column">
-                <div class="row">
-                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-sm-6">
-                        <div class="row">
-                            <div class="col-2">
-                                <i class="boddy-side-icon fa fa-info-circle" aria-hidden="true">
-                                </i>
-                            </div>
-                            <div class="col-10 ">
-                                <h4 class="boddy-side-heading uppercase ">THE DOMINICAN MUSIC</h4>
-
-                                <p> The music of the Dominican Republic refers to the popular, traditional or folkloric
-                                    musical manifestations of the Dominican Republic oriented to the description of the
-                                    Dominicans, their character, culture and customs. It has its own well-defined
-                                    features, as well as a clear external influence, first of all, of Spanish and
-                                    African music, in rhythmic, tonal and harmonic aspects.
-
-                                    <button type="button" class="btn btn-light" onclick="I_vermas('mas');" id="mas">Read
-                                        more</button>
-                                </p>
-                                <p id="desplegar" style="display:none;">During the colonial period, the inhabitants of
-                                    Santo Domingo listened mostly to music imported from Europe, but there was also a
-                                    significant exchange with the other Spanish colonies in the Caribbean. The Latin
-                                    American adaptation of Spanish contradanza was very popular throughout the region,
-                                    where it later developed in ways such as dance (still existing in Puerto Rico),
-                                    danzón (in Cuba), and other related genres. The calenda of African origin is also
-                                    found in many of the islands and currently survives in various forms found in
-                                    Martinique, Trinidad and Carriacou (Granada).<button type="button"
-                                        class="btn btn-light" onclick="I_vermas('menos');" id="menos">Read less</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-sm-6">
-                        <div class="row">
-                            <div class="col-2">
-                                <i class="boddy-side-icon fa fa-star" aria-hidden="true">
-                                </i>
-                            </div>
-                            <div class="col-10">
-                                <h4 class="boddy-side-heading uppercase">HISTORY</h4>
-                                <p>
-
-                                    La historia de la música dominicana naturalmente comienza con la independencia de
-                                    España en 1821 y de Haití (que se había hecho cargo de la parte española de la isla
-                                    en 1822 ) en 1844. El merengue aprece por primera vez solamente una década más
-                                    tarde. <button type="button" class="btn btn-light" onclick="II_vermas('II_mas');"
-                                        id="II_mas">Read
-                                        more</button>
-                                </p>
-                                <p id="II_desplegar" style="display:none;">Aunque los orígenes de este baile son muy
-                                    debatidas, parece haberse evolucionado a partir de la mezcla de estilos africanos y
-                                    españoles vigentes en ese momento en todas las colonias españolas del Caribe. En un
-                                    principio, se tocaba en la tambora, la güira (raspador), y cualquier instrumento de
-                                    cuerda que aparecía, desde la guitarra hasta el tres o el cuatro. Por lo tanto,
-                                    muchos dominicanos consideran que la música simboliza su herencia tripartita, una
-                                    combinación de los africanos (representada por la tambora) , los europeos (la
-                                    guitarra o el acordeón) y los indios taínos ( la güira , aunque sus orígenes son
-                                    discutibles) .
-                                    <button type="button" class="btn btn-light" onclick="II_vermas('II_menos');"
-                                        id="II_menos">Read less</button>
-
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-sm-6">
-                        <div class="row">
-                            <div class="col-2">
-                                <i class="boddy-side-icon fa fa-street-view" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-10">
-                                <h4 class="boddy-side-heading uppercase">Dominican classical music</h4>
-                                <p>Classical music is not a strong genre in Dominican society. However, since the
-                                    creation of the first entities oriented to this current in the early 90s, today its
-                                    evolution and development is palpable, although it has a long way to go to attract
-                                    the general public. Darwin Aquino, director of the National Youth Symphony, and
-                                    teacher Catana Pérez de Cuello, former director of the Eduardo Brito National
-                                    Theater, agree that the classical is not a music that is permeated in our tradition.
-                                    As the musicologist also explained, this is because the people do not know and do
-                                    not care, in addition to having the concept that it is "dead music."
-
-                                    <button type="button" class="btn btn-light" onclick="III_vermas('III_mas');"
-                                        id="III_mas">Read
-                                        more</button> </p>
-                                <p id="III_desplegar" style="display:none;"> “Antes, en Semana Santa, y cuando fallecía
-                                    una persona ‘importante’, lo que se colocaba era música clásica y aunque esa
-                                    costumbre ha pasado, la creencia subsiste. También hay un desconocimiento porque la
-                                    gente no tiene cómo acercarse, y las personas, normalmente, muestran indiferencia
-                                    hacia lo que no conocen”, dijo Catana Pérez en una entrevista con elCaribe. Entiende
-                                    que su poca penetración en el pueblo se debe a un asunto de educación, porque los
-                                    públicos no tienen dónde conocer sobre este género y, por lo tanto, no les interesa.
-                                    “Mientras no haya una educación artística en la escuela, que les permita a los niños
-                                    crecer sabiendo de la música clásica, cómo la van a conocer si sus padres la
-                                    desconocen por igual. Lo clásico permanece en una élite intelectual, porque es la
-                                    población que la conoce”, afirmó Catana.
-                                    <button type="button" class="btn btn-light" onclick="III_vermas('III_menos');"
-                                        id="III_menos">Read less</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="container-fluid">
-        <div id="footer-details" class="row">
-            <div class="col-sm-4">
-                <h5 class="uppercase general-sub">SOY FLOW ©</h5>
-                <p class="inline-block">
-                    Luis Pena, Full Stack Web Developer Student. <br>
-                    Email: jansgreen@gmail.com<br>
-                    www.jansgreem.info </p>
-
-            </div>
-
-            <div class="col-sm-4">
-                <h5 class="uppercase general-sub">Social</h5>
-                <ul class="list-inline social-links">
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/soyflows/">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <span class="sr-only">Facebook</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://twitter.com/Ceronlinetv0">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-
-                            <span class="sr-only">Twitter</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank"
-                            href="https://www.linkedin.com/in/luis-manuel-pena-mendez-489674139?trk=people-guest_profile-result-card_result-card_full-click">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.pinterest.es/jansgreen/">
-                            <i class="fa fa-pinterest" aria-hidden="true"></i>
-                            <span class="sr-only">Pinterest</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/jans_green">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <span class="sr-only">Instagram</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.youtube.com/user/jansgreen">
-                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                            <span class="sr-only">YouTube</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://github.com/jansgreen/SoyFlow.git">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                            <span class="sr-only">github</span>
-                        </a>
-                    </li>
-
+        <section class="logo">
+            <h1>Dominican Music</h1>
+        </section>
+    </header>
+    <div class="maincontainer">
+        <section class="container">
+            <!---------centro-->
+            <div class="slider">
+                <ul>
+                    <li><img src="assets/images/img01.jpg" alt=""><a i=""></li>
+                    <li><img src="assets/images/img02.jpg" alt=""><a i=""></li>
+                    <li><img src="assets/images/img03.jpg" alt=""><a i=""></li>
                 </ul>
+            </div>
+        </section>
+        <aside class="RSS">
+            <blockquote>prueba 1</blockquote>
+            <blockquote>prueba 2</blockquote>
+        </aside>
+    </div>
+    <footer>
+        <div>
+            <div class="footer-details">
+                <ul>
+                    <li>
+                        <h5>SOY FLOW ©</h5>
+                        <p> Luis Pena, Full Stack Web Developer Student. <br>
+                            Email: jansgreen@gmail.com<br>
+                            www.jansgreem.info </p>
+
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5>Social</h5>
+<ul class="social-links" social-links><li class="list-inline-item">
+        <a target="_blank" href="https://www.facebook.com/soyflows/">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://twitter.com/Ceronlinetv0">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+
+            <span class="sr-only">Twitter</span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank"
+            href="https://www.linkedin.com/in/luis-manuel-pena-mendez-489674139?trk=people-guest_profile-result-card_result-card_full-click">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.pinterest.es/jansgreen/">
+            <i class="fa fa-pinterest" aria-hidden="true"></i>
+            <span class="sr-only">Pinterest</span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.instagram.com/jans_green">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Instagram</span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/user/jansgreen">
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <span class="sr-only">YouTube</span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/jansgreen/SoyFlow.git">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <span class="sr-only">github</span>
+        </a>
+    </li></ul>
+                
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
