@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|exo:100,200,300,400,500,600,700&display=swap');
+
+
+ 
+/* ----------------------------------------HOME----------------------------------------*/
+/* ----------------------------------------HOME----------------------------------------*/
+/* ----------------------------------------HOME----------------------------------------*/
+/* ----------------------------------------HOME----------------------------------------*/
+
+
+/*--------------------------------------------Colors*/
+
+
+.bg-color-name-title {
+    background-color: #1406db;
+}
+
+.bg-color-boddy-side{
+  background-color: #fff;
+}
+
+.bg-color-music-info{
+  background-color: #f4f4f4;
+}
+
+.bg-color-work-history{
+  background-color: #fefaff;
+
+}
+
+.bg-color-contact{
+  background-color: #fff;
+}
+
+.ui-main-menu-color-home{
+  background-color: #cc0505;
+
+}
+
+.ui-main-menu-color-search{
+    background-color: #000000;
+
+}
+.ui-main-menu-color-artists{
+  background-color: #077e1b;
+}
+.ui-main-menu-color-albums{
+  background-color: #bbb807;
+}
+.ui-main-menu-color-other{
+  background-color: #6e4517;
+}
+
+.ui-main-menu-color-artname{
+    background: #ffffff;
+}
+
+.ui-main-menu-color-contract{
+    background: #dd06d2;
+}
+.ui-main-menu-color-contract:hover{
+    background: #cc0505;
+}
+
+.row-table {
+    display: table;
+}
+
+.section-column {
+    display: table-cell;
+    padding: 0 30px 30px;
+    float: none;
+}
+
+.history-heading,
+.section-heading {
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+
+/*--------------------------------------------Special/Margin and Text*/
+
+
+h1,
+h2,
+h3,
+h4 {
+  margin:0;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.general-sub {
+font-family: "Exo", sans-serif;
+font-weight: 300;
+color: #fafafa;
+}
+
+.inline-block {
+    display: inline-block;
+}
+.row-table{
+  display: table;
+}
+
+.section-column{
+display: table-cell;
+padding: 0 30px 30px;
+float: none;
+margin-top: 5%;
+}
+
+
+
+
+/*--------------------------------------------Heading*/
+
+header {
+    margin:8%;
+}
+
+.heading {
+    margin-left: 50px;
+    
+}
+
+.logo {
+    background: url("../images/SOYFLOW.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    
+}
+
+.name {
+    font-family: "Exo", sans-serif;
+    font-weight: 100;
+    font-size: 46px;
+    margin-top: 50px;
+    color: #fff;
+}
+
+.title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: #fff;
+}
+
+
+.list-inline-item:not(:last-child) {
+    margin: 0;
+}
+
+
+.menucontainer{
+  font-size: 0;
+}
+#nav li {
+    font-size: 14px;
+    padding: 0;
+}
+#nav{
+  margin: 0;
+}
+
+.menuitem {
+    height: 120px;
+    text-align: center;
+    padding: 0;
+}
+
+.menuitem-contract{
+    height: 120px;
+    width: 170px;
+    color: #000000;
+    border: none;
+}
+
+.menuitem a {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    height: 120px;
+}
+
+.menuitem a i {
+    padding-top: 22px;
+    display: block;
+    color: #fafafa;
+    font-size: 26px;
+}
+
+.menuitem span {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.menuitem h3 {
+    width: 100%;
+    text-align: center;
+    color:#1406db;
+    border-bottom: #f4f4f4 solid;
+    height: 120px;
+}
+
+/*------------------------------------------------------Search UI*/
+
+.container-search{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    left: 20%;
+    margin-top: 17%;
+   	display: table-cell;
+	
+  }
+
+  .container-user{
+    color: #ffffff;
+    width: 50px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    left: 5%;
+    margin-top: 17%;
+    border: none;
+	display: table-cell;
+	
+  }
+   
+  .container-search input#search{
+    width: 300px;
+    height: 50px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #262626;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .container-search input#search::-webkit-input-placeholder {
+    color: #65737e;
+ }
+  
+ .container-search input#search:-moz-placeholder { /* Firefox 18- */
+    color: #65737e;  
+ }
+  
+ .container-search input#search::-moz-placeholder {  /* Firefox 19+ */
+    color: #65737e;  
+ }
+  
+ .container-search input#search:-ms-input-placeholder {  
+    color: #65737e;  
+ }
+
+ .container-search .icon{
+    position: absolute;
+    margin-left: 17px;
+    margin-top: 15px;
+    z-index: 1;
+    color: #4f5b66;
+   
+     -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  .box{
+
+    background-color: #000000;    
+  }
+
+/*--------------------------------------------Hover.css*/
+
+.hvr-sweep-to-bottom:before {
+    background: rgba(0, 0, 0, 0.2);
+    height: 120px;
+}
+
+/* ----------------------------------------Boddy Side */
+
+.boddy-side-icon {
+    font-size: 26px;
+    color: #1406db;
+}
+
+.boddy-side-heading {
+    margin-bottom: 15px;
+}
+
+.spar {
+  text-decoration: none;
+  color: black;
+   }
+
+.hpar {
+display: block;
+
+   }
+
+/* ----------------------------------------Genders Info and menu */
+.genres-info-item{
+  margin-bottom: 20px;
+  display: block;
+  clear: both;
+}
+
+.genres-info-item .key, .genres-info-item .value{
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.genres-info-item .key p, .genres-info-item .value p {
+margin: 0;
+
+}
+
+.genres-info-item .key {
+width: 30%;
+margin-right: 21px;
+padding-top: 2px;
+vertical-align: top;
+}
+.genres-info-item .key p{
+font-weight: 700;
+}
+
+.genres-info-item .value {
+position:relative;
+width: 60%;
+}
+
+#menu ul, ol{
+list-style: none;
+}
+
+
+#menu {
+    padding: absolute;
+    margin: 0;
+    border: 0; 
+}
+
+ 
+#menu ul, li {
+    list-style: none;
+    margin: 0;
+    padding: absolute; 
+    border: 0;
+   
+}
+ 
+#menu ul {
+    position: relative;
+    z-index: 597;
+    float: left; 
+}
+ 
+#menu ul li {
+    float: left;
+    min-height: 1px;
+    line-height: 1em;
+    vertical-align: middle; 
+}
+ 
+#menu ul li:hover,
+#menu ul li:hover {
+    position: relative;
+    z-index: 599;
+    cursor: default; 
+}
+ 
+#menu ul ul {
+    visibility: hidden;
+    position:absolute;
+    top: 100%;
+    left: 10;
+    z-index: 598;
+    width: 100%;
+    margin: 3px; 
+    border-left: 3px solid;
+    border-left-color: #1406db;
+    border-left-style: outset;
+    
+}
+ 
+#menu ul ul li {
+    float: none; 
+}
+ 
+#menu ul li:hover > ul {
+    visibility: visible; 
+}
+ 
+#menu ul ul {
+    top: 0;
+    left: 100%; 
+}
+ 
+#menu ul li {
+    float: none; 
+}
+ 
+#menu {
+    width: 255px; 
+}
+ 
+#menu span, #menu a {
+    display: inline-block;
+    text-decoration: none; 
+}
+ 
+#menu:after, #menu ul:after {
+    content: '';
+    display: block;
+    clear: both; 
+}
+ 
+#menu ul {
+    width: 70%; 
+}
+
+#menu li {
+    width: 120%; 
+}
+
+#menu li {
+    background: #f4f4f4;
+}
+#menu li:hover {
+    background: #f4f4f4; 
+}
+#menu a {
+    color: black;
+    line-height: 160%;
+    padding: absolute 28px;
+    width: absolute; 
+}
+
+#menu ul ul li {
+    background: #f4f4f4; 
+}
+#menu ul ul li:hover {
+    background: #f4f4f4; 
+}
+#menu ul ul li:hover a {
+    color:#cc0505; 
+}
+#menu a:hover {
+    color:#cc0505; 
+}
+
+#menu ul ul li ul li {
+    background: #f4f4f4; 
+}
+#menu ul ul li ul li:hover {
+    background: #f4f4f4; 
+}
+#menu {
+    position: relative; 
+}
+ 
+#menu .has-sub:after, #menu .has-sub > ul > .has-sub:hover:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 9px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -5px;
+}
+ 
+#menu .genres-info-item {
+    float: right;
+}
+
+#menu .hr {
+    size:"1px";
+}
+#menu .Big{
+    size:"50px";
+}
+
+
+/* ----------------------------------------Footer */
+
+footer {
+    background-color: #000000;
+    color: #fafafa;
+    min-height: 120px;
+    margin: 0 0 0 0;
+    margin-top: 0;
+}
+
+
+.social-links {
+    padding-bottom: 50px;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+
+.social-links li a i:hover {
+    background: #cc0505;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+#footer-details {
+    margin: 0;
+    padding: 0;
+}
+
+ 
+/* ----------------------------------------HOME AND----------------------------------------*/
+/* ----------------------------------------HOME AND----------------------------------------*/
+/* ----------------------------------------HOME AND----------------------------------------*/
+/* ----------------------------------------HOME AND----------------------------------------*/
+
+/* ----------------------------------------ARTISTS----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+
+
+
+
+
+/* ----------------------------------------ALBUM----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+/* ----------------------------------------ARTISTS----------------------------------------*/
+
+.card{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #f4f4f4;
+}
+
+
+.card-text{
+    text-align: justify;
+    
+}
+
+
+.card-links{
+    padding-bottom: 50px;
+    }
+
+    
+    .card-links li a i{
+        background: #94b9fc;
+        border-radius: 50%;
+        font-size: 16px;
+        width: 32px;
+        height: 32px;
+        padding: 12px 0;
+        line-height: 7px;
+        text-align: center;
+        color: #fafafa;
+        transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        -webkit-transition: all 0.35s ease-in-out;
+        -o-transition: all 0.35s ease-in-out;
+        }
+    
+    .card-links li a i:hover {
+        background:  #033ba3;
+        color: #e6e6fc;
+    }
+
+.album-card{
+    margin-left: 5%;
+    
+    
+}
+
+.text-monospace a {
+    color: #231b94;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.text-monospace a:hover {
+    background: #94b9fc;
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+
+
+.progress {
+    position: relative;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.progress-type {
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 3px 30px 2px 10px;
+    color: #fafafa;
+    background-color: rgba(25, 25, 25, 0.2);
+}
+
+.progress-section {
+    margin: 40px 20px;
+}
+/* ----------------------------------------Work History */
+.history-heading{
+  color: #fafafa;
+  margin-bottom: 50Px;
+}
+
+.timeline-item{
+  padding: 4em 2em 0em 2em;
+  position: relative;
+  color: #fafafa;
+  border-left: 1px solid;
+}
+
+.timeline-item p {
+padding: 0;
+margin: 0;
+
+}
+
+.timeline-item:before{
+  content: attr(data-dates);
+  position: absolute;
+  left: 2.5em;
+  top: 3em;
+  display: block;
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  padding: 0;
+  margin:0;
+}
+
+.timeline-item:after{
+width: 12px;
+height: 12px;
+display: block;
+top: 2.4em;
+position: absolute;
+left: -6px;
+border-radius: 12px;
+content:' ';
+background: #fafafa;
+
+}
+
+.history-items{
+  margin: 30px
+}
+
+/* ----------------------------------------Contact form */
+
+.contact-heading{
+  font-family: "Exo", sans-serif;
+  font-weight: 300;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  }
+
+  .center-form{
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+  }
+
+button [type="submit"]{
+margin-top: 15px;
+margin-bottom: 20px;
+color: #fafafa;
+background-color: #cc0505;
+}
+
+/* ----------------------------------------Media Queries */
+
+
+@media(){
+.center-form{
+  padding-top: 30px;
+  min-height: 240px;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+}
+
+
+
+  /*-------------------------------------------------------Experimento menu*/
+
+.artname{
+    color: #1406db;
+    position: absolute;
+     
+}
+
+
+.text-monospace{
+
+    text-align: left;
+
+}
+/*-------------------------------------------------------Contract Form*/
+
+.contract-field{
+    margin-left: 15%;
+    width: 300%; 
+    text-transform: uppercase;
+   
+}
+.contract-row-1{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 10%;
+}
+
+.contract-row-1, .contract-row-2{
+    display: table-cell;
+
+}
+
+.contract-row-2{
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 10%;
+}
+
+.contract-footer{
+background-color: #ecebeb;
+text-align: center;
+margin-top: 5%;
+
+}
+
+.contract-full{
+margin-left: auto;
+margin-right: auto;
+margin-top: 5%;
+width: 70%;
+font-family:"Exo", sans-serif;
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 5%;
+}
+
+.contract-body{
+background-color: #f4f4f4;
+}
+
+.form-group {
+    display: table-row;
+}
+
+
+.label{
+    margin-left: 15%;
+    width: 300%;
+    margin-bottom: 0%;
+    margin-top: 15%;
+    text-transform: uppercase;
+}
+
+
+
+/*------------------------------------------------------------------------------------------login*/
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-logo{
+    position: relative;
+    margin-left: -41.5%;
+}
+.login-logo img{
+    position: absolute;
+    width: 20%;
+    margin-top: 19%;
+    background: #282726;
+    border-radius: 4.5rem;
+    padding: 5%;
+}
+.login-form-1{
+    padding: 9%;
+    background:#282726;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color:#fff;
+}
+.login-form-2{
+    padding: 9%;
+    background: #cc0505;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color: #fff;
+}
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+}
+.btnForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btnForgetPwd:hover{
+    text-decoration:none;
+    color:#fff;
+}
+
+.access-field{
+    margin-left: 5%;
+    width: 200%;
+    margin-bottom: 5%;
+    }
+
+
+
+
+            .buttom-cell{
+                display: inline;
+                margin-left: 3%;
+            }
+            */
+/*---------------------------------------------------new template*/
