@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <link rel="stylesheet" href="/lib/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-tree-list/0.0.11/ion-tree-list.min.css"
         type="text/css" />
@@ -10,206 +11,102 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <title>SoyFlow</title>
+
 </head>
 
 <body>
-
     <header>
-            <div class="row no-gutters">
-                    <div class="col-md-4 box">
-                            <div class="container-user">
-                                    <a href="access.html"><span class="icon"><i class="fa fa-user" aria-hidden="true"> Access</i></span></a>
-                            </div>
-                            <div class="container-search">
-                                    <span class="icon"><i class="fa fa-search"></i></span>
-                                    <input type="search" id="search" placeholder="Search..." />
-                            </div>
-                        </div>
-                    <div class="col-md-8">
-                        <ul id="nav" class="list-inline menucontainer">
-                            <li class="col-6 col-sm-3 ui-main-menu-color-home list-inline-item menuitem">
-                                <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa fa-music"
-                                        aria-hidden="true"></i><span>HOME</span></a>
+        <!---------------------------------------------------------------------NavBar and menus-->
+        <nav class="navegation">
+            <div id="mainmenu">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist.html">Arts</a></li>
+                    <li><a href="albums.html">Arbum</a></li>
+                    <li><a href="info.html">Info</a>
+                        <ul>
+                            <li><a href="salsa.html">Salsa</a></li>
+                            <li><a href="bachata.html">Bachata</a></li>
+                            <li><a href="merengue.html">Merengue</a>
+                                <ul>
+                                    <li><a href="pericoripiao.html">Perico Ripiao</a></li>
+                                    <li><a href="mambo.html">Mambo</a></li>
+                                </ul>
                             </li>
-        
-                            <li class="col-6 col-sm-3 ui-main-menu-color-artists list-inline-item menuitem">
-                                <a href="artists.html" class="hvr-sweep-to-bottom"><i class="fa fa-users" aria-hidden="true"></i>
-                                    <span>ARTISTS</span> </a>
-                            </li>
-        
-                            <li class="col-6 col-sm-3 ui-main-menu-color-albums list-inline-item menuitem">
-                                <a href="albums.html" class="hvr-sweep-to-bottom"><i class="fa fa-play"
-                                        aria-hidden="true"></i><span>ALBUMS</span> </a>
-                            </li>
-        
-                            <li class="col-6 col-sm-3 ui-main-menu-color-other list-inline-item menuitem">
-                                <a href="radio.html" class="hvr-sweep-to-bottom"><i class="fa fa-headphones"
-                                        aria-hidden="true"></i><span>RADIO</span> </a>
+                            <li><a href="urbans.html">Urban Music</a>
+                                <ul>
+                                    <li><a href="rap.html">Dominican Rap</a></li>
+                                    <li><a href="dembow.html">Dembow</a></li>
+                                </ul>
                             </li>
                         </ul>
-                    </div>
-                </div>
-
-        <div class="row no-gutters">
-            <a href="index.html" class="col-md-4 logo"></a>
-            <div class="col-md-8 ">
-                <div class="row no-gutters bg-color-name-title ">
-                    <div class="col heading ">
-                        <h1 class="name">DominicanMusic</h1>
-                        <h2 class="title">KING MUSIC IN THE DOMINICAN REPUBLIC!</h2>
-
-                    </div>
-                </div>
-                <div class="menuitem">
-                    <ul>
-                        <h3 class="section-heading uppercase">ABOUT MERENGUE</h3>
-                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="logo">
+            <a href="index.html" class="logo"></a>
+            <div>
+                <div class="header-logo">
+                    <h1 class="name">DominicanMusic</h1>
+                    <h2 class="title">KING MUSIC IN THE DOMINICAN REPUBLIC!</h2>
                 </div>
             </div>
         </div>
     </header>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 bg-color-music-info">
-                <div class="row">
-                    <div class="col-12">
-                        <h3 class="section-heading uppercase">MUSICAL GENRES</h3>
-                    </div>
-                </div>
+    <section>
+        <article>
+            <div class="art-container">
+                <div class="a-col">
+                        <h4 class="boddy-side-heading uppercase ">WHAT IS MERENGUE?</h4>
+
+                        <p> Merengue is a dance music genre originated in the Dominican Republic at the end of
+                            the 19th century. It is very popular throughout the Americas, where it is
+                            considered, along with salsa, as one of the great dance genres that distinguish the
+                            Latin American genre. It is also very popular in part of Europe, like Spain, among
+                            other latitudes. The merengue was inscribed on November 30, 2016 in the
+                            representative list of the Intangible Cultural Heritage of Humanity of Unesco.
+
+                            In its origins, the Dominican merengue was interpreted with string instruments
+                            (bandurria and / or guitar). Years later, the string instruments were replaced by
+                            the accordion, thus conforming, together with the güira and the tambora, the
+                            instrumental structure of the typical merengue ensemble. This set, with its three
+                            instruments, represents the synthesis of the three cultures that shaped the
+                            idiosyncrasy of Dominican culture. The European influence comes to be represented by
+                            the accordion, the African by the drum, which is a drum with two patches, and the
+                            Taíno or aboriginal by the güira.<button type="button" class="btn btn-light"
+                                onclick="I_vermas('mas');" id="mas">Read more</button>
 
 
-                <div class="genres-info-item">
-                        <div class="key">
-                            <div id="menu">
-                                <ul>
-                                    <Li> <a href="bachata.html">
-                                            <p class="uppercase"> BACHATA </p>
-                                        </a>
-                                    </Li>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="genres-info-item">
-                            <div class="key">
-                                <div id="menu">
-                                    <ul>
-                                        <Li> <a href="urbans.html">
-                                                <p class="uppercase"> URBANS </p>
-                                            </a>
-                                            <UL class="has-sub">
-                                                <LI>
-                                                    <a href="dembow.html">
-                                                        <p class="uppercase"> DEMBOW </p>
-                                                    </a>
-                                                </LI>
-                                                <LI>
-                                                    <hr>
-                                                    <a href="rap.html">
-                                                        <p class="uppercase"> DOMINICAN RAP </p>
-                                                    </a>
-                                                </LI>
-                                            </UL>
-                                        </Li>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="genres-info-item">
-                            <div class="key">
-                                <div id="menu">
-                                    <ul>
-                                        <Li> <a href="merengue.html">
-                                                <p class="uppercase"> MERENGUE </p>
-                                            </a>
-                                            <Ul>
-                                                <LI>
-                                                    <a href="mambo.html">
-                                                        <p class="uppercase"> MAMBO </p>
-                                                    </a>
-                                                    <hr class="Big">
-                                                </LI>
-                                                <LI>
-                                                    <a href="pericoripiao.html">
-                                                        <p class="uppercase"> PERICO RIPIAO </p>
-                                                    </a>
-                                                </LI>
-                                            </UL>
-                                        </Li>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="genres-info-item">
-                            <div class="key">
-                                <div id="menu">
-                                    <ul>
-                                        <Li> <a href="salsa.html">
-                                                <p class="uppercase"> SALSA </p>
-                                            </a>
-                                        </Li>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </p>
+                        <p id="desplegar" style="display:none;"> Although in some areas of the Dominican
+                            Republic, especially in the Cibao and in the Northwest sub-region, there are still
+                            typical sets with similar characteristics to those pioneers, this rhythm was
+                            evolving throughout the 20th century. First, with the introduction of new
+                            instruments such as the saxophone and later with the appearance of orchestras with
+                            complex instrumental wind sections.
+
+                            The evolution of decent letter meringue to liven up one of its paths. From then on,
+                            it spread very quickly throughout the country. In 1875, President Ulises Francisco
+                            Espaillat (known for his writings against merengue) began a campaign against
+                            merengue for his dances and explicit lyrics, but it was totally useless, since the
+                            dance had already taken over the Cibao, where he became strong point that is
+                            associated today with this region as the cradle of merengue.<button type="button"
+                                class="btn btn-light" onclick="I_vermas('menos');" id="menos">Read
+                                less</button>
+                        </p>
             </div>
-            <div class="col-md-8 bg-color-boddy-side section-column">
-                <div class="row">
-                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-sm-6">
-                        <div class="row">
-                            <div class="col-2">
-                                <i class="boddy-side-icon fa fa-info-circle" aria-hidden="true">
-                                </i>
-                            </div>
-                            <div class="col-10 ">
-                                <h4 class="boddy-side-heading uppercase ">WHAT IS MERENGUE?</h4>
-
-                                <p> Merengue is a dance music genre originated in the Dominican Republic at the end of
-                                    the 19th century. It is very popular throughout the Americas, where it is
-                                    considered, along with salsa, as one of the great dance genres that distinguish the
-                                    Latin American genre. It is also very popular in part of Europe, like Spain, among
-                                    other latitudes. The merengue was inscribed on November 30, 2016 in the
-                                    representative list of the Intangible Cultural Heritage of Humanity of Unesco.
-
-                                    In its origins, the Dominican merengue was interpreted with string instruments
-                                    (bandurria and / or guitar). Years later, the string instruments were replaced by
-                                    the accordion, thus conforming, together with the güira and the tambora, the
-                                    instrumental structure of the typical merengue ensemble. This set, with its three
-                                    instruments, represents the synthesis of the three cultures that shaped the
-                                    idiosyncrasy of Dominican culture. The European influence comes to be represented by
-                                    the accordion, the African by the drum, which is a drum with two patches, and the
-                                    Taíno or aboriginal by the güira.<button type="button" class="btn btn-light"
-                                        onclick="I_vermas('mas');" id="mas">Read more</button>
+        </article>
 
 
-                                </p>
-                                <p id="desplegar" style="display:none;"> Although in some areas of the Dominican
-                                    Republic, especially in the Cibao and in the Northwest sub-region, there are still
-                                    typical sets with similar characteristics to those pioneers, this rhythm was
-                                    evolving throughout the 20th century. First, with the introduction of new
-                                    instruments such as the saxophone and later with the appearance of orchestras with
-                                    complex instrumental wind sections.
-
-                                    The evolution of decent letter meringue to liven up one of its paths. From then on,
-                                    it spread very quickly throughout the country. In 1875, President Ulises Francisco
-                                    Espaillat (known for his writings against merengue) began a campaign against
-                                    merengue for his dances and explicit lyrics, but it was totally useless, since the
-                                    dance had already taken over the Cibao, where he became strong point that is
-                                    associated today with this region as the cradle of merengue.<button type="button"
-                                        class="btn btn-light" onclick="I_vermas('menos');" id="menos">Read
-                                        less</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
     <footer class="container-fluid">
         <div id="footer-details" class="row">
@@ -218,7 +115,7 @@
                 <p class="inline-block">
                     Luis Pena, Full Stack Web Developer Student. <br>
                     Email: jansgreen@gmail.com<br>
-                    www.jansgreem.info
+                    www.jansgreem.info </p>
 
             </div>
 
