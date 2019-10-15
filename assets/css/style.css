@@ -4,7 +4,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
+   
 }
 
 ul, ol {
@@ -26,6 +26,7 @@ ul, ol {
     height:auto;
     clear: both;
     display: table;
+
 } 
 
 [class*="g-col-"]{
@@ -111,7 +112,10 @@ ul, ol {
     .g-col-xm-1{width:8.88888888%;}
                     }
   
-            
+  /*====================================================
+ MENU (NAV) 
+  ====================================================*/          
+
 .ui-nav{
 background-color: #5b5b5b; 
 border-bottom:2px solid #8f8f8f;
@@ -136,7 +140,91 @@ text-decoration: none;
 color: #55ACEE;
 text-decoration: overline;
              }
-
+ 
+             .submenu {
+                margin-top: 5px;
+                position: absolute;
+                float: left;
+                min-width: 200px;
+                text-align: justify;
+                min-width: 200px;
+                background-color: #5b5b5b; 
+                border-bottom:2px solid #8f8f8f;
+                border-top:2px solid #8f8f8f;
+                
+                }
+                
+                .submenu a{
+                    text-transform: capitalize;
+                    margin-left: 10px;
+                    text-decoration: none;
+                    color: #fafafa; 
+                
+                    }
+                
+                .submenu a:hover{
+                    transition-duration: 1s;
+                    text-decoration: none;
+                    color: #55ACEE;
+                    text-decoration: overline;
+                    
+                        }
+                
+                .submenu {
+                transition-duration: .2s;
+                visibility: hidden;
+                
+                      }
+                
+                .ui-menu:hover > .submenu {
+                visibility: visible;
+                         
+                }
+                
+                .m-submenu {
+                margin-top: -10%;
+                margin-left: 100%;
+                position: absolute;
+                float: right;
+                min-width: 200px;
+                text-align: justify;
+                background-color: #5b5b5b; 
+                border-bottom:2px solid #8f8f8f;
+                border-top:2px solid #8f8f8f;
+                      }
+                
+                .m-submenu {
+                transition-duration: .2s;
+                display: none;
+                    }
+                
+                 .mg-submenu:hover .m-submenu {
+                display: block;
+                      }
+                
+                .u-submenu {
+                    margin-top: -10%;
+                    margin-left: 100%;
+                    position: absolute;
+                    float: right;
+                    min-width: 200px;
+                    text-align: justify;
+                    background-color: #5b5b5b; 
+                    border-bottom:2px solid #8f8f8f;
+                    border-top:2px solid #8f8f8f;
+                          }
+                    
+                .u-submenu {
+                transition-duration: .2s;
+                display: none;
+                        }
+                    
+                .um-submenu:hover .u-submenu {
+                display: block;
+                          }
+  /*====================================================
+ HEADER, LOGO AND EMBLEM 
+  ====================================================*/  
     .ui-header{
 min-height: 380px;
 background-color: #000000;
@@ -170,7 +258,9 @@ text-transform: uppercase;
 margin-top: 30%;
 margin-bottom: 30%;
       }
-
+/*====================================================
+ SECTION AND ASIDE 
+  ====================================================*/  
       .ui-section{
 background-color: #000000;
       }
@@ -211,13 +301,18 @@ animation: cambio 20s infinite alternate linear;
             100%{margin-left:-200%}
         }
 /*--------------------------------------------------------------ASIDE*/
-    .iu-aside {
-margin-left: 0;
-margin-top: 10px;
-background-color: #d1cbcb;
-max-width: 520px;
-text-transform: uppercase;
+body{
+    background-color: #000000;
 }
+
+.iu-aside {
+    margin-left: 0;
+    margin-top: 10px;
+    background-color: #d1cbcb;
+    max-width: 520px;
+    text-transform: uppercase;
+    
+    }
 
     .fa-rss-square{
 color: orange;
@@ -289,6 +384,11 @@ font-size: 26px;
 text-transform: uppercase;
 font-size: 20px;
             }
+.barners:hover{
+    transform: scale(1.2);
+    background-color: #b5dfffb2;
+            }
+            
             
     .ui-footer {
 border-top: 10px solid blue;
@@ -311,89 +411,44 @@ margin-top: 10px;
 margin-bottom: 10px;
         }
               
-                
-                footer h5 {
-                    text-transform: uppercase;
-                }
+ /*====================================================
+ FOOTER 
+  ====================================================*/                 
+footer h5 {
+    text-transform: uppercase;
+}
             
-                .social-links li a i {
-                    float: left;
-                    width: 32px;
-                    height: 32px;
-                    padding: 12px 0;
-                    border-radius: 50%;
-                    font-size: 13px;
-                    line-height: 7px;
-                    text-align: center;
-                    color: #fafafa;
-                    background: #8f8f8f;
-                    transition: all 0.35s ease-in-out;
-                    -moz-transition: all 0.35s ease-in-out;
-                    -webkit-transition: all 0.35s ease-in-out;
-                    -o-transition: all 0.35s ease-in-out;
-                }
+    .social-links li a i {
+float: left;
+width: 32px;
+height: 32px;
+padding: 12px 0;
+border-radius: 50%;
+font-size: 13px;
+line-height: 7px;
+text-align: center;
+color: #fafafa;
+background: #8f8f8f;
+transition: all 0.35s ease-in-out;
+-moz-transition: all 0.35s ease-in-out;
+-webkit-transition: all 0.35s ease-in-out;
+-o-transition: all 0.35s ease-in-out;
+            }
                 
                 
-                .social-links li a i:hover {
-                    background: #cc0505;
-                }
+    .social-links li a i:hover {
+background: #cc0505;
+}
                 
-                .fa-twitter {
-                  background: #55ACEE;
-                  color: white;
-                }
+    .fa-twitter {
+background: #55ACEE;
+color: white;
+}
 
 
-
-            .linea-2{
-
-                background-color: rgb(43, 226, 43);
-
-            }
-
-
-            .linea-1{
-                background-color: #5b5b5b; 
-                border-bottom:2px solid #8f8f8f;
-                border-top:2px solid #8f8f8f;
-                font-family: 'Oswald', sans-serif;
-                color: #ffffff;
-
-            }
-
-            .linea-2{
-
-                background-color: rgb(43, 226, 43);
-
-            }
-
-            .linea-3{
-
-                background-color: rgb(226, 116, 43);
-
-            }
-
-            .linea-4{
-
-                background-color: rgb(43, 144, 226);
-
-            }
-
-            
-            .linea-5{
-
-                background-color: rgb(226, 43, 43);
-
-            }
-
-            footer {
-
-                background-color: #000000;
-                color: #fafafa;
-                
-                }
-
-/* ----------------------------------------ARTISTS----------------------------------------*/
+ /*====================================================
+ ARTIST PAGE 
+  ====================================================*/ 
 .maincard{
         width: 100%;
         height: 500px;
@@ -448,6 +503,10 @@ transition: all 0.35s ease-in-out;
 background:  #033ba3;
 color: #e6e6fc;
     }
+
+ /*====================================================
+ ALBUM PAGE 
+  ====================================================*/ 
 
 .album-card{
     margin-left: 5%;
@@ -515,5 +574,20 @@ article > h1, h2, h3, h4, h5, h6{
 }
 
 
-/*----------------------------------------- structure*/
+/*----------------------------------------- prueba*/
 
+
+.contract-img img{
+    width: 70%;
+    height: auto;
+}
+
+.contract-boddy{
+    dis
+}
+
+.contract-header{
+    margin-top:10%;
+    margin-bottom:10%;
+    background-color: #fafafa;
+}

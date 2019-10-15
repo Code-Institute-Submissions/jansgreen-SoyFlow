@@ -5,8 +5,7 @@
     <link rel="stylesheet" href="/lib/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-tree-list/0.0.11/ion-tree-list.min.css"
         type="text/css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,74 +14,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="assets/js/app.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  
     <title>SoyFlow</title>
 </head>
 
 <body>
-        <header>
-                <div class="row no-gutters">
-                    <div class="col-md-4 box">
-                        <div class="container-user">
-                            <a href="access.html"><span class="icon"><i class="fa fa-user" aria-hidden="true">
-                                        Access</i></span></a>
-                        </div>
-                        <div class="container-search">
-                            <span class="icon"><i class="fa fa-search"></i></span>
-                            <input type="search" id="search" placeholder="Search..." />
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <ul id="nav" class="list-inline menucontainer">
-                            <li class="col-6 col-sm-3 ui-main-menu-color-home list-inline-item menuitem">
-                                <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa fa-music"
-                                        aria-hidden="true"></i><span>HOME</span></a></li>
+        <nav>
+                <div class="row ui-nav">
+                    <div class="g-col-1 g-col-xm-3 ui-menu"><a href="access.html"><i class="fa fa-user" aria-hidden="true"></i></a></div>
+                    <div class="g-col-1 g-col-xm-3 ui-menu"><a href="index.html">Home</a></div>
+                    <div class="g-col-1 g-col-xm-3 ui-menu"><a href="artist.html">Arts</a></div>
+                    <div class="g-col-1 g-col-xm-3 ui-menu"><a href="albums.html">Album</a></div>
         
-                            <li class="col-6 col-sm-3 ui-main-menu-color-artists list-inline-item menuitem">
-                                <a href="artists.html" class="hvr-sweep-to-bottom"><i class="fa fa-users"
-                                        aria-hidden="true"></i>
-                                    <span>ARTISTS</span> </a>
-                            </li>
         
-                            <li class="col-6 col-sm-3 ui-main-menu-color-albums list-inline-item menuitem">
-                                <a href="albums.html" class="hvr-sweep-to-bottom"><i class="fa fa-play"
-                                        aria-hidden="true"></i><span>ALBUMS</span> </a>
-                            </li>
+                    <div class="g-col-1 g-col-xm-3 ui-menu"><a href="info.html">Info <i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                        <div class="submenu">
+                            <div><a href="salsa.html">salsa</a></div>
+                            <div><a href="bachata.html">bachata</a></div>
+                            <div class="mg-submenu"><a href="merengue.html">merengue <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         
-                            <li class="col-6 col-sm-3 ui-main-menu-color-other list-inline-item menuitem">
-                                <a href="radio.html" class="hvr-sweep-to-bottom"><i class="fa fa-headphones"
-                                        aria-hidden="true"></i><span>RADIO</span> </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                                <div class="m-submenu">
+                                <div><a href="pericoripiao.html">Perico ripiao</a></div>
+                                <div><a href="mambo.html">mambo</a></div>
+                            </div>
+                            </div>
+                            <div class="um-submenu"><a href="urbans.html">urban music <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
         
-                <div class="row no-gutters">
-                    <a href="index.html" class="col-md-4 logo"></a>
-                    <div class="col-md-8 ">
-                        <div class="row no-gutters bg-color-name-title ">
-                            <div class="col heading ">
-                                <h1 class="name">DominicanMusic</h1>
-                                <h2 class="title">KING MUSIC IN THE DOMINICAN REPUBLIC!</h2>
-        
+                                <div class="u-submenu">
+                                <div><a href="rap.html">dominican rap</a></div>
+                                <div><a href="dembow.html">dembow</a></div>
+                            </div>
                             </div>
                         </div>
-                        <div class="menuitem">
-                            <h3 class="section-heading uppercase">ABOUT DOMINICAN MUSIC</h3>
+                    </div>
+            </nav>
+            <header>
+                <div class="row ui-header">
+                    <div class="g-col-4 g-col-xm-12 ui-logo"></div>
+                    <div class="g-col-xm-12 ui-emblem">
+                        <div>
+                            <h1 class="name">DominicanMusic</h1>
+                            <h2 class="title">KING MUSIC IN THE DOMINICAN REPUBLIC!</h2>
                         </div>
                     </div>
                 </div>
-        </header>
-    <section class="container-fluid">
-            
-        <form>
-            <div class="contract-full shadow-lg">
-                <div class="contract-header">
-                    <div class="form-group"><img src="/assets/images/contract.jpg" alt="" style="width: 100%">
+            </header>
+    
+            <section>
+            <form>
+            <div class="row contract-header">
+                  <div class="contract-img"><img src="/assets/images/contract.jpg" alt="">
                     </div>
-                    <div class="contract-boddy">
-                        <div class="contract-row-1">
-                            <div class="form-group">
+
+                    <div class="row contract-boddy">
+                        <div class="g-col-6">
                                 <label for="User-name" class="label">User or Company name</label>
                                 <input type="text" class="form-text contract-field " aria-describedby="User-name"
                                     placeholder="User or Company name">
@@ -96,8 +81,8 @@
                                 <input type="addres" class="form-text contract-field" aria-describedby="addres"
                                     placeholder="the address where the event will take place.">
                             </div>
-                        </div>
-                        <div class="contract-row-2">
+
+                        <div class="g-col-6  contract-row-2">
                             <div class="form-group">
                                 <label for="email" class="label">Email</label>
                                 <input type="email" class="form-text contract-field" aria-describedby="Email"
@@ -110,8 +95,8 @@
                                     placeholder="Your number phone"></div>
                         </div>
 
-
                     </div>
+
                     <div class="contract-footer">
                         <div>
                             <small id="safe" class="form-text">We'll never share your email with anyone
@@ -123,75 +108,77 @@
                         <button type="submit" class="btn btn-primary">Continue</button>
                     </div>
                 </div>
-            </div>
         </form>
         
     </section>
 
-
-    <footer class="container-fluid">
-        <div id="footer-details" class="row">
-            <div class="col-sm-4">
-                <h5 class="uppercase general-sub">SOY FLOW ©</h5>
-                <p class="inline-block">
-                    Luis Pena, Full Stack Web Developer Student. <br>
-                    Email: jansgreen@gmail.com<br>
-                    www.jansgreem.info
-
+    <footer>
+            <div class="row ui-footer">
+                    <div class="g-col-6 ">
+                            <div class="footer-details">
+                                <ul>
+                                    <li>
+                                        <h5>SOY FLOW ©</h5>
+                                        <p> Luis Pena, Full Stack Web Developer Student. <br>
+                                            Email: jansgreen@gmail.com<br>
+                                            www.jansgreem.info </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="g-col-6">
+                            <div class="row footer-social">
+                                <h5>Social</h5>
+                                <ul class="social-links" social-links>
+                                    <li class="list-inline-item">
+                                        <a target="_blank" href="https://www.facebook.com/soyflows/">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            <span class="sr-only">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a target="_blank" href="https://twitter.com/Ceronlinetv0">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                
+                                            <span class="sr-only">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a target="_blank"
+                                            href="https://www.linkedin.com/in/luis-manuel-pena-mendez-489674139?trk=people-guest_profile-result-card_result-card_full-click">
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                            <span class="sr-only">LinkedIn</span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a target="_blank" href="https://www.pinterest.es/jansgreen/">
+                                            <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                            <span class="sr-only">Pinterest</span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a target="_blank" href="https://www.instagram.com/jans_green">
+                                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                                            <span class="sr-only">Instagram</span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a target="_blank" href="https://www.youtube.com/user/jansgreen">
+                                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                            <span class="sr-only">YouTube</span>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a target="_blank" href="https://github.com/jansgreen/SoyFlow.git">
+                                            <i class="fa fa-github" aria-hidden="true"></i>
+                                            <span class="sr-only">github</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
             </div>
-
-            <div class="col-sm-4">
-                <h5 class="uppercase general-sub">Social</h5>
-                <ul class="list-inline social-links">
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/soyflows/">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <span class="sr-only">Facebook</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://twitter.com/Ceronlinetv0">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-
-                            <span class="sr-only">Twitter</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank"
-                            href="https://www.linkedin.com/in/luis-manuel-pena-mendez-489674139?trk=people-guest_profile-result-card_result-card_full-click">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.pinterest.es/jansgreen/">
-                            <i class="fa fa-pinterest" aria-hidden="true"></i>
-                            <span class="sr-only">Pinterest</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/jans_green">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <span class="sr-only">Instagram</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.youtube.com/user/jansgreen">
-                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                            <span class="sr-only">YouTube</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://github.com/jansgreen/SoyFlow.git">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                            <span class="sr-only">github</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 
 </html>
