@@ -61,39 +61,40 @@
             </header>
     
             <section>
-            <form>
+            <form method="POST">
             <div class="row contract-header">
+                <div class="row contract-title">
+                    <h1>Contract artist now!</h1>
+                </div>
                   <div class="contract-img"><img src="/assets/images/contract.jpg" alt="">
                     </div>
 
-                    <div class="row contract-boddy">
-                        <div class="g-col-6">
-                                <label for="User-name" class="label">User or Company name</label>
-                                <input type="text" class="form-text contract-field " aria-describedby="User-name"
-                                    placeholder="User or Company name">
-                                <label for="name" class="label">Full Name</label>
-                                <input type="text" class="form-text contract-field" aria-describedby="full-name"
-                                    placeholder="Full Name">
-                                <label for="Addres" class="label">Address</label>
-                                <input type="address" class="form-text contract-field" aria-describedby="address"
-                                    placeholder="Your Addres">
-                                <label for="Addres" class="label">Event Address</label>
-                                <input type="addres" class="form-text contract-field" aria-describedby="addres"
-                                    placeholder="the address where the event will take place.">
+                    <div class="row ">
+                        <div class="g-col-6 g-col-xm-12 contract-form-1">
+                                <label class="row f-inpu-lb"  for="User-name" class="label">User or Company name</label>
+                                <input class="row f-inpu"  type="text" id="User-name"   placeholder="User or Company name">
+
+                                <label class="row f-inpu-lb"  for="full-name" class="label">Full Name</label>
+                                <input class="row f-inpu"  type="text" id="full-name" placeholder="Full Name">
+
+                                <label class="row f-inpu-lb"  for="Addres" class="label">Address</label>
+                                <input class="row f-inpu"  type="address" id="Address" placeholder="Your Addres">
+
+                                <label class="row f-inpu-lb"  for="E-Addres" class="label">Event Address</label>
+                                <input class="row f-inpu"  type="addres" id="E-Addres"placeholder="the address where the event will take place.">
+
                             </div>
 
-                        <div class="g-col-6  contract-row-2">
-                            <div class="form-group">
-                                <label for="email" class="label">Email</label>
-                                <input type="email" class="form-text contract-field" aria-describedby="Email"
-                                    placeholder="your or company Email">
-                                <label for="Password" class="label">Password</label>
-                                <input type="password" class="form-text contract-field" aria-describedby="Password"
-                                    placeholder="Confirmed Password">
-                                <label for="phone" class="label">Phone Number</label>
-                                <input type="number" class="form-text contract-field" aria-describedby="phone"
-                                    placeholder="Your number phone"></div>
-                        </div>
+                        <div class="g-col-6 g-col-xm-12 contract-form-2">
+
+                                <label class="row f-inpu-lb" for="email" class="label">Email</label>
+                                <input class="row f-inpu" type="email" id="Email" placeholder="your or company Email">
+
+                                <label class="row f-inpu-lb" for="Password" class="label">Password</label>
+                                <input  class="row f-inpu"type="password" id="Password" placeholder="Confirmed Password">
+
+                                <label class="row f-inpu-lb" for="phone" class="label">Phone Number</label>
+                                <input class="row f-inpu" type="number" id="phone"  placeholder="Your number phone"></div>
 
                     </div>
 
@@ -101,11 +102,11 @@
                         <div>
                             <small id="safe" class="form-text">We'll never share your email with anyone
                                 else.</small>
-                            <input type="checkbox" class="form-check-input">
+                            <input type="checkbox" class="form-check-input" id="conditions">
                             <label class="form-check-label" for="conditions">By checking this box you are accepting
                                 the terms and conditions.</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Continue</button>
+                        <button type="submit" class="btn btn-primary" name="submit">submit</button>
                     </div>
                 </div>
         </form>

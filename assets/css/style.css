@@ -578,14 +578,55 @@ article > h1, h2, h3, h4, h5, h6{
 
 
 .contract-img img{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 70%;
     height: auto;
+    border-radius: 1%;
+    box-shadow: 0 0 10px #8f8f8f;
 }
 
 
+.contract-title{
+
+    margin-bottom: 15px;
+    border-bottom: 1px solid #8f8f8f;
+    background-color: #55acee7c;
+}
+
+.contract-title h1{
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .contract-header{
-    margin-top:10%;
-    margin-bottom:10%;
+    height: auto;
+    width: 70%;
+    margin-top:2%;
+    margin-bottom:2%;
     background-color: #fafafa;
+    border-radius: 1%;
+}
+
+.f-inpu{
+    width: 80%;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.f-inpu-lb{
+    margin-bottom: 0%;
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+
+.contract-footer{
+    margin-right: 2%;
+    margin-bottom: 2%;
+    text-align: center;
 }
