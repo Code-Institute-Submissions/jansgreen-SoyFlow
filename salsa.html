@@ -2,20 +2,16 @@
 <html lang="en">
 
 <head>
-
-    <link rel="stylesheet" href="/lib/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-tree-list/0.0.11/ion-tree-list.min.css"
-        type="text/css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
-        type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/app.js"></script>
     <title>SoyFlow</title>
 
 </head>
@@ -23,7 +19,7 @@
 <body>
         <nav>
                 <div class="row ui-nav">
-                    <div class="g-col-1 g-col-xm-3 ui-menu"><a href="access.html"><i class="fa fa-user" aria-hidden="true"></i></a></div>
+                    <!--<div class="g-col-1 g-col-xm-3 ui-menu"><a href="access.html"><i class="fa fa-user" aria-hidden="true"></i></a></div>-->
                     <div class="g-col-1 g-col-xm-3 ui-menu"><a href="index.html">Home</a></div>
                     <div class="g-col-1 g-col-xm-3 ui-menu"><a href="artist.html">Arts</a></div>
                     <div class="g-col-1 g-col-xm-3 ui-menu"><a href="albums.html">Album</a></div>
@@ -63,25 +59,25 @@
             </header>
     <section>
         <article>
-            <div class="art-container">
-                <div class="a-col">
+            <div class="row">
+                <div class="g-col-8 img-inf-i">
+                    <img src="assets/images/salsa.jpg" alt="">
+                </div>
+                <div class="g-col-3 g-col-xm-12 img-inf-p">
                         <h4 class="boddy-side-heading uppercase ">WHAT IS SALSA?</h4>
 
                         <p> Salsa is a dance music genre resulting from the synthesis of Cuban son and other
                             Caribbean music genres, with jazz and other American rhythms. Salsa was consolidated
                             as a commercial success by Puerto Rican musicians in New York City in the 1960s.33
                             Although its roots date back to previous decades in countries of the Caribbean
-                            basin.<button type="button" class="btn btn-light" onclick="I_vermas('mas');"
-                                id="mas">Read more</button>
+                            basin.
 
 
                         </p>
-                        <p id="desplegar" style="display:none;">The sauce finally spread throughout Colombia5
+                        <p >The sauce finally spread throughout Colombia5
                             and the rest of America, giving rise to Puerto Rican, Panamanian, Venezuelan, Cuban,
                             Dominican, Colombian and other Latin American regional scenes. The sauce encompasses
-                            several styles such as hard sauce, romantic sauce and timba.<button type="button"
-                                class="btn btn-light" onclick="I_vermas('menos');" id="menos">Read
-                                less</button>
+                            several styles such as hard sauce, romantic sauce and timba.
                     </p>
             </div>
         </article>

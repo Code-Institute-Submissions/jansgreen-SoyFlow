@@ -32,5 +32,5 @@ function III_vermas(id){
     document.getElementById("III_mas").style.display="inline";
     }
 }
-    
+
 
