@@ -44,3 +44,5 @@ ___
 [Access]("access.html")
 >This section is disabled for security reasons, when you start the php logistics this section will block the other tabs and exceed the home tab and only registered users will have access to the blocked section.
 
+###### All images that use this website are from third parties, searched with Google!
+
