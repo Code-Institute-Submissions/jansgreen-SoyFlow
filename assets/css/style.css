@@ -58,7 +58,7 @@ height:auto;
 @media(width:1024px){
 img{ width: 1020px; margin: 2px; padding: 0%;  }
 p{ margin: 2px; padding: 0%; width: 1020x; text-align: justify; color: #f4f4f4;   }
-.ui-logo{width:150px;}
+.ui-logo{width:320px;}
 .name{font-size: 35px}
 .title{ font-size: 25px}
 .ui-header{margin-bottom: 5px;  min-height: 50px;}
@@ -68,7 +68,7 @@ p{ margin: 2px; padding: 0%; width: 1020x; text-align: justify; color: #f4f4f4; 
 @media(width:768px){
 img{ width: 764px; margin: 2px; padding: 0%;  }
 p{ margin: 2px; padding: 0%; width: 764px; text-align: justify; color: #f4f4f4;   }
-.ui-logo{width:150px;}
+.ui-logo{width:767px;}
 .name{font-size: 35px}
 .title{ font-size: 25px}
 .ui-header{margin-bottom: 5px;  min-height: 50px;}
@@ -77,7 +77,7 @@ p{ margin: 2px; padding: 0%; width: 764px; text-align: justify; color: #f4f4f4; 
 @media(width:425px){
 img{ width: 421px; margin: 2px; padding: 0%;  }
 p{ margin: 2px; padding: 0%; width: 421px; text-align: justify; color: #f4f4f4;   }
-.ui-logo{width:150px;}
+.ui-logo{width:424px;}
 .name{font-size: 35px}
 .title{ font-size: 25px}
 .ui-header{margin-bottom: 5px;  min-height: 50px;}
@@ -89,7 +89,7 @@ p{ margin: 2px; padding: 0%; width: 421px; text-align: justify; color: #f4f4f4; 
 @media(max-width:375px){
 img{ width: 371px; margin: 2px; padding: 0%;  }
 p{ margin: 2px; padding: 0%; width: 371px; text-align: justify; color: #f4f4f4;   }
-.ui-logo{width:150px;}
+.ui-logo{width:374px;}
 .name{font-size: 35px}
 .title{ font-size: 25px}
 .ui-header{margin-bottom: 5px;  min-height: 50px;}
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {font-size:18px; color: #033ba3; text-align: center;}
 @media(width:320px){
 img{ width: 316px; margin: 2px; padding: 0%; min-height: 150px; }
 p{ margin: 2px; padding: 0%; width:316px; text-align: justify; color: #f4f4f4; }
-.ui-logo{width:300px;}
+.ui-logo{width:100%;}
 .name{font-size: 35px}
 .title{ font-size: 25px}
 h1, h2, h3, h4, h5, h6 {font-size:16px; color: #033ba3; text-align: center;}
@@ -328,20 +328,20 @@ display: block;
   /*====================================================
  HEADER, LOGO AND EMBLEM 
   ====================================================*/  
-    .ui-header{
+.ui-header{
 height: auto;
 background-color: #000000;
 box-shadow: 0 0 3px 0 #4d4d4d;
 margin-bottom: 15px;
 }
 
-    .ui-logo{
+.ui-logo{
 background-image: url(../images/SOYFLOW.jpg);
 align-items: center;
 justify-content: center;
 background-repeat: no-repeat;
 background-size: contain;
-min-height: 300px;
+min-height: 320px;
 transition: all .5s ease-in-out;
 -moz-transition: all .5s ease-in-out;
 -webkit-transition: all .5s ease-in-out;
@@ -371,11 +371,11 @@ color: #f4f4f4;
 /*====================================================
  SECTION AND ASIDE 
   ====================================================*/  
-      .ui-section{
+.ui-section{
 background-color: #000000;
-      }
+}
 
-    .slider {
+.slider {
 margin-left: 10px;
 width: 95%;
 margin-top: 2%;
@@ -384,17 +384,17 @@ overflow: hidden;
 display: block;
 box-shadow: 0 0 5px #ca1c1c;
 }
-        .slider ul {
+.slider ul {
 width: 300%;
 display: flex;
 padding: 0;
 animation: cambio 20s infinite alternate linear;
-    }
+}
         
-    .slider li {
+.slider li {
  list-style: none;
     
-        }
+}
         
 .slider img {
     width: 100%;
@@ -423,28 +423,28 @@ max-width: 520px;
 text-transform: uppercase;
 }
 
-    .fa-rss-square{
+.fa-rss-square{
 color: orange;
 font-size: 26px;
-        }
-        .ui-asideheader{
+}
+.ui-asideheader{
 border-bottom:2px solid #5b5b5b;
-              }
+}
 
       
-    .asideTitle {
+.asideTitle {
 margin-top: 5px; 
 text-transform: uppercase;
 float: right;
 font-family: Arial, Helvetica, sans-serif;
              }
              
-     #lastArts{
+#lastArts{
 margin: 10px;
 padding: 0;
 }
             
-    .barners{
+.barners{
 margin-left: 5px;
 margin-right: 5px;
 margin-top: 15px;
@@ -455,7 +455,7 @@ background-color: #dddddd;
             
 
             
-    .barnerimag{
+.barnerimag{
 display: block;
 margin-top: 2px;
 margin-bottom: 2px;
@@ -468,19 +468,19 @@ height: 112px;
 border: 1px solid #000000;
     }
 
-    .barnerimag img{
+.barnerimag img{
 width: 100%;
 height: 112px;
 
     }
-    .barnerscontent{
+.barnerscontent{
 text-align: center;
 text-transform: uppercase;
 width: 55%;
 margin-top: 10px;
         }
 
-    .barnerstitle{
+.barnerstitle{
 background-color: #55ACEE;
 text-transform: uppercase;
 width: 100%;
@@ -489,7 +489,7 @@ font-size: 26px;
 }
 
             
-    .barnertext > dl{
+.barnertext > dl{
 text-transform: uppercase;
 font-size: 20px;
             }
@@ -499,13 +499,13 @@ font-size: 20px;
             }
             
             
-    .ui-footer {
+.ui-footer {
 border-top: 10px solid blue;
 background-color: #000000;
 color: #fafafa;
            }
 
-    .ui-footer {
+.ui-footer {
 border-top: 10px solid blue;
 background-color: #000000;
 color: #fafafa;
@@ -515,16 +515,16 @@ margin-top: 10px;
 margin-bottom: 10px;
      }
 
-     .footer-social{
+.footer-social{
 margin-top: 10px;
 margin-bottom: 10px;
-        }
+}
               
  /*====================================================
  FOOTER 
   ====================================================*/                 
             
-    .social-links li a i {
+.social-links li a i {
 float: left;
 width: 32px;
 height: 32px;
@@ -539,7 +539,7 @@ transition: all 0.35s ease-in-out;
 -moz-transition: all 0.35s ease-in-out;
 -webkit-transition: all 0.35s ease-in-out;
 -o-transition: all 0.35s ease-in-out;
-            }
+}
                 
                 
     .social-links li a i:hover {
