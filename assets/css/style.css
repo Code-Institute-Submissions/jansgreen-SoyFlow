@@ -14,29 +14,107 @@ ul, ol {
  /*====================================================
  SYSTEM COLUMNS-------(GRID) 
   ====================================================*/
-  .content {
-    position: relative;
-    margin: 0;
-    width:100%;
-    height:auto;
- }
-.row{
+  
+ .row{
     margin: auto;
-    width:100%;
     height:auto;
     clear: both;
     display: table;
+position: relative;
+    width:100%;
+ 
 
 } 
 
-[class*="g-col-"]{
-    float: left;
-    margin: auto;
-    height:auto;
+[img]{
+width: 100%;
+margin-left: 2px;
+margin-top: 2px;
+margin-bottom: 10px; 
+margin-top: 2%;
 }
+
+p{
+    color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6{
+color: #f4f4f4;
+text-align: justify;
+text-transform: uppercase;
+}
+/*
+.card-body > p, h1, h2, h3, h4, h5, h6{
+    color: #000000;
+    }
+*/
+
+[class*="g-col-"]{
+float: left;
+margin: auto;
+height:auto;
+}
+
+@media(width:1024px){
+img{ width: 1020px; margin: 2px; padding: 0%;  }
+p{ margin: 2px; padding: 0%; width: 1020x; text-align: justify; color: #f4f4f4;   }
+.ui-logo{width:150px;}
+.name{font-size: 35px}
+.title{ font-size: 25px}
+.ui-header{margin-bottom: 5px;  min-height: 50px;}
+
+}
+    
+@media(width:768px){
+img{ width: 764px; margin: 2px; padding: 0%;  }
+p{ margin: 2px; padding: 0%; width: 764px; text-align: justify; color: #f4f4f4;   }
+.ui-logo{width:150px;}
+.name{font-size: 35px}
+.title{ font-size: 25px}
+.ui-header{margin-bottom: 5px;  min-height: 50px;}
+}
+
+@media(width:425px){
+img{ width: 421px; margin: 2px; padding: 0%;  }
+p{ margin: 2px; padding: 0%; width: 421px; text-align: justify; color: #f4f4f4;   }
+.ui-logo{width:150px;}
+.name{font-size: 35px}
+.title{ font-size: 25px}
+.ui-header{margin-bottom: 5px;  min-height: 50px;}
+.card-body >p { padding: 0%; margin-left: 0%; margin-right: 0%; font-size: 14px; width:270px;}
+.card {max-width: 418px; margin:0%; margin-left: 0%; padding: 0%;}
+.maincard{ width: 425px; padding: 0; margin-left: 0%;}
+}
+
+@media(max-width:375px){
+img{ width: 371px; margin: 2px; padding: 0%;  }
+p{ margin: 2px; padding: 0%; width: 371px; text-align: justify; color: #f4f4f4;   }
+.ui-logo{width:150px;}
+.name{font-size: 35px}
+.title{ font-size: 25px}
+.ui-header{margin-bottom: 5px;  min-height: 50px;}
+h1, h2, h3, h4, h5, h6 {font-size:18px; color: #033ba3; text-align: center;}
+.card-body >p { padding: 0%; margin-left: 0%; margin-right: 0%; font-size: 14px; width:270px;}
+.submenu{display: block}
+}
+
+@media(width:320px){
+img{ width: 316px; margin: 2px; padding: 0%; min-height: 150px; }
+p{ margin: 2px; padding: 0%; width:316px; text-align: justify; color: #f4f4f4; }
+.ui-logo{width:300px;}
+.name{font-size: 35px}
+.title{ font-size: 25px}
+h1, h2, h3, h4, h5, h6 {font-size:16px; color: #033ba3; text-align: center;}
+.card-body >p { padding: 0%; margin-left: 0%; margin-right: 0%; font-size: 14px; width:270px;}
+.card {width: 300px; margin:0%; margin-left: 0%; padding: 0%;}
+.maincard{ width: 300px; padding: 0; margin-left: 0%;}
+}
+
+
+@media(max-width:2560px){
 .g-col-12{width:100%;}
 .g-col-11{width:91.66666667%;}
-.g-col-10{width:83.33333333%; }
+.g-col-10{width:83.33333333%;}
 .g-col-9{width:75%;}
 .g-col-8{width:66.66666667%;}
 .g-col-7{width:58.33333333%;}
@@ -46,12 +124,13 @@ ul, ol {
 .g-col-3{width:25%;}
 .g-col-2{width:16.66666666%;}
 .g-col-1{width:8.33333333%;}
+ }
 
  /*====================================================
  SYSTEM SCREEN SIZE 
   ====================================================*/
   /*----------------------------------------------LARGE SCREEN*/
-@media(min-width:1200px){
+@media(min-width:1440px){
 .g-col-lg-12{width:100%;}
 .g-col-lg-11{width:91.66666667%;}
 .g-col-lg-10{width:83.33333333%; }
@@ -66,51 +145,79 @@ ul, ol {
 .g-col-lg-1{width:8.88888888%;}
 }
   /*----------------------------------------------MEDIUM SCREEN*/
-@media(max-width:1199px) and (min-width:992px){
-    .g-col-md-12{width:100%;}
-    .g-col-md-11{width:91.66666667%;}
-    .g-col-md-10{width:83.33333333%; }
-    .g-col-md-9{width:75%;}
-    .g-col-md-8{width:66.66666667%;}
-    .g-col-md-7{width:58.33333333%;}
-    .g-col-md-6{width:50%;}
-    .g-col-md-5{width:41.66666667%;}
-    .g-col-md-4{width:33.33333333%;}
-    .g-col-md-3{width:25%;}
-    .g-col-md-2{width:16.66666666%;}
-    .g-col-md-1{width:8.88888888%;}
-                    }
+@media(max-width:1024px) and (min-width:769px){
+.g-col-md-12{width:100%;}
+.g-col-md-11{width:91.66666667%;}
+.g-col-md-10{width:83.33333333%; }
+.g-col-md-9{width:75%;}
+.g-col-md-8{width:66.66666667%;}
+.g-col-md-7{width:58.33333333%;}
+.g-col-md-6{width:50%;}
+.g-col-md-5{width:41.66666667%;}
+.g-col-md-4{width:33.33333333%;}
+.g-col-md-3{width:25%;}
+.g-col-md-2{width:16.66666666%;}
+.g-col-md-1{width:8.88888888%;}
+}
   /*----------------------------------------------SMALL SCREEN*/
-  @media(max-width:991px) and (min-width:768px){
-    .g-col-sm-12{width:100%;}
-    .g-col-sm-11{width:91.66666667%;}
-    .g-col-sm-10{width:83.33333333%; }
-    .g-col-sm-9{width:75%;}
-    .g-col-sm-8{width:66.66666667%;}
-    .g-col-sm-7{width:58.33333333%;}
-    .g-col-sm-6{width:50%;}
-    .g-col-sm-5{width:41.66666667%;}
-    .g-col-sm-4{width:33.33333333%;}
-    .g-col-sm-3{width:25%;}
-    .g-col-sm-2{width:16.66666666%;}
-    .g-col-sm-1{width:8.88888888%;}
-                    }
+  @media(max-width:768px) and (min-width:426px){
+.g-col-sm-12{width:100%;}
+.g-col-sm-11{width:91.66666667%;}
+.g-col-sm-10{width:83.33333333%; }
+.g-col-sm-9{width:75%;}
+.g-col-sm-8{width:66.66666667%;}
+.g-col-sm-7{width:58.33333333%;}
+.g-col-sm-6{width:50%;}
+.g-col-sm-5{width:41.66666667%;}
+.g-col-sm-4{width:33.33333333%;}
+.g-col-sm-3{width:25%;}
+.g-col-sm-2{width:16.66666666%;}
+.g-col-sm-1{width:8.88888888%;}
+}
 
 /*----------------------------------------------EXTRA SMALL SCREEN*/
-  @media(max-width:767px){
-    .g-col-xm-12{width:100%;}
-    .g-col-xm-11{width:91.66666667%;}
-    .g-col-xm-10{width:83.33333333%; }
-    .g-col-xm-9{width:75%;}
-    .g-col-xm-8{width:66.66666667%;}
-    .g-col-xm-7{width:58.33333333%;}
-    .g-col-xm-6{width:50%;}
-    .g-col-xm-5{width:41.66666667%;}
-    .g-col-xm-4{width:33.33333333%;}
-    .g-col-xm-3{width:25%;}
-    .g-col-xm-2{width:16.66666666%;}
-    .g-col-xm-1{width:8.88888888%;}
-                    }
+@media(max-width:425px) and (min-width:376px){
+.g-col-xm-12{width:100%;}
+.g-col-xm-11{width:91.66666667%;}
+.g-col-xm-10{width:83.33333333%; }
+.g-col-xm-9{width:75%;}
+.g-col-xm-8{width:66.66666667%;}
+.g-col-xm-7{width:58.33333333%;}
+.g-col-xm-6{width:50%;}
+.g-col-xm-5{width:41.66666667%;}
+.g-col-xm-4{width:33.33333333%;}
+.g-col-xm-3{width:25%;}
+.g-col-xm-2{width:16.66666666%;}
+.g-col-xm-1{width:8.88888888%;}
+}
+@media(max-width:375px)and (min-width:321px){
+.g-col-sxm-12{width:375px;}
+.g-col-sxm-11{width:91.66666667%;}
+.g-col-sxm-10{width:83.33333333%; }
+.g-col-sxm-9{width:75%;}
+.g-col-sxm-8{width:66.66666667%;}
+.g-col-sxm-7{width:58.33333333%;}
+.g-col-sxm-6{width:50%;}
+.g-col-sxm-5{width:41.66666667%;}
+.g-col-sxm-4{width:33.33333333%;}
+.g-col-sxm-3{width:25%;}
+.g-col-sxm-2{width:16.66666666%;}
+.g-col-sxm-1{width:8.88888888%;}
+}
+@media(max-width:320px){
+.g-col-sxmI-12{width:100%;}
+.g-col-sxmI-11{width:91.66666667%;}
+.g-col-sxmI-10{width:83.33333333%; }
+.g-col-sxmI-9{width:75%;}
+.g-col-sxmI-8{width:66.66666667%;}
+.g-col-sxmI-7{width:58.33333333%;}
+.g-col-sxmI-6{width:50%;}
+.g-col-sxmI-5{width:41.66666667%;}
+.g-col-sxmI-4{width:33.33333333%;}
+.g-col-sxmI-3{width:25%;}
+.g-col-sxmI-2{width:16.66666666%;}
+.g-col-sxmI-1{width:8.88888888%;}
+}
   
   /*====================================================
  MENU (NAV) 
@@ -135,99 +242,97 @@ text-decoration: none;
 color: #fafafa;
              }
 
-    .ui-menu > a:hover {
+.ui-menu > a:hover {
 text-decoration: none;
 color: #55ACEE;
 text-decoration: overline;
              }
  
-             .submenu {
-                margin-top: 5px;
-                position: absolute;
-                float: left;
-                min-width: 200px;
-                text-align: justify;
-                min-width: 200px;
-                background-color: #5b5b5b; 
-                border-bottom:2px solid #8f8f8f;
-                border-top:2px solid #8f8f8f;
+.submenu {
+margin-top: 5px;
+position: absolute;
+float: left;
+min-width: 200px;
+text-align: justify;
+min-width: 200px;
+background-color: #5b5b5b; 
+border-bottom:2px solid #8f8f8f;
+border-top:2px solid #8f8f8f;
+
+}
                 
-                }
+.submenu a{
+text-transform: capitalize;
+margin-left: 10px;
+text-decoration: none;
+color: #fafafa; 
+}
                 
-                .submenu a{
-                    text-transform: capitalize;
-                    margin-left: 10px;
-                    text-decoration: none;
-                    color: #fafafa; 
+.submenu a:hover{
+transition-duration: 1s;
+text-decoration: none;
+color: #55ACEE;
+text-decoration: overline;
+}
                 
-                    }
+.submenu {
+transition-duration: .2s;
+visibility: hidden;
+}
                 
-                .submenu a:hover{
-                    transition-duration: 1s;
-                    text-decoration: none;
-                    color: #55ACEE;
-                    text-decoration: overline;
+.ui-menu:hover > .submenu {
+visibility: visible;
+}
+                
+.m-submenu {
+margin-top: -10%;
+margin-left: 100%;
+position: absolute;
+float: right;
+min-width: 200px;
+text-align: justify;
+background-color: #5b5b5b; 
+border-bottom:2px solid #8f8f8f;
+border-top:2px solid #8f8f8f;
+}
+                
+.m-submenu {
+transition-duration: .2s;
+display: none;
+}
+                
+.mg-submenu:hover .m-submenu {
+display: block;
+}
+                
+.u-submenu {
+margin-top: -10%;
+margin-left: 100%;
+position: absolute;
+float: right;
+min-width: 200px;
+text-align: justify;
+background-color: #5b5b5b; 
+border-bottom:2px solid #8f8f8f;
+border-top:2px solid #8f8f8f;
+}
                     
-                        }
-                
-                .submenu {
-                transition-duration: .2s;
-                visibility: hidden;
-                
-                      }
-                
-                .ui-menu:hover > .submenu {
-                visibility: visible;
-                         
-                }
-                
-                .m-submenu {
-                margin-top: -10%;
-                margin-left: 100%;
-                position: absolute;
-                float: right;
-                min-width: 200px;
-                text-align: justify;
-                background-color: #5b5b5b; 
-                border-bottom:2px solid #8f8f8f;
-                border-top:2px solid #8f8f8f;
-                      }
-                
-                .m-submenu {
-                transition-duration: .2s;
-                display: none;
-                    }
-                
-                 .mg-submenu:hover .m-submenu {
-                display: block;
-                      }
-                
-                .u-submenu {
-                    margin-top: -10%;
-                    margin-left: 100%;
-                    position: absolute;
-                    float: right;
-                    min-width: 200px;
-                    text-align: justify;
-                    background-color: #5b5b5b; 
-                    border-bottom:2px solid #8f8f8f;
-                    border-top:2px solid #8f8f8f;
-                          }
+.u-submenu {
+transition-duration: .2s;
+display: none;
+}
                     
-                .u-submenu {
-                transition-duration: .2s;
-                display: none;
-                        }
-                    
-                .um-submenu:hover .u-submenu {
-                display: block;
-                          }
+.um-submenu:hover .u-submenu {
+display: block;
+}
   /*====================================================
  HEADER, LOGO AND EMBLEM 
   ====================================================*/  
     .ui-header{
-min-height: 300px;
+height: auto;
 background-color: #000000;
+box-shadow: 0 0 3px 0 #4d4d4d;
+margin-bottom: 15px;
 }
 
     .ui-logo{
@@ -241,23 +346,28 @@ transition: all .5s ease-in-out;
 -moz-transition: all .5s ease-in-out;
 -webkit-transition: all .5s ease-in-out;
             }
-
+          
                                 
-    .ui-emblem{
-min-height: 300px;
+.ui-emblem{
+height: 200px;
 color: #f4f4f4;
 text-transform: uppercase;
 }
 
-    .ui-emblem > h1, h2, h3, h4, h5, h6 {
-text-align: justify;
-text-transform: uppercase;
+
+
+.ui-emblem{
+margin-top: 10%;
+margin-bottom: 5%;
+
+      }
+.name{
+color: #f4f4f4;
+}
+.title{
+color: #f4f4f4;
 }
 
-    .ui-emblem > div {
-margin-top: 20%;
-margin-bottom: 20%;
-      }
 /*====================================================
  SECTION AND ASIDE 
   ====================================================*/  
@@ -290,29 +400,28 @@ animation: cambio 20s infinite alternate linear;
     width: 100%;
         }
         
-        @keyframes cambio {
-            0%{margin-left: 0;}
-            20%{margin-left: 0;}
-            25%{margin-left: -100%}
-            45%{margin-left:-100%}
-            50%{margin-left: -200%}
-            70%{margin-left:-200%}
-            75%{margin-left: -200%}
-            100%{margin-left:-200%}
+@keyframes cambio {
+0%{margin-left: 0;}
+20%{margin-left: 0;}
+25%{margin-left: -100%}
+45%{margin-left:-100%}
+50%{margin-left: -200%}
+70%{margin-left:-200%}
+75%{margin-left: -200%}
+100%{margin-left:-200%}
         }
 /*--------------------------------------------------------------ASIDE*/
 body{
-    background-color: #000000;
+background-color: #000000;
 }
 
 .iu-aside {
-    margin-left: 0;
-    margin-top: 10px;
-    background-color: #d1cbcb;
-    max-width: 520px;
-    text-transform: uppercase;
-    
-    }
+margin-left: 0;
+margin-top: 10px;
+background-color: #d1cbcb;
+max-width: 520px;
+text-transform: uppercase;
+}
 
     .fa-rss-square{
 color: orange;
@@ -414,9 +523,6 @@ margin-bottom: 10px;
  /*====================================================
  FOOTER 
   ====================================================*/                 
-footer h5 {
-    text-transform: uppercase;
-}
             
     .social-links li a i {
 float: left;
@@ -450,30 +556,36 @@ color: white;
  ARTIST PAGE 
   ====================================================*/ 
 .maincard{
-        width: 100%;
-        height: 500px;
-        background-color: #eee;
-        overflow: visible;
-        scroll-margin-bottom: 0;
+width: 100%;
+height: 500px;
+background-color: #fafafa;
+overflow: visible;
 }
+ /*====================================================
+ ALBUM PAGE 
+  ====================================================*/ 
 
 .maincard{
-    overflow: scroll;
+overflow: scroll;
+scrollbar-width: 100%;
+
   }
 
 .card{
-position: relative;
-float: left;
-width: 20rem;
-margin-right: 10px;
+width: 20.1rem;
 margin-left: 15px;
-margin-top: 2%;
-background-color: #f4f4f4;
+margin-top: 25px;
+background-color: #f9ffe3;
+box-shadow: 0 0 10px #4d4d4d81;
+
 }
+.card-body >h1, h2, h3, h4, h5, h6 {color: #000000; text-align: center;}
+.card-body > p{ position: relative; color: #000000;}
 
 
 .card-text{
     text-align: justify;
+    color: #000000;
     
 }
 
@@ -484,6 +596,8 @@ background-color: #f4f4f4;
 
     
 .card-links li a i{
+margin-top: 25px;
+margin-left: 10px;
 background: #94b9fc;
 border-radius: 50%;
 font-size: 16px;
@@ -504,51 +618,52 @@ background:  #033ba3;
 color: #e6e6fc;
     }
 
- /*====================================================
- ALBUM PAGE 
-  ====================================================*/ 
+
 
 .album-card{
     margin-left: 5%;
     
 }
 
-.text-monospace a {
-    color: #231b94;
-    text-decoration: none;
-    font-size: 16px;
+.alb-header{
+    width: 100%;
+  
+}
+.alb-list{
+    width: 100%;
+
+    
 }
 
-.text-monospace a:hover {
+.alb-list > ul {
+margin-left: 20px;
+    
+}
+
+.alb-footer{
+    max-height: 80px;
+    width: 100%;
+    background-color: #d1cbcb;
+    
+}
+.alb-details > h5, h6{
+    margin-left: 10px;
+color: #000000;
+}
+
+
+.alb-list > ul li a:hover {
     background: #94b9fc;
     color: #fafafa;
     text-decoration: none;
     font-size: 18px;
 
 }
+
 /*========================================
 INFO
 ==========================================*/
-.img-inf-i{
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 10px; 
-    
-    }
-    
-    .img-inf-p{
-        margin-top: 2%;
-     }
 
-article{
-        background-color: #f4f4f4;
-    }
-    
-     @media(max-width:767px){
-            p{width:350px;  text-align: justify; margin: 5px;} 
-            .img-inf-i{width:350px;} 
-     }
-  
 
 
 /*==============================
@@ -557,60 +672,72 @@ CONTRACT
 
 
 .contract-img img{
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 70%;
-    height: auto;
-    border-radius: 1%;
-    box-shadow: 0 0 10px #8f8f8f;
+margin-left: 15%;
+margin-right: 15%;
+margin-top: 5%;
+margin-bottom: 5%;
+width: 70%;
+height: auto;
+border-radius: 1%;
+box-shadow: 0 0 10px #8f8f8f;
 }
 
 
 .contract-title{
-
-    margin-bottom: 15px;
-    border-bottom: 1px solid #8f8f8f;
-    background-color: #55acee7c;
+margin-bottom: 15px;
+border-bottom: 1px solid #8f8f8f;
+background-color: #55acee7c;
 }
 
 .contract-title h1{
-    margin-left: 5%;
-    font-family: Arial, Helvetica, sans-serif;
+margin-left: 5%;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .contract-header{
-    height: auto;
-    width: 70%;
-    margin-top:2%;
-    margin-bottom:2%;
-    background-color: #fafafa;
-    border-radius: 1%;
+height: auto;
+width: 70%;
+margin-top:2%;
+margin-bottom:2%;
+background-color: #fafafa;
+border-radius: 1%;
 }
 
 .f-inpu{
-    width: 80%;
-    margin-left: 5%;
-    margin-right: 2%;
-    margin-bottom: 2%;
-    font-family: Arial, Helvetica, sans-serif;
+width: 80%;
+margin-left: 5%;
+margin-right: 2%;
+margin-bottom: 2%;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .f-inpu-lb{
-    margin-bottom: 0%;
-    margin-left: 5%;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: capitalize;
+margin-bottom: 0%;
+margin-left: 5%;
+font-family: Arial, Helvetica, sans-serif;
+text-transform: capitalize;
 }
 
 .contract-footer{
-    margin-right: 2%;
-    margin-bottom: 2%;
-    text-align: center;
+margin-right: 2%;
+margin-bottom: 2%;
+text-align: center;
 }
 
 /*===============================
 INFO
 =================================*/
+
+article{
+background-color: #000000;
+}
+
+
+
+.pagination{
+margin: 15px auto;
+}
+
+
+
 
