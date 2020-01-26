@@ -341,7 +341,7 @@ align-items: center;
 justify-content: center;
 background-repeat: no-repeat;
 background-size: contain;
-min-height: 320px;
+min-height: 75px;
 transition: all .5s ease-in-out;
 -moz-transition: all .5s ease-in-out;
 -webkit-transition: all .5s ease-in-out;
@@ -349,7 +349,7 @@ transition: all .5s ease-in-out;
           
                                 
 .ui-emblem{
-height: 200px;
+height: 25px;
 color: #f4f4f4;
 text-transform: uppercase;
 }
@@ -372,12 +372,12 @@ color: #f4f4f4;
  SECTION AND ASIDE 
   ====================================================*/  
 .ui-section{
-background-color: #000000;
+background-color: #0c0c0c;
 }
 
 .slider {
-margin-left: 10px;
-width: 95%;
+/*margin-left: 10px;*/
+/*width: 95%;*/
 margin-top: 2%;
 margin-bottom: 2%;
 overflow: hidden;
@@ -397,7 +397,7 @@ animation: cambio 20s infinite alternate linear;
 }
         
 .slider img {
-    width: 100%;
+   width: 100%;
         }
         
 @keyframes cambio {
@@ -417,9 +417,9 @@ background-color: #000000;
 
 .iu-aside {
 margin-left: 0;
-margin-top: 10px;
+/*margin-top: 10px;*/
 background-color: #d1cbcb;
-max-width: 520px;
+/*max-width: 520px;*/
 text-transform: uppercase;
 }
 
@@ -741,3 +741,41 @@ margin: 15px auto;
 
 
 
+
+.ap8{
+    background-color: #5b5b5b; 
+    border-bottom:2px solid #8f8f8f;
+    border-top:2px solid #8f8f8f; 
+    height: 750px;
+}
+
+.sCell {
+	border: 1px solid #999999;
+	display: table-cell;
+    padding: 3px 10px;
+    
+}
+
+/*.sCell-I{
+    width: 20%; 
+}
+
+.sCell-II{
+    width: 20%; 
+}
+.sCell-III{
+    width: 50%; 
+}*/
+
+.sCont {
+	display: table-row;
+}
+
+.sBody {
+	display: table-row-group;
+}
+
+.sTable{
+	display: table;
+	width: 100%;
+}
