@@ -3,59 +3,153 @@
 
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.min.css" integrity="sha256-QaRlBIHoN1LIkxeziW34nknOVrCasnLJY6esf3ldv+k=" crossorigin="anonymous" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/html.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="assets/js/app.js"></script>
     <title>SoyFlow</title>
-
 </head>
 
 <body>
     <header>
-        <div class="row ui-header">
-            <div class="g-col-4 g-col-xm-3 g-col-sm-3 g-col-lg-3 g-col-md-3 g-col-sxm-3 g-col-sxmI-3 ui-logo"></div>
-            <!-- <div class="g-col-8 g-col-xm-3 g-col-sm-3 g-col-lg-3 g-col-md-3 g-col-sxm-3 g-col-sxmI-3 ui-emblem">
-                <div>
-                    <h1 class="name">DominicanMusic</h1>
-                    <h2 class="title">KING MUSIC IN THE DOMINICAN REPUBLIC!</h2>
+<!--HE TERMINADO EN EL DISEÑO AHORA TENGO QUE TRABAJARLE EL JS DEL FORMULARIO, TAMBIEN LE CREE UN CSS APARTE PARA LIMPIAL MAS EL CODIGO, TENGO QUE RESOLVER EL GRILD DEJA UN MARJE A LA DERECHA Y ESTOY USANDO BOOSTRAP, PARA SUBIR EL MUNTO UI-->
+        <nav class="row ui-header">
+            <div class="col-12 logo ui-logo"></div>
+            <div class="col ui-logo"></div>
+            <div class="col ui-logo"></div>
+            <div class="col ui-logo"></div>
+        </nav>
+        <section class="row ap8">
+            <article class="col-2"></article>
+            <article class="col-5 iMar-C">
+                <div class="row">
+                    <p>Welcome to SoyFlow, This is a musical portal where you can freely learn more about your favorite
+                        artists, you can also make an event to get your favorite artist to be present at that event.
+                    </p>
                 </div>
-            </div>-->
-        </div>
-    </header>
-<div class="sTable">
-    <div class="sBody">
-      <div  class="sRow">
-<div class="g-col-6"><img src="assets/images/musicnotes.jpg" style="width: 48rem;" alt=""></div>
-<div class="g-col-6"><img src="assets/images/musicnotes.jpg" style="width: 48rem;" alt=""></div>
- 
-</div><!--me quede aqui estoy trabajando en la pagina de inicio estructurada como la de facebook-->
+                <div class="row">
+                    <img src="/assets/images/musicnote.pn" style="width: 5rem;" alt="">
+                </div>
+            </article>
+            <aside class="col-5 iMar aCont">
+                <div class="input-group mb-3 ">
 
-</div>
-</div>
-    <footer>
-        <div class="row ui-footer">
-            <div class="g-col-5 g-col-sm-12 g-col-lg-6 g-col-md-12 g-col-xm-12 g-col-sxm-12 g-col-sxmI-12 g-col-sxm-12">
-                <div class="footer-details">
-                    <ul>
+                    <div class="container">
+                        <p>Sing in:</p>
+                    </div>
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username or company name" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2">@example.com</span>
+                    </div>
+                    <input type="email" class="form-control" id="basic-url" aria-describedby="basic-addon2">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">Your address</span>
+                    </div>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+
+                <label for="basic-url">Your URL </label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                    </div>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">+1</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Phone number" aria-label="Phone"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Password</span>
+                    </div>
+                    <input type="password" aria-label="Password" class="form-control">
+
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Confirm Password</span>
+                    </div>
+                    <input type="password" aria-label="Password" class="form-control">
+
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        <p> I have carefully read <a
+                                href="https://www.timeinc.net/subs/privacy/termsofservice/pptos.html">the terms and
+                                conditions</a>; I agree with the terms and conditions. </p>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+                <div class="input-group mb-3 iMar">
+
+                    <div class="container">
+                        <p>Login:</p>
+                    </div>
+
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username, Email or Phone" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group ">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Confirm Password</span>
+                    </div>
+                    <input type="password" aria-label="Password" class="form-control">
+
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+
+            </aside>
+        </section>
+
+        <footer class="ui-footer">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <ul class="sMar">
                         <li>
                             <h5>SOY FLOW ©</h5>
-                            <p> Luis Pena, Full Stack Web Developer Student. <br>
-                                Email: jansgreen@gmail.com<br>
-                                www.jansgreem.info </p>
+                            <p>
+                                Luis Pena, Full Stack Web Developer Student. <br />
+                                Email: jansgreen@gmail.com<br />
+                                www.jansgreem.info
+                            </p>
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="g-col-5 g-col-sm-12 g-col-lg-6 g-col-md-12 g-col-xm-12 g-col-sxm-12 g-col-sxmI-12 g-col-sxm-12">
-                <div class="row footer-social">
-                    <h5>Social</h5>
-                    <ul class="social-links" social-links>
+                <div class="col">
+
+                    <ul class="social-links sMar social-links">
+                        <h5>Social</h5>
                         <li class="list-inline-item">
                             <a target="_blank" href="https://www.facebook.com/soyflows/">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -102,9 +196,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col"></div>
             </div>
-        </div>
-    </footer>
+
+        </footer>
+
 </body>
 
 </html>
