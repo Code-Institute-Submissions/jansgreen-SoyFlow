@@ -1,109 +1,497 @@
-.ui-nav{
-    background-color: #5b5b5b; 
-    border-bottom:2px solid #8f8f8f;
-    border-top:2px solid #8f8f8f; 
-    height: 55px;
-          }
-
-          .ap8{
-            background-color: #5b5b5b; 
-            border-bottom:2px solid #8f8f8f;
-            border-top:2px solid #8f8f8f; 
-            height: 750px;
-            color: #ffffff;
-        }
-
-        .iMar{
-            margin-top: 2%;
-            margin-bottom: 2%;
-            
-        }
-
-        .iMar-C{
-            margin-top: auto;
-            margin-bottom: auto;
-            text-align: center;
-            
-        }
-
-        .form-control{
-            max-width: 100%;
-  
-            margin-right: 3%;
-        }
-
-        #basic-addon2{
-            max-width: 100%;
-
-            margin-right: 3%;
-        }
-
-     /*====================================================
-     LOGO // UI-LOGOSIDE
+/*====================================================
+     UI-TITLES
       ====================================================*/
-        .logo{
-            background-image: url(../images/SOYFLOW.jpg);
-            align-items: center;
-            justify-content: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            min-height: 100px;
-            transition: all .5s ease-in-out;
-            -moz-transition: all .5s ease-in-out;
-            -webkit-transition: all .5s ease-in-out;
-            
-                        }
-        .ui-logo{
-            background-color: #000000;
 
-           
-        }
+.mTitle {
+  font-family: "Coda Caption", sans-serif;
+  color: #5aa1fd;
+}
 
-     /*====================================================
+.sTitle {
+}
+
+.cTitle {
+}
+
+/*====================================================
+     forms
+      ====================================================*/
+
+/*====================================================
+     NAV/MENU AND SUBMENU
+====================================================*/
+
+.ui-nav {
+  background-color: #5b5b5b;
+  border-bottom: 2px solid #8f8f8f;
+  border-top: 2px solid #8f8f8f;
+  height: 55px;
+  }
+.ui-menu {
+  margin-top: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  display: table;
+  margin-left: 2%;
+}
+.ui-menu > a {
+  text-decoration: none;
+  color: #fafafa;
+ 
+}
+
+.ui-menu > a:hover {
+  text-decoration: none;
+  color: #55acee;
+  text-decoration: overline;
+}
+
+.submenu {
+  margin-top: 5px;
+  position: absolute;
+  float: left;
+  min-width: 200px;
+  text-align: justify;
+  min-width: 200px;
+  background-color: #5b5b5b;
+  border-bottom: 2px solid #8f8f8f;
+  border-top: 2px solid #8f8f8f;
+}
+
+.submenu a {
+  text-transform: capitalize;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.submenu a:hover {
+  transition-duration: 1s;
+  text-decoration: none;
+  color: #55acee;
+  text-decoration: overline;
+}
+
+.submenu {
+  transition-duration: 0.2s;
+  visibility: hidden;
+}
+
+.ui-menu:hover > .submenu {
+  visibility: visible;
+}
+
+.m-submenu {
+  margin-top: -10%;
+  margin-left: 100%;
+  position: absolute;
+  float: right;
+  min-width: 200px;
+  text-align: justify;
+  background-color: #5b5b5b;
+  border-bottom: 2px solid #8f8f8f;
+  border-top: 2px solid #8f8f8f;
+}
+
+.m-submenu {
+  transition-duration: 0.2s;
+  display: none;
+}
+
+.mg-submenu:hover .m-submenu {
+  display: block;
+}
+
+.u-submenu {
+  margin-top: -10%;
+  margin-left: 100%;
+  position: absolute;
+  float: right;
+  min-width: 200px;
+  text-align: justify;
+  background-color: #5b5b5b;
+  border-bottom: 2px solid #8f8f8f;
+  border-top: 2px solid #8f8f8f;
+}
+
+.u-submenu {
+  transition-duration: 0.2s;
+  display: none;
+}
+
+.um-submenu:hover .u-submenu {
+  display: block;
+}
+
+.ap8 {
+  background-color: #5b5b5b;
+  border-bottom: 2px solid #8f8f8f;
+  border-top: 2px solid #8f8f8f;
+  height: 750px;
+  color: #ffffff;
+}
+
+.iMar {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.iMar-C {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.iAccess {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.form-control {
+  max-width: 100%;
+
+  margin-right: 3%;
+}
+
+#basic-addon2 {
+  max-width: 100%;
+
+  margin-right: 3%;
+}
+
+/*====================================================
+     LOGO // UI-LOGOSIDE AND IMG
+      ====================================================*/
+.logo {
+  background-image: url(../images/SOYFLOW.jpg);
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100px;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+.ui-logo {
+  background-color: #000000;
+}
+
+.ui-header{
+  height: auto;
+  background-color: #000000;
+  box-shadow: 0 0 3px 0 #4d4d4d;
+  
+  }
+/* SET POTITION*/
+  .heaven
+  {
+    position:absolute;
+    height:300px;
+    width:300px;
+    z-index: -1;
+  }
+/* UNSET POTITION*/
+  .eye{
+    position:absolute;
+    height:200px;
+    width:200px;
+    z-index: 1;
+  }
+
+/*====================================================
+     LOGING AND REGISTRER SIDE  
+      ====================================================*/
+
+.iReg {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+/*====================================================
      FOOTER 
       ====================================================*/
-               
-            
+
 .ui-footer {
-    border-top: 10px solid blue;
-    background-color: #000000;
-    color: #fafafa;
-    min-height: 200px;
-               }
-   
-    .footer-social{
-    margin-top: 10px;
-    margin-bottom: 10px;
+  border-top: 10px solid blue;
+  background-color: #000000;
+  color: #fafafa;
+  min-height: 200px;
+}
+
+.footer-social {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sMar {
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+
+.social-links li a i {
+  float: left;
+  width: 32px;
+  height: 32px;
+  padding: 12px 0;
+  border-radius: 50%;
+  font-size: 13px;
+  line-height: 7px;
+  text-align: center;
+  color: #fafafa;
+  background: #8f8f8f;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+  background: #cc0505;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+ /*====================================================
+ ARTIST PAGE 
+  ====================================================*/ 
+  .maincard{
+    width: 100%;
+
+    background-color: #fafafa;
+    overflow: visible;
+    
     }
-                  
-    .sMar{
-margin-top: 3%;
-margin-bottom: 1%;
-    }             
-                
-    .social-links li a i {
-    float: left;
+     /*====================================================
+     ALBUM PAGE 
+      ====================================================*/ 
+    
+    .maincard{
+    overflow: scroll;
+    scrollbar-width: 100%;
+    
+      }
+    
+    .card{
+    width: 20.1rem;
+    margin-left: 15px;
+    margin-top: 25px;
+    background-color: #f9ffe3;
+    box-shadow: 0 0 10px #4d4d4d81;
+    
+    }
+    .card-body >h1, h2, h3, h4, h5, h6 {color: #000000; text-align: center;}
+    .card-body > p{ position: relative; color: #000000;}
+    
+    
+    .card-text{
+        text-align: justify;
+        color: #000000;
+        
+    }
+    
+    
+    .card-links{
+        padding-bottom: 50px;
+        }
+    
+        
+    .card-links li a i{
+    margin-top: 25px;
+    margin-left: 10px;
+    background: #94b9fc;
+    border-radius: 50%;
+    font-size: 16px;
     width: 32px;
     height: 32px;
     padding: 12px 0;
-    border-radius: 50%;
-    font-size: 13px;
     line-height: 7px;
     text-align: center;
     color: #fafafa;
-    background: #8f8f8f;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
+            }
+        
+    .card-links li a i:hover {
+    background:  #033ba3;
+    color: #e6e6fc;
+        }
+    
+    
+    
+    .album-card{
+        margin-left: 5%;
+        
     }
-                    
-                    
-        .social-links li a i:hover {
-    background: #cc0505;
+    
+    .alb-header{
+        width: 100%;
+      
     }
-                    
-        .fa-twitter {
-    background: #55ACEE;
-    color: white;
+    .alb-list{
+        width: 100%;
+    
+        
     }
+    
+    .alb-list > ul {
+    margin-left: 20px;
+        
+    }
+    
+    .alb-footer{
+        max-height: 80px;
+        width: 100%;
+        background-color: #d1cbcb;
+        
+    }
+    .alb-details > h5, h6{
+        margin-left: 10px;
+    color: #000000;
+    }
+    
+    
+    .alb-list > ul li a:hover {
+        background: #94b9fc;
+        color: #fafafa;
+        text-decoration: none;
+        font-size: 18px;
+    
+    }
+
+    /*====================================================
+     TEXT AND PARRAPHAS
+      ====================================================*/
+
+      .iPar{
+        text-align: justify;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 2%;
+      }
+
+      .iPar > h4{
+text-transform: uppercase;
+text-decoration: solid;
+color: rgb(231, 25, 25);
+      }
+
+      .Hpar {
+
+       display: none;
+      }
+
+      .arMiHi {
+min-height: 675px;
+      }
+
+      
+/*==============================
+CONTRACT
+================================*/
+
+
+.contract-img img{
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 70%;
+  height: auto;
+  border-radius: 1%;
+  box-shadow: 0 0 10px #8f8f8f;
+  }
+  
+  
+  .contract-title{
+  margin-bottom: 15px;
+  border-bottom: 1px solid #8f8f8f;
+  background-color: #55acee7c;
+  }
+  
+  .contract-title h1{
+  margin-left: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .contract-header{
+  height: auto;
+  width: 70%;
+  margin-top:2%;
+  margin-bottom:2%;
+  background-color: #fafafa;
+  border-radius: 1%;
+  }
+  
+  .f-inpu{
+  width: 80%;
+  margin-left: 5%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .f-inpu-lb{
+  margin-bottom: 0%;
+  margin-left: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  }
+  
+  .contract-footer{
+  margin-top: auto;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  }
+
+.card-header{
+  min-width: 100%;
+  display: table-header-group;
+}
+
+.card{
+  min-width: 100rem;
+}
+
+#cImg{
+  min-width: 100%;
+}
+
+.contract-form-1{
+  display: block;
+  float: left;
+}
+.contract-form-2{
+  display: block;
+  float: right;
+}
+
+
+.card-footer{
+  min-width: 60rem;
+  display: inline-table;
+  }
+
+/*==============================
+ARTIST
+================================*/
+
+.Min-card{
+  background-color: #ffffce;
+  border-radius: 3%;
+  -webkit-border-radius: 3%;
+  -moz-border-radius: 3%;
+  -ms-border-radius: 3%;
+  -o-border-radius: 3%;
+}

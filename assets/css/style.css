@@ -718,10 +718,10 @@ font-family: Arial, Helvetica, sans-serif;
 text-transform: capitalize;
 }
 
-.contract-footer{
-margin-right: 2%;
-margin-bottom: 2%;
-text-align: center;
+
+
+.card{
+   min-width: 700px;
 }
 
 /*===============================

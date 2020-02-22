@@ -1,36 +1,34 @@
 
+$(document).ready(function(){
+$("#hParI_O").click(function() {
+  $("span").hide(200);
+  $("#hParI_I").show(200);
+})
 
-function I_vermas(id){
-    if(id=="mas"){
-    document.getElementById("desplegar").style.display="block";   
-    document.getElementById("mas").style.display="none"; 
-    }
-    else{
-    document.getElementById("desplegar").style.display="none";
-    document.getElementById("mas").style.display="inline";
-    }
+$("#hParI_I").click(function() {
+  $("span").show(200);
+  $("#hParI_I").hide(200);
+})
+})
+
+/*==================================================================
+VALIDATION
+==================================================================*/
+function formVal() {
+  var user = document.getElementById(user);
+  var iUsername = document.getElementById(iUsername);
+  var iFullName = document.getElementById(iFullName);
+  var iEmail = document.getElementById(iEmail);
+  var basicUrl = document.getElementById(basicUrl);
+  var iAddress = document.getElementById(iAddress);
+  var iState = document.getElementById(iState);
+  var iCity = document.getElementById(iCity);
+  var iZip = document.getElementById(iZip);
 }
 
-function II_vermas(id){
-    if(id=="II_mas"){
-    document.getElementById("II_desplegar").style.display="block";   
-    document.getElementById("II_mas").style.display="none"; 
-    }
-    else{
-    document.getElementById("II_desplegar").style.display="none";
-    document.getElementById("II_mas").style.display="inline";
-    }
-}
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
 
-function III_vermas(id){
-    if(id=="III_mas"){
-    document.getElementById("III_desplegar").style.display="block";   
-    document.getElementById("III_mas").style.display="none"; 
-    }
-    else{
-    document.getElementById("III_desplegar").style.display="none";
-    document.getElementById("III_mas").style.display="inline";
-    }
-}
-
-
+var element = document.getElementById("div1");
+element.appendChild(para);
