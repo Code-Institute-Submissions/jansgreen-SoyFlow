@@ -1,4 +1,16 @@
 /*====================================================
+    GENERAL
+      ====================================================*/
+
+li {
+  list-style: none;
+}
+
+ul {
+  text-decoration: none;
+}
+
+/*====================================================
      UI-TITLES
       ====================================================*/
 
@@ -26,7 +38,7 @@
   border-bottom: 2px solid #8f8f8f;
   border-top: 2px solid #8f8f8f;
   height: 55px;
-  }
+}
 .ui-menu {
   margin-top: 15px;
   font-family: "Open Sans", sans-serif;
@@ -38,7 +50,6 @@
 .ui-menu > a {
   text-decoration: none;
   color: #fafafa;
- 
 }
 
 .ui-menu > a:hover {
@@ -182,27 +193,25 @@
   background-color: #000000;
 }
 
-.ui-header{
+.ui-header {
   height: auto;
   background-color: #000000;
   box-shadow: 0 0 3px 0 #4d4d4d;
-  
-  }
+}
 /* SET POTITION*/
-  .heaven
-  {
-    position:absolute;
-    height:300px;
-    width:300px;
-    z-index: -1;
-  }
+.heaven {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  z-index: -1;
+}
 /* UNSET POTITION*/
-  .eye{
-    position:absolute;
-    height:200px;
-    width:200px;
-    z-index: 1;
-  }
+.eye {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  z-index: 1;
+}
 
 /*====================================================
      LOGING AND REGISTRER SIDE  
@@ -260,148 +269,140 @@
   color: white;
 }
 
- /*====================================================
+/*====================================================
  ARTIST PAGE 
-  ====================================================*/ 
-  .maincard{
-    width: 100%;
+  ====================================================*/
+.maincard {
+  width: 100%;
 
-    background-color: #fafafa;
-    overflow: visible;
-    
-    }
-     /*====================================================
+  background-color: #fafafa;
+  overflow: visible;
+}
+/*====================================================
      ALBUM PAGE 
-      ====================================================*/ 
-    
-    .maincard{
-    overflow: scroll;
-    scrollbar-width: 100%;
-    
-      }
-    
-    .card{
-    width: 20.1rem;
-    margin-left: 15px;
-    margin-top: 25px;
-    background-color: #f9ffe3;
-    box-shadow: 0 0 10px #4d4d4d81;
-    
-    }
-    .card-body >h1, h2, h3, h4, h5, h6 {color: #000000; text-align: center;}
-    .card-body > p{ position: relative; color: #000000;}
-    
-    
-    .card-text{
-        text-align: justify;
-        color: #000000;
-        
-    }
-    
-    
-    .card-links{
-        padding-bottom: 50px;
-        }
-    
-        
-    .card-links li a i{
-    margin-top: 25px;
-    margin-left: 10px;
-    background: #94b9fc;
-    border-radius: 50%;
-    font-size: 16px;
-    width: 32px;
-    height: 32px;
-    padding: 12px 0;
-    line-height: 7px;
-    text-align: center;
-    color: #fafafa;
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-            }
-        
-    .card-links li a i:hover {
-    background:  #033ba3;
-    color: #e6e6fc;
-        }
-    
-    
-    
-    .album-card{
-        margin-left: 5%;
-        
-    }
-    
-    .alb-header{
-        width: 100%;
-      
-    }
-    .alb-list{
-        width: 100%;
-    
-        
-    }
-    
-    .alb-list > ul {
-    margin-left: 20px;
-        
-    }
-    
-    .alb-footer{
-        max-height: 80px;
-        width: 100%;
-        background-color: #d1cbcb;
-        
-    }
-    .alb-details > h5, h6{
-        margin-left: 10px;
-    color: #000000;
-    }
-    
-    
-    .alb-list > ul li a:hover {
-        background: #94b9fc;
-        color: #fafafa;
-        text-decoration: none;
-        font-size: 18px;
-    
-    }
+      ====================================================*/
 
-    /*====================================================
+.maincard {
+  overflow: scroll;
+  scrollbar-width: 100%;
+}
+
+.card {
+  width: 20.1rem;
+  margin-left: 15px;
+  margin-top: 25px;
+  background-color: #f9ffe3;
+  box-shadow: 0 0 10px #4d4d4d81;
+}
+.card-body > h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  text-align: center;
+}
+.card-body > p {
+  position: relative;
+  color: #000000;
+}
+
+.card-text {
+  text-align: justify;
+  color: #000000;
+}
+
+.card-links {
+  padding-bottom: 50px;
+}
+
+.card-links li a i {
+  margin-top: 25px;
+  margin-left: 10px;
+  background: #94b9fc;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  padding: 12px 0;
+  line-height: 7px;
+  text-align: center;
+  color: #fafafa;
+  transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+.card-links li a i:hover {
+  background: #033ba3;
+  color: #e6e6fc;
+}
+
+.album-card {
+  margin-left: 5%;
+}
+
+.alb-header {
+  width: 100%;
+}
+.alb-list {
+  width: 100%;
+}
+
+.alb-list > ul {
+  margin-left: 20px;
+}
+
+.alb-footer {
+  max-height: 80px;
+  width: 100%;
+  background-color: #d1cbcb;
+}
+.alb-details > h5,
+h6 {
+  margin-left: 10px;
+  color: #000000;
+}
+
+.alb-list > ul li a:hover {
+  background: #94b9fc;
+  color: #fafafa;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*====================================================
      TEXT AND PARRAPHAS
       ====================================================*/
 
-      .iPar{
-        text-align: justify;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 2%;
-      }
+.iPar {
+  text-align: justify;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
 
-      .iPar > h4{
-text-transform: uppercase;
-text-decoration: solid;
-color: rgb(231, 25, 25);
-      }
+.iPar > h4 {
+  text-transform: uppercase;
+  text-decoration: solid;
+  color: rgb(231, 25, 25);
+}
 
-      .Hpar {
+.Hpar {
+  display: none;
+}
 
-       display: none;
-      }
+.arMiHi {
+  min-height: 675px;
+}
 
-      .arMiHi {
-min-height: 675px;
-      }
-
-      
 /*==============================
 CONTRACT
 ================================*/
 
-
-.contract-img img{
+.contract-img img {
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 5%;
@@ -410,88 +411,161 @@ CONTRACT
   height: auto;
   border-radius: 1%;
   box-shadow: 0 0 10px #8f8f8f;
-  }
-  
-  
-  .contract-title{
+}
+
+.contract-title {
   margin-bottom: 15px;
   border-bottom: 1px solid #8f8f8f;
   background-color: #55acee7c;
-  }
-  
-  .contract-title h1{
+}
+
+.contract-title h1 {
   margin-left: 5%;
   font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .contract-header{
+}
+
+.contract-header {
   height: auto;
   width: 70%;
-  margin-top:2%;
-  margin-bottom:2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   background-color: #fafafa;
   border-radius: 1%;
-  }
-  
-  .f-inpu{
+}
+
+.f-inpu {
   width: 80%;
   margin-left: 5%;
   margin-right: 2%;
   margin-bottom: 2%;
   font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .f-inpu-lb{
+}
+
+.f-inpu-lb {
   margin-bottom: 0%;
   margin-left: 5%;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;
-  }
-  
-  .contract-footer{
+}
+
+.contract-footer {
   margin-top: auto;
   margin-right: 2%;
   margin-bottom: 2%;
   text-align: center;
-  }
+}
 
-.card-header{
+.card-header {
   min-width: 100%;
   display: table-header-group;
 }
 
-.card{
+.card {
   min-width: 100rem;
 }
 
-#cImg{
+#cImg {
   min-width: 100%;
 }
 
-.contract-form-1{
+.contract-form-1 {
   display: block;
   float: left;
 }
-.contract-form-2{
+.contract-form-2 {
   display: block;
   float: right;
 }
 
-
-.card-footer{
+.card-footer {
   min-width: 60rem;
   display: inline-table;
-  }
+}
 
 /*==============================
 ARTIST
 ================================*/
 
-.Min-card{
+.Min-card {
   background-color: #ffffce;
   border-radius: 3%;
   -webkit-border-radius: 3%;
   -moz-border-radius: 3%;
   -ms-border-radius: 3%;
   -o-border-radius: 3%;
+  -webkit-box-shadow: 10px 10px 5px -5px rgba(207, 240, 170, 1);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(207, 240, 170, 1);
+  box-shadow: 10px 10px 5px -5px rgba(207, 240, 170, 1);
 }
+
+.alCard {
+  width: 30rem;
+  background-color: #ffffce;
+
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+
+  -webkit-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+#alImg {
+  width: 30rem;
+}
+
+/*=======================================================================
+CSS FOR JS
+=========================================================================*/
+#alrUser {
+  display: none;
+  margin-right: 80%;
+  position: absolute;
+  background-color: #cc05056e;
+  color: #ffffff;
+  text-decoration: solid;
+  height: 45px;
+  width: 200px;
+  z-index: 1;
+}
+
+#colorGreen {
+  background-color: #18861d;
+}
+#alrReg {
+  display: none;
+  margin-top: 2%;
+  margin-right: 80%;
+  position: absolute;
+  background-color: #cc05056e;
+  color: #ffffff;
+  text-decoration: solid;
+  height: 45px;
+  width: 200px;
+  z-index: 1;
+}
+#alrContr, #alrContrPhone, #alrContrEmail, #alrContrPassword, #alrContrEaddress, #alrContrAddress, #alrContrFname, #alrContrUname {
+ display: none;
+  margin-top: 2%;
+  margin-right: 80%;
+  position: absolute;
+  background-color: #cc05056e;
+  color: #ffffff;
+  text-decoration: solid;
+  height: 45px;
+  width: 200px;
+  z-index: 1;
+}
+
+#secClaInf{
+  display: none;
+}
+
+#hParI_I, #hParI_O{
+  background-color: #b8b8b8;
+  border: 1px solid #e9e9e9;
+}
+

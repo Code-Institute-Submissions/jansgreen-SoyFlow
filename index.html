@@ -4,88 +4,93 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/html.css" />
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="assets/js/app.js"></script>
+    <!--SCRIPTS-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/app.js"></script>
+
     <title>SoyFlow</title>
 </head>
 
 <body>
+
     <header></header>
-        <!--HE TERMINADO EN EL DISEÑO AHORA TENGO QUE TRABAJARLE EL JS DEL FORMULARIO, TAMBIEN LE CREE UN CSS APARTE PARA LIMPIAL MAS EL CODIGO, TENGO QUE RESOLVER EL GRILD DEJA UN MARJE A LA DERECHA Y ESTOY USANDO BOOSTRAP, PARA SUBIR EL MUNTO UI-->
-        <nav class="row ui-header">
-            <div class="col-12 col-xs-12 logo ui-logo"></div>
-            <div class="col ui-logo"></div>
-            <div class="col ui-logo"></div>
-            <div class="col ui-logo"></div>
-        </nav>
-    
-        
-        <section class="row ap8">
-            <article class="col-5 iMar-C">
-                <p>Welcome to SoyFlow, This is a musical portal where you can freely learn more about your favorite
-                    artists, you can also make an event to get your favorite artist to be present at that event.
-                </p>
-            </article>
-            <article class="col-2 iAccess">
-                <div class="row">
-                    <div class="sAccess">
-                        <div class="">
-                            <div class="mTitle"><label for="basic-url mTitle">Loging</label></div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">User</span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                            aria-describedby="basic-addon1">
-                    </div>
-    
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Password</span>
-                        </div>
-                        <input type="password" class="form-control" placeholder="Password" aria-label="Username"
-                            aria-describedby="basic-addon1">
-                            <button type="submit" class="btn btn-primary">Login</button>
-                    </div>
-                </div>
-                </div>
-              
-    
-    
-                </div>
-                <div class="row ">
-                    <img src="/assets/images/musicnote.pn" style="width: 5rem;" alt="">
-                </div>
-            </article>
-            <article class="col-1 iBor"></article>
+    <!--HE TERMINADO EN EL DISEÑO AHORA TENGO QUE TRABAJARLE EL JS DEL FORMULARIO, TAMBIEN LE CREE UN CSS APARTE PARA LIMPIAL MAS EL CODIGO, TENGO QUE RESOLVER EL GRILD DEJA UN MARJE A LA DERECHA Y ESTOY USANDO BOOSTRAP, PARA SUBIR EL MUNTO UI-->
+    <nav class="row ui-header">
+        <div class="col-12 col-xs-12 logo ui-logo"></div>
+        <div class="col ui-logo"></div>
+        <div class="col ui-logo"></div>
+        <div class="col ui-logo"></div>
+    </nav>
 
-            <aside class="col-4  iMar aCont">
 
-                <!--USER LOGIN AND SING IN-->
-                <form class="row formVal" action="" method="post">
-                    <div class="iReg">
-                    <div class="mTitle"><label for="basic-url">Sing in</label></div>
+    <section class="row ap8">
+        <article class="col-5 iMar-C">
+            <p>Welcome to SoyFlow, This is a musical portal where you can freely learn more about your favorite
+                artists, you can also make an event to get your favorite artist to be present at that event.
+
+            </p>
+        </article>
+        <article class="col-2 iAccess">
+            <div class="row">
+                <div class="sAccess">
+                    <div class="">
+                        <div class="mTitle"><label for="basic-url mTitle">Loging</label></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="userSpan">User</span>
+                                <p class="alert alert-primary" role="alert" id="alrUser"></p> 
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1" id="userLog">
+
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="passwordSpan">Password</span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Password" aria-label="Username"
+                                aria-describedby="basic-addon1" id="passwordLog">
+                            <button type="submit" class="btn btn-primary" id="logSending">Login</button>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        <article class="col-1 iBor"></article>
+
+        <aside class="col-4  iMar aCont">
+
+            <!--USER LOGIN AND SING IN-->
+            <form class="row">
+                <div class="iReg">
+                    <div class="mTitle"><label for="basic-url">Sing in</label> 
+                    </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="sUser">User</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" id="iUsername"
-                            aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            id="iUsername" aria-describedby="basic-addon1">
                     </div>
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Full Name</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Full Name" aria-label="Username" id="iFullName"
-                            aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Full Name" aria-label="Username"
+                            id="iFullName" aria-describedby="basic-addon1">
                     </div>
 
 
@@ -97,7 +102,7 @@
                         </div>
                     </div>
 
-                   <div class="mTitle"><label for="basic-url">URL bussiness</label></div> 
+                    <div class="mTitle"><label for="basic-url">URL bussiness</label></div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
@@ -117,114 +122,118 @@
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                           <span class="input-group-text">Address</span>
+                            <span class="input-group-text">Address</span>
                         </div>
                         <input type="text" class="form-control" aria-label="Your Address" id="iAddress">
                         <div class="input-group-append">
                         </div>
-                            <div class="input-group mb-3">
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <div class="mTitle"> <label for="inputCity">City</label></div> 
-                                        <input type="text" class="form-control" id="iCity">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <div class="mTitle">  <label for="inputState">State</label></div>
-                                        <select id="iState" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <div class="mTitle"><label for="inputZip">Zip</label></div>
-                                        <input type="text" class="form-control" id="iZip">
-                                    </div>
+                        <div class="input-group mb-3">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <div class="mTitle"> <label for="inputCity">City</label></div>
+                                    <input type="text" class="form-control" id="iCity">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <div class="mTitle"> <label for="inputState">State</label></div>
+                                    <select id="iState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <div class="mTitle"><label for="inputZip">Zip</label></div>
+                                    <input type="text" class="form-control" id="iZip">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">
-                                        I have read and <a href="https://page-one.springer.com/pdf/preview/10.1007/3-540-36467-6_10">agree with the policies</a> and standards.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>    
-                            <button type="submit" class="btn btn-primary">Sign in</button>
                         </div>
-                </form>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    I have read and <a
+                                        href="https://page-one.springer.com/pdf/preview/10.1007/3-540-36467-6_10">agree
+                                        with the policies</a> and standards.
+                                </label>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary"id="singSendding">Sign in</button>
+                    <p class="alert alert-primary" role="alert" id="alrReg"></p>
+                </div>
+            </form>
 
 
-            </aside>
-        </section>
+        </aside>
+    </section>
 
-        <footer class="row ui-footer">
+    <footer class="row ui-footer">
 
-            <div class="col"></div>
-            <div class="col">
-                <ul class="sMar">
-                    <li>
-                        <h5>SOY FLOW ©</h5>
-                        <p>
-                            Luis Pena, Full Stack Web Developer Student. <br />
-                            Email: jansgreen@gmail.com<br />
-                            www.jansgreem.info
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="col">
+        <div class="col"></div>
+        <div class="col">
+            <ul class="sMar">
+                <li>
+                    <h5>SOY FLOW ©</h5>
+                    <p>
+                        Luis Pena, Full Stack Web Developer Student. <br />
+                        Email: jansgreen@gmail.com<br />
+                        www.jansgreem.info
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
 
-                <ul class="social-links sMar social-links">
-                    <h5>Social</h5>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.facebook.com/soyflows/">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <span class="sr-only">Facebook</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://twitter.com/Ceronlinetv0">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <ul class="social-links sMar social-links">
+                <h5>Social</h5>
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://www.facebook.com/soyflows/">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://twitter.com/Ceronlinetv0">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
 
-                            <span class="sr-only">Twitter</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank"
-                            href="https://www.linkedin.com/in/luis-manuel-pena-mendez-489674139?trk=people-guest_profile-result-card_result-card_full-click">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.pinterest.es/jansgreen/">
-                            <i class="fa fa-pinterest" aria-hidden="true"></i>
-                            <span class="sr-only">Pinterest</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.instagram.com/jans_green">
-                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                            <span class="sr-only">Instagram</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://www.youtube.com/user/jansgreen">
-                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                            <span class="sr-only">YouTube</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a target="_blank" href="https://github.com/jansgreen/SoyFlow.git">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                            <span class="sr-only">github</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col"></div>
-        </footer>
+                        <span class="sr-only">Twitter</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank"
+                        href="https://www.linkedin.com/in/luis-manuel-pena-mendez-489674139?trk=people-guest_profile-result-card_result-card_full-click">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <span class="sr-only">LinkedIn</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://www.pinterest.es/jansgreen/">
+                        <i class="fa fa-pinterest" aria-hidden="true"></i>
+                        <span class="sr-only">Pinterest</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://www.instagram.com/jans_green">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span class="sr-only">Instagram</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://www.youtube.com/user/jansgreen">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <span class="sr-only">YouTube</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a target="_blank" href="https://github.com/jansgreen/SoyFlow.git">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        <span class="sr-only">github</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col"></div>
+    </footer>
 
 </body>
 

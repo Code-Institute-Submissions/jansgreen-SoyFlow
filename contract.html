@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-    <script type="text/javascript" src="assets/JS/app.js"></script>
-    <script  src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="  crossorigin="anonymous"></script>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/app.js"></script>
     
    <!--  <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.min.js"></script>
@@ -92,29 +93,37 @@
                                 
                                     <div class="col-5 contract-form-1">
                                             <label class="row f-inpu-lb"  for="User-name" class="label">User or Company name</label>
-                                            <input class="row f-inpu"  type="text" id="User-name"   placeholder="User or Company name">
+                                            <p class="alert alert-primary" role="alert" id="alrContrUname"></p>
+                                            <input class="row f-inpu"  type="text" id="User_name"   placeholder="User or Company name">
             
                                             <label class="row f-inpu-lb"  for="full-name" class="label">Full Name</label>
-                                            <input class="row f-inpu"  type="text" id="full-name" placeholder="Full Name">
+                                            <p class="alert alert-primary" role="alert" id="alrContrFname"></p>
+                                            <input class="row f-inpu"  type="text" id="full_name" placeholder="Full Name">
             
                                             <label class="row f-inpu-lb"  for="Addres" class="label">Address</label>
+                                            <p class="alert alert-primary" role="alert" id="alrContrAddress"></p>
                                             <input class="row f-inpu"  type="address" id="Address" placeholder="Your Addres">
             
                                             <label class="row f-inpu-lb"  for="E-Addres" class="label">Event Address</label>
-                                            <input class="row f-inpu"  type="addres" id="E-Addres"placeholder="the address where the event will take place.">
+                                            <p class="alert alert-primary" role="alert" id="alrContrEaddress"></p>
+                                            <input class="row f-inpu"  type="addres" id="E_Address"placeholder="the address where the event will take place.">
             
                                         </div>
             
                                     <div class=" col-5 contract-form-2">
             
                                             <label class="row f-inpu-lb" for="email" class="label">Email</label>
+                                            <p class="alert alert-primary" role="alert" id="alrContrEmail"></p>
                                             <input class="row f-inpu" type="email" id="Email" placeholder="your or company Email">
             
                                             <label class="row f-inpu-lb" for="Password" class="label">Password</label>
+                                            <p class="alert alert-primary" role="alert" id="alrContrPassword"></p>
                                             <input  class="row f-inpu"type="password" id="Password" placeholder="Confirmed Password">
             
                                             <label class="row f-inpu-lb" for="phone" class="label">Phone Number</label>
+                                            <p class="alert alert-primary" role="alert" id="alrContrPhone"></p>
                                             <input class="row f-inpu" type="number" id="phone"  placeholder="Your number phone">
+                                            
                                 </div>
             
                                 </div>
@@ -127,7 +136,7 @@
                                         <label class="form-check-label" for="conditions">By checking this box you are accepting
                                             the terms and conditions.</label>
                                     </div>
-                                    <button type="submit" class="btn btn-primary" name="submit">submit</button>
+                                    <button type="button" class="btn btn-primary" name="submit" id="ContSendding">submit</button>
                                 </div>
                             
                 
