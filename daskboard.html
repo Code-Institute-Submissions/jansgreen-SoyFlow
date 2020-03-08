@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        ntegrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/html.css" />
+    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/app.js"></script>
+
+
+    <!--  <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine-html.js"></script> -->
+
+    <title>SoyFlow</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="row ui-header logo ui-logo">
+            <div class="g-col-4 g-col-xm-12 "></div>
+            <div class="g-col-xm-12 ui-emblem">
+                <div></div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="row ui-nav">
+            <!--<div class="g-col-1 g-col-xm-3 ui-menu"><a href="access.html"><i class="fa fa-user" aria-hidden="true"></i></a></div>-->
+            <div class="g-col-1 g-col-xm-3 g-col-sm-3 g-col-sxmI-3 g-col-sxm-3 ui-menu"><a href="index.html">Home</a>
+            </div>
+            <div class="g-col-1 g-col-xm-3 g-col-sm-3 g-col-sxmI-3 g-col-sxm-3 ui-menu"><a href="artist.html">Arts</a>
+            </div>
+            <div class="g-col-1 g-col-xm-3 g-col-sm-3 g-col-sxmI-3 g-col-sxm-3 ui-menu"><a href="albums.html">Album</a>
+            </div>
+
+
+            <div class="g-col-1 g-col-xm-3 g-col-sm-3 g-col-sxmI-3 g-col-sxm-3 ui-menu"><a href="info.html">Info <i
+                        class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                <div class="submenu eye">
+                    <div><a href="salsa.html">salsa</a></div>
+                    <div><a href="bachata.html">bachata</a></div>
+                    <div class="mg-submenu"><a href="merengue.html">merengue <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i></a>
+
+                        <div class="m-submenu">
+                            <div><a href="pericoripiao.html">Perico ripiao</a></div>
+                            <div><a href="mambo.html">mambo</a></div>
+                        </div>
+                    </div>
+                    <div class="um-submenu"><a href="urbans.html">urban music <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i></a>
+
+                        <div class="u-submenu">
+                            <div><a href="rap.html">dominican rap</a></div>
+                            <div><a href="dembow.html">dembow</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </nav>
+    <section class="col-12 arMiHi">
+        <article>
+            <div class="row daskList">
+
+                <button class="btn btn-secondary" onclick="writeToDocument('name')">Album</button>
+                <button class="btn btn-secondary" onclick="writeToDocument('artist')">Artist</button>
+                <button class="btn btn-secondary" onclick="writeToDocument('url')">Url</button>
+                <button class="btn btn-secondary" onclick="writeToDocument('image')">Image</button>
+                <button class="btn btn-secondary" onclick="writeToDocument('listeners')">Listeners</button>
+                <button class="btn btn-secondary" onclick="writeToDocument('playcount')">Playcount</button>
+                <button class="btn btn-secondary" onclick="writeToDocument('tracks')">Tracks</button>
+                <button class="btn btn-secondary" onclick="writeToDocument('tags')">Tags</button>
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Searrch</span>
+                    <input type="text" class="col-12 form-control" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <button>
+                <div class="row contDaskList" id="data"></div>
+                <button onclick="checkAuth()">execute</button>
+            </button>
+
+
+            
+        </article>
+
+    </section>
+
+    </footer>
+</body>
+
+</html>

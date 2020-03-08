@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--SCRIPTS-->
 
+    <!--SCRIPTS-->
+    <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
 
@@ -35,8 +36,9 @@
         <article class="col-5 iMar-C">
             <p>Welcome to SoyFlow, This is a musical portal where you can freely learn more about your favorite
                 artists, you can also make an event to get your favorite artist to be present at that event.
-
+                <div class="mt-5" id="data">
             </p>
+                              
         </article>
         <article class="col-2 iAccess">
             <div class="row">
@@ -60,6 +62,12 @@
                             <input type="password" class="form-control" placeholder="Password" aria-label="Username"
                                 aria-describedby="basic-addon1" id="passwordLog">
                             <button type="submit" class="btn btn-primary" id="logSending">Login</button>
+                            <div class="container my-5 text-center">
+                                <button class="btn btn-primary" onclick="authenticate().then(loadClient)">Google</button>
+                                
+                                    
+                                </div>
+                            </div>
 
                             
                         </div>
@@ -73,7 +81,7 @@
         <aside class="col-4  iMar aCont">
 
             <!--USER LOGIN AND SING IN-->
-            <form class="row">
+           <form action="assets/users/users.txt" method="POST" class="row">
                 <div class="iReg">
                     <div class="mTitle"><label for="basic-url">Sing in</label> 
                     </div>
@@ -161,7 +169,7 @@
                     <button type="submit" class="btn btn-primary"id="singSendding">Sign in</button>
                     <p class="alert alert-primary" role="alert" id="alrReg"></p>
                 </div>
-            </form>
+          </form>
 
 
         </aside>
