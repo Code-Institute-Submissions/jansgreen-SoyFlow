@@ -140,60 +140,130 @@ FORMS AND LOG
 var sUser = sUser;
 console.log(sUser);
 
-
-function singSendding() 
-{
-  var fso  = CreateObject("Scripting.FileSystemObject");  
-   var fh = fso.CreateTextFile("assets/users/Reg.txt", true); 
-   fh.WriteLine(miCadenaDeTexto); 
-   fh.Close(); 
+function singSendding() {
+  var fso = CreateObject("Scripting.FileSystemObject");
+  var fh = fso.CreateTextFile("assets/users/Reg.txt", true);
+  fh.WriteLine(miCadenaDeTexto);
+  fh.Close();
 }
 
 /*==============================================================
-API OF 
+API OF YOUTUBE
 ===============================================================*/
 
- 
-    function authenticate() {
-      return gapi.auth2.getAuthInstance()
-          .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner https://www.googleapis.com/auth/youtubepartner-channel-audit"})
-          .then(function() { console.log("Sign-in successful"); },
-                function(err) { console.error("Error signing in", err); });
+function authenticate() {
+  return gapi.auth2
+    .getAuthInstance()
+    .signIn({
+      scope:
+        "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner https://www.googleapis.com/auth/youtubepartner-channel-audit"
+    })
+    .then(
+      function() {
+        console.log("Sign-in successful");
+      },
+      function(err) {
+        console.error("Error signing in", err);
+      }
+    );
+}
+function loadClient() {
+  gapi.client.setApiKey("AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg");
+  return gapi.client
+    .load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+    .then(
+      function() {
+        console.log("GAPI client loaded for API");
+      },
+      function(err) {
+        console.error("Error loading GAPI client for API", err);
+      }
+    );
+}
+// Make sure the client is loaded and sign-in is complete before calling this method.
+function execute() {
+  return gapi.client.youtube.channels.list({}).then(
+    function(response) {
+      // Handle the results here (response.result has the parsed body).
+      console.log("Response", response);
+    },
+    function(err) {
+      console.error("Execute error", err);
     }
-    function loadClient() {
-      gapi.client.setApiKey("AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg");
-      return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-          .then(function() { console.log("GAPI client loaded for API"); },
-                function(err) { console.error("Error loading GAPI client for API", err); });
-    }
-    // Make sure the client is loaded and sign-in is complete before calling this method.
-    function execute() {
-      return gapi.client.youtube.channels.list({})
-          .then(function(response) {
-                  // Handle the results here (response.result has the parsed body).
-                  console.log("Response", response);
-              },
-                function(err) { console.error("Execute error", err); });
-    }
-    gapi.load("client:auth2", function() {
-      gapi.auth2.init({client_id: "522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com"});
-    });
-  
-  
+  );
+}
+gapi.load("client:auth2", function() {
+  gapi.auth2.init({
+    client_id:
+      "522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com"
+  });
+});
 
 /*========================
 prueba
 ================*/
-var bodyContainer = document.querySelector('data')
-        function spotifyButton() {
-            fetch('https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&scopes=user-library-read&response_type=code&&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                bodyContainer.innerHTML = `${data}`;
-            })
-        } 
-   
+
+var contenido = document.querySelector("#contenido");
+function traer() {
+  fetch(
+    "https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&scopes=user-library-read&response_type=code&&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard")
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    });
+}
+
+$.ajax({
+  url: "https://api.spotify.com/v1/playlists/37i9dQZEVXbKAbrMR8uuf7?market=DO",
+  beforeSend: function(xhr) {
+    xhr.setRequestHeader(
+      "Authorization",
+      "Bearer BQBUoLKFzu8eazJPBRkYP6E7o8WNUsAtxzq9T5xfKq6Xrw4gJT6jyDFEIZl"
+    );
+  },
+  success: function(data) {
+    alert(data);
+    //process the JSON data etc
+  }
+});
+
+$.getJSON(
+  "your-api-url/validate.php?" + $(this).serialize + "callback=?",
+  function(data) {
+    if (data) console.log(data);
+  }
+);
+
+/*======================= AJAX
+
+
+
+var daskCon = document.querySelector('#data')
+function spotifyAuh() {
+  fetch('https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&scopes=user-library-read&response_type=code&&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard', 37i9dQZEVXbKAbrMR8uuf7)
+    .then(res => res.json())
+    .then(data => {
+      data
+      console.log(data)
+      daskCon.innerHTML = `${data}`;
+    })
+}
+
+xhr.getAlbums(['5U4W9E5WsYb2jUQWePT8Xm', '3KyVcddATClQKIdtaap4bV'])
+  .then(function (data) {
+    console.log('Albums information', data);
+  }, function (err) {
+    console.error(err);
+  });
+
+
+
+
+
+=================================*/
+
+/*CLABE API*/
+
 /*=====================
 SPOTIFY AUTORIZACE AND TOKEN
 =======================
@@ -212,10 +282,8 @@ curl -H "Authorization: Basic ODQwMmJmNjc5ZjhiNGU2Yzk3NTY4NjMwNWMyYmMxNWY6Zjk0MD
 https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&scopes=user-library-read&response_type=code&&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard
 =======================*/
 
-
-
 /*
-var request = require("request"); 
+var request = require("request");
 var user_id = "lyo60r7xrt5cexv4nm7uw4wd2";
 var token = "Bearer BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w";
 var playlist_url="https://api.spotify.com/v1/playlists/"+user_id+"/playlists";
@@ -223,14 +291,14 @@ var playlist_url="https://api.spotify.com/v1/playlists/"+user_id+"/playlists";
   function fPlayList() {
       fetch({url:playlist_url, headers:{Authorization:token}})
       .then(res => res.json())
-      .then(data => { 
+      .then(data => {
           console.log(data)
- 
-      }) 
+
+      })
   }*/
 
 /*================================= VAR REQUEST = REQUIRE("NO ESTA FUNCIONANDO")
-var request = require("request"); 
+var request = require("request");
 var user_id = "lyo60r7xrt5cexv4nm7uw4wd2";
 var token = "Bearer BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w";
 var playlist_url="https://api.spotify.com/v1/playlists/"+user_id+"/playlists";
@@ -239,14 +307,14 @@ request({url:playlist_url, headers:{Authorization:token}}, function(err, res) {
   if(res){
     var playlists=Json.parse(res.body);
     var playlist_url = playlists.items[0].href
-    request({url:playlist_url, headers:{"Authorization":token}}, function(err, res) { 
+    request({url:playlist_url, headers:{"Authorization":token}}, function(err, res) {
     if (res){
       var playlist = JSON.parse(res.body);
       console.log("playlist:"+playlist.name);
       playlist.tracks.items.forEach(function(track) {
         document.getElementsById("data").innerHTML = `"playlist:"+${playlist.name}`
         console.log(track.track.name);
-        
+
       });
      }
   })
@@ -263,9 +331,9 @@ request({url:playlist_url, headers:{Authorization:token}}, function(err, res) {
       .then(res => res.json())
       .then(data => { data.setTimeout(600)
           console.log(data)
- 
-      }) 
-  } 
+
+      })
+  }
 
 
 
@@ -368,9 +436,9 @@ function writeToDocument() {
       z.appendChild(name);
       document.getElementById("data").appendChild(z);
     });
-} 
+}
 */
-/*===========================*/ /*CLABE API*/
+/*===========================*/
 /*https://www.youtube.com/watch?v=SPIbNWqyulk
 AIzaSyB3zD_WxamQjZdhXJ08fxVpfdkukZlyLCE*/
 /*===========================*/
@@ -409,8 +477,8 @@ function writeToDocument(type) {
     getData(type, function(data) {
         data = data.results;
         console.log(data[`album`].name);
-        
-        
+
+
         var tableHeaders = getTableHeaders(data[0]);
 
         data.forEach(function(item) {
@@ -436,5 +504,37 @@ function writeToDocument(type) {
   var trackst = document.createTextNode(`${acceAlbum[`tracks`]}`);
   var tags = document.createTextNode(`${acceAlbum[`tags`]}`);
   var fullInfo = `${name + artist + url + listeners + playcount + trackst + tags + fullInfo}`;
+
+
+===============================
+  .getJSON('your-api-url/validate.php?'+$(this).serialize+'callback=?', function(data){
+  if(data)console.log(data);
+  });
+
+   spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', function(err, data) {
+    if (err) console.error(err);
+    else console.log('Artist albums', data);
+  });
+
+  // get Elvis' albums, using Promises through Promise, Q or when
+  spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE')
+    .then(function(data) {
+      console.log('Artist albums', data);
+    }, function(err) {
+      console.error(err);
+    });
+
+    var spotifyApi = new SpotifyWebApi('https://api.spotify.com/v1/playlists/');
+spotifyApi.setAccessToken('BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w');
+spotifyApi.setPromiseImplementation(Q);
+spotifyApi.getAuthInstance('8402bf679f8b4e6c975686305c2bc15f');
+spotifyApi.setApiKey('8402bf679f8b4e6c975686305c2bc15f')
+
+spotifyApi.getArtistAlbums('17HsiXfqKUPoTP6Y5ebs1L:playlist:37i9dQZEVXbKAbrMR8uuf7')
+    .then(function(data) {
+    console.log('Artist albums', data);
+ }, function(err) {
+    console.error(err);
+  });
 
 ===============================================================*/
