@@ -133,8 +133,26 @@ $(document).ready(function() {
   });
 });
 /*==============================================================
+FORMS AND LOG 
+===============================================================*/
+
+/*SignIN*/
+var sUser = sUser;
+console.log(sUser);
+
+
+function singSendding() 
+{
+  var fso  = CreateObject("Scripting.FileSystemObject");  
+   var fh = fso.CreateTextFile("assets/users/Reg.txt", true); 
+   fh.WriteLine(miCadenaDeTexto); 
+   fh.Close(); 
+}
+
+/*==============================================================
 API OF 
 ===============================================================*/
+
  /* 
     function authenticate() {
       return gapi.auth2.getAuthInstance()
