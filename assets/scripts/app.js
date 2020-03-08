@@ -153,7 +153,7 @@ function singSendding()
 API OF 
 ===============================================================*/
 
- /* 
+ 
     function authenticate() {
       return gapi.auth2.getAuthInstance()
           .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner https://www.googleapis.com/auth/youtubepartner-channel-audit"})
@@ -172,50 +172,100 @@ API OF
           .then(function(response) {
                   // Handle the results here (response.result has the parsed body).
                   console.log("Response", response);
-                },
+              },
                 function(err) { console.error("Execute error", err); });
     }
     gapi.load("client:auth2", function() {
       gapi.auth2.init({client_id: "522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com"});
-    });*/
+    });
   
   
 
 /*========================
 prueba
 ================*/
+var bodyContainer = document.querySelector('data')
+        function spotifyButton() {
+            fetch('https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&scopes=user-library-read&response_type=code&&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                bodyContainer.innerHTML = `${data}`;
+            })
+        } 
+   
+/*=====================
+SPOTIFY AUTORIZACE AND TOKEN
+=======================
+Client_Id 8402bf679f8b4e6c975686305c2bc15f
+Client  f9408c256dd64b00ac65e8b4bdad7549
+ClientID_Secret_Together 8402bf679f8b4e6c975686305c2bc15f:f9408c256dd64b00ac65e8b4bdad7549
+ClientID_Secret_BASE64_ENCODE ODQwMmJmNjc5ZjhiNGU2Yzk3NTY4NjMwNWMyYmMxNWY6Zjk0MDhjMjU2ZGQ2NGIwMGFjNjVlOGI0YmRhZDc1NDk=
 
-  /**
-   * Sample JavaScript code for youtube.playlists.list
-   * See instructions for running APIs Explorer code samples locally:
-   * https://developers.google.com/explorer-help/guides/code_samples#javascript
-   */
 
-  function authenticate() {
-    return gapi.auth2.getAuthInstance()
-        .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner"})
-        .then(function() { console.log("Sign-in successful"); },
-              function(err) { console.error("Error signing in", err); });
-  }
-  function loadClient() {
-    gapi.client.setApiKey("AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg");
-    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-        .then(function() { console.log("GAPI client loaded for API"); },
-              function(err) { console.error("Error loading GAPI client for API", err); });
-  }
-  // Make sure the client is loaded and sign-in is complete before calling this method.
-  function execute() {
-    return gapi.client.youtube.playlists.list({})
-        .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                console.log("Response", response);
-              },
-              function(err) { console.error("Execute error", err); });
-  }
-  gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: "522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com"});
-  });
 
+curl -H "Authorization: Basic ODQwMmJmNjc5ZjhiNGU2Yzk3NTY4NjMwNWMyYmMxNWY6Zjk0MDhjMjU2ZGQ2NGIwMGFjNjVlOGI0YmRhZDc1NDk=" -d grant_type=authorization_code -d code=AQB84jEMV1ODCPe7y643Kb7OG5hYt_N1gxoZh0ZXD5Ceo0xnWXMPn8oVilRYHSdzTBbrQUddTO1UOrM1_Bl0UKClXyNtKDnHyEXM4uIhG-NUGkwXXLaKK_q_UC9Nfn2xfWRU8b5sn667bb8ETKSKAAggsS1duySsw5CiUwdUjoey8aGO0jvq14zKI6o1JsZ50a6zppSVSzDa4kyk-dbJs80YpA -d redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard https://accounts.spotify.com/api/token
+
+{"access_token":"BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w","token_type":"Bearer","expires_in":3600,"refresh_token":"AQChtWqIAZEHYxciiOJ-oNPXha0SAtk2wImFN3bRikBl12ZyUmDJfDI4F5UGrtif2vivuZIdOAotHWpfdgmNshWoiZNMhu3BQ_ZvJoAK4bPQkZLcN-foNhoWikgJDEdSDNI","scope":""}
+
+====================== SPOTIFY URL
+https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&scopes=user-library-read&response_type=code&&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard
+=======================*/
+
+
+
+/*
+var request = require("request"); 
+var user_id = "lyo60r7xrt5cexv4nm7uw4wd2";
+var token = "Bearer BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w";
+var playlist_url="https://api.spotify.com/v1/playlists/"+user_id+"/playlists";
+
+  function fPlayList() {
+      fetch({url:playlist_url, headers:{Authorization:token}})
+      .then(res => res.json())
+      .then(data => { 
+          console.log(data)
+ 
+      }) 
+  }*/
+
+/*================================= VAR REQUEST = REQUIRE("NO ESTA FUNCIONANDO")
+var request = require("request"); 
+var user_id = "lyo60r7xrt5cexv4nm7uw4wd2";
+var token = "Bearer BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w";
+var playlist_url="https://api.spotify.com/v1/playlists/"+user_id+"/playlists";
+
+request({url:playlist_url, headers:{Authorization:token}}, function(err, res) {
+  if(res){
+    var playlists=Json.parse(res.body);
+    var playlist_url = playlists.items[0].href
+    request({url:playlist_url, headers:{"Authorization":token}}, function(err, res) { 
+    if (res){
+      var playlist = JSON.parse(res.body);
+      console.log("playlist:"+playlist.name);
+      playlist.tracks.items.forEach(function(track) {
+        document.getElementsById("data").innerHTML = `"playlist:"+${playlist.name}`
+        console.log(track.track.name);
+        
+      });
+     }
+  })
+}
+})
+
+
+*/
+
+/*
+  var contenido = document.querySelector('#contenido')
+  function spotifyButton() {
+      fetch('https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&response_type=code')
+      .then(res => res.json())
+      .then(data => { data.setTimeout(600)
+          console.log(data)
+ 
+      }) 
+  } 
 
 
 

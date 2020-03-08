@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="assets/css/html.css" />
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
@@ -81,15 +82,29 @@
                 <button class="btn btn-secondary" onclick="writeToDocument('tracks')">Tracks</button>
                 <button class="btn btn-secondary" onclick="writeToDocument('tags')">Tags</button>
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Searrch</span>
-                    <input type="text" class="col-12 form-control" placeholder="Username" aria-label="Username"
-                        aria-describedby="basic-addon1">
+                    
+                    <input class="input-group-text" id="basic-addon1" input type="submit" value="Search">
+                    <input type="search" class="col-12 form-control" placeholder="Type here the Artist" aria-describedby="basic-addon1">
+               
                 </div>
             </div>
-            <button>
                 <div class="row contDaskList" id="data"></div>
-                <button class="btn btn-secondary" onclick="execute()">PlayList</button>
-                <button class="btn btn-primary" onclick="authenticate().then(loadClient)">Google</button>
+               
+                <article>
+                    <div class="form">
+                        <img src="images/note.svg" alt="">
+                        <form action="">
+                            <input type="search" value="">
+                            <input type="submit" value="Create">
+                        </form>
+                        <p>Icon created by unlimicon from the Noun Project</p>
+                    </div>
+                    <div class="playlist">
+                        <div class="loader">
+                            <div class="inner-circle"></div>
+                        </div>
+                    </div>
+                </article>      
 
 
             

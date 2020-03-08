@@ -603,3 +603,19 @@ border-right: 2%;
   margin-right: 2%;
   margin-top: 2%;
 }
+
+.btn-primary > a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.btn-danger > a{
+  text-decoration: none;
+  color: #000000;
+  
+}
+
+.BCreate{
+  display: inline-block;
+  ;
+}
