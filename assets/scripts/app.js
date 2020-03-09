@@ -205,19 +205,43 @@ gapi.load("client:auth2", function() {
 /*========================
 prueba
 ================*/
-var apiKey = "AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg";
-var channelId = "PLHhEYO7zXEOrBDzgvQCjQ4uphDVYfSD66";
-var url = "https://www.googleapis.com/youtube/v3/search?key="+apiKey+"&channelId="+channelId+"&part=id,snippet&maxResults=50";
+document.ready(function() {
+var user_id = "lyo60r7xrt5cexv4nm7uw4wd2";
+var token = "Bearer BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w";
+var playlist_url="https://api.spotify.com/v1/playlists/"+user_id+"/playlists";
 
 $.ajax({
-  url: url,
+  url: playlist_url, headers:{Authorization:token},
   method: "GET",
   success:function(response){
-    console.log(response);
-    
-  }
+    console.log(response); }
 });
-console.log("Este punto");
+
+
+});
+
+var contenido = document.querySelector('#data')
+function spotifyButton() {
+var user_id = "lyo60r7xrt5cexv4nm7uw4wd2";
+var token = "Bearer BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w";
+var playlist_url="https://api.spotify.com/v1/playlists/"+user_id+"/playlists";
+    fetch('https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&response_type=code')
+    .then($.ajax({
+      url: playlist_url, headers:{Authorization:token},
+      method: "GET",
+      mode: 'no-cors',
+      success:function(response){
+        console.log(response); }
+    })
+    )
+    .then(res => res.json())
+    .then(data => { data
+        console.log(response)
+
+    })
+}
+
+
 /*=====================*//*
 /* After the API loads, call a function to enable the search box.
 function handleAPILoaded() {
@@ -290,7 +314,7 @@ function fetchVideo(pid) {
 
 
 
-   function traer() {
+   function bSpot() {
     $.ajax({
       url: 'https://www.googleapis.com/youtube/v3/playlists',
       dataType: 'json',
@@ -327,10 +351,6 @@ xhr.getAlbums(['5U4W9E5WsYb2jUQWePT8Xm', '3KyVcddATClQKIdtaap4bV'])
 
 
 
-=================================*/
-
-/*CLABE API*/
-
 /*=====================
 SPOTIFY AUTORIZACE AND TOKEN
 =======================
@@ -339,11 +359,13 @@ Client  f9408c256dd64b00ac65e8b4bdad7549
 ClientID_Secret_Together 8402bf679f8b4e6c975686305c2bc15f:f9408c256dd64b00ac65e8b4bdad7549
 ClientID_Secret_BASE64_ENCODE ODQwMmJmNjc5ZjhiNGU2Yzk3NTY4NjMwNWMyYmMxNWY6Zjk0MDhjMjU2ZGQ2NGIwMGFjNjVlOGI0YmRhZDc1NDk=
 
+curl -H "Authorization: Basic ODQwMmJmNjc5ZjhiNGU2Yzk3NTY4NjMwNWMyYmMxNWY6Zjk0MDhjMjU2ZGQ2NGIwMGFjNjVlOGI0YmRhZDc1NDk=" 
+-d grant_type=authorization_code 
+-d code=AQB84jEMV1ODCPe7y643Kb7OG5hYt_N1gxoZh0ZXD5Ceo0xnWXMPn8oVilRYHSdzTBbrQUddTO1UOrM1_Bl0UKClXyNtKDnHyEXM4uIhG-NUGkwXXLaKK_q
+_UC9Nfn2xfWRU8b5sn667bb8ETKSKAAggsS1duySsw5CiUwdUjoey8aGO0jvq14zKI6o1JsZ50a6zppSVSzDa4kyk-dbJs80YpA -d redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard https://accounts.spotify.com/api/token
 
-
-curl -H "Authorization: Basic ODQwMmJmNjc5ZjhiNGU2Yzk3NTY4NjMwNWMyYmMxNWY6Zjk0MDhjMjU2ZGQ2NGIwMGFjNjVlOGI0YmRhZDc1NDk=" -d grant_type=authorization_code -d code=AQB84jEMV1ODCPe7y643Kb7OG5hYt_N1gxoZh0ZXD5Ceo0xnWXMPn8oVilRYHSdzTBbrQUddTO1UOrM1_Bl0UKClXyNtKDnHyEXM4uIhG-NUGkwXXLaKK_q_UC9Nfn2xfWRU8b5sn667bb8ETKSKAAggsS1duySsw5CiUwdUjoey8aGO0jvq14zKI6o1JsZ50a6zppSVSzDa4kyk-dbJs80YpA -d redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard https://accounts.spotify.com/api/token
-
-{"access_token":"BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w","token_type":"Bearer","expires_in":3600,"refresh_token":"AQChtWqIAZEHYxciiOJ-oNPXha0SAtk2wImFN3bRikBl12ZyUmDJfDI4F5UGrtif2vivuZIdOAotHWpfdgmNshWoiZNMhu3BQ_ZvJoAK4bPQkZLcN-foNhoWikgJDEdSDNI","scope":""}
+{"access_token":"BQAX4QnLuSdR9D1WVtKSrYBcbixBmNY5lB4619AXCkmiH5YHa1iCAFTOJjFcRgAPxtyINsVQsZLbt5DaQYrzYKOJwwfnA1bDH46Cn8RVBjOkM6HYzbZfSUAOB3C6B3DWJWoldhnFkhmbmsVvTrscC56aNvqXiEuD6w",
+"token_type":"Bearer","expires_in":3600,"refresh_token":"AQChtWqIAZEHYxciiOJ-oNPXha0SAtk2wImFN3bRikBl12ZyUmDJfDI4F5UGrtif2vivuZIdOAotHWpfdgmNshWoiZNMhu3BQ_ZvJoAK4bPQkZLcN-foNhoWikgJDEdSDNI","scope":""}
 
 ====================== SPOTIFY URL
 https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&scopes=user-library-read&response_type=code&&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard
@@ -392,15 +414,7 @@ request({url:playlist_url, headers:{Authorization:token}}, function(err, res) {
 */
 
 /*
-  var contenido = document.querySelector('#contenido')
-  function spotifyButton() {
-      fetch('https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&response_type=code')
-      .then(res => res.json())
-      .then(data => { data.setTimeout(600)
-          console.log(data)
 
-      })
-  }
 
 
 
