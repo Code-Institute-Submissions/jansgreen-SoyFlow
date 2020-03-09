@@ -181,6 +181,8 @@ function loadClient() {
       }
     );
 }
+
+
 // Make sure the client is loaded and sign-in is complete before calling this method.
 function execute() {
   return gapi.client.youtube.channels.list({}).then(
@@ -196,33 +198,62 @@ function execute() {
 gapi.load("client:auth2", function() {
   gapi.auth2.init({ client_id:  "522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com"
   });
-  $.ajax({
-    url: 'https://www.googleapis.com/youtube/v3/playlists',
-    dataType: 'json',
-    success: function(response) {
-      console.log(response);
-    }
-  });
-
 
 });
 
 
-function requestUserUploadsPlaylistId() {
-  // See https://developers.google.com/youtube/v3/docs/channels/list
-  var request = gapi.client.youtube.channels.list({
-    mine: true,
-    part: 'contentDetails'
-  });
-  request.execute(function(response) {
-    playlistId = response.result.items[0].contentDetails.relatedPlaylists.uploads;
-    requestVideoPlaylist(playlistId);
-  });
-}
-
 /*========================
 prueba
 ================*/
+var apiKey = "AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg";
+var channelId = "PLHhEYO7zXEOrBDzgvQCjQ4uphDVYfSD66";
+var url = "https://www.googleapis.com/youtube/v3/search?key="+apiKey+"&channelId="+channelId+"&part=id,snippet&maxResults=50";
+
+$.ajax({
+  url: url,
+  method: "GET",
+  success:function(response){
+    console.log(response);
+    
+  }
+});
+console.log("Este punto");
+/*=====================*//*
+/* After the API loads, call a function to enable the search box.
+function handleAPILoaded() {
+  $('#search-button').attr('disabled', false);
+}
+
+// Search for a specified string.
+function search() {
+  var q = $('#query').val();
+  var request = gapi.client.youtube.search.list({
+    q: q,
+    part: 'snippet'
+  });
+
+  request.execute(function(response) {
+    var str = JSON.stringify(response.result);
+    $('#search-container').html('<pre>' + str + '</pre>');
+  });
+}*/
+/*
+function traer() {
+var user_id = "lyo60r7xrt5cexv4nm7uw4wd2";
+const url = "https://api.spotify.com/v1/playlists/"+user_id+"/playlists";
+
+const options = {
+  headers: {
+    Authorization: "Bearer BQDA8ph-zV8MH_dvqD0WtbseTdZgBNAXsYvLW7AgKA03vhw3wsTmI8G3NMwdz8PLdTsOISW8Vn6-xkBb477ITedPOgC1sCo2WYHJK9uDNnlQnx9akptIt3oX8RHtnaiNVv5NL8aGymG9cPKgeG6ohR507lZnqU1kNFku_wtPENIMqcFBeguKfhxO-R2F2QWkrAspjQ-6_A3t2wCh-BnlR0ESNULwz6C2wEBtEu4I0tBUDqGf4QB_Bc1t9zCzXRsWrsaMRYwrkLDsplfqYltDKrRdfx4IDw"
+  }
+};
+
+fetch(url, options)
+  .then( res => res.json())
+  .then( data => console.log(data) );
+}*/
+
+/*
 $(document).ready(function() {
   $.get(
     "www.googleapis.com/youtube/v3/channels", {
@@ -267,7 +298,7 @@ function fetchVideo(pid) {
         console.log(data);
       }
     });
-      }
+      }  */
 
       
 /*======================= AJAX
