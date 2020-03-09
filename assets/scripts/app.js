@@ -1,3 +1,4 @@
+
 /*==============================================================
 VALIDATE LOGGIN
 ===============================================================*/
@@ -156,7 +157,7 @@ function authenticate() {
     .getAuthInstance()
     .signIn({
       scope:
-        "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner https://www.googleapis.com/auth/youtubepartner-channel-audit"
+        "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner https://www.googleapis.com/auth/youtubepartner-channel-audit https://www.googleapis.com/youtube/v3/channels"
     })
     .then(
       function() {
@@ -202,37 +203,20 @@ gapi.load("client:auth2", function() {
 /*========================
 prueba
 ================*/
-
-var contenido = document.querySelector("#contenido");
-function traer() {
-  fetch(
-    "https://accounts.spotify.com/authorize?client_id=8402bf679f8b4e6c975686305c2bc15f&scopes=user-library-read&response_type=code&&redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard")
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-    });
-}
-
-$.ajax({
-  url: "https://api.spotify.com/v1/playlists/37i9dQZEVXbKAbrMR8uuf7?market=DO",
-  beforeSend: function(xhr) {
-    xhr.setRequestHeader(
-      "Authorization",
-      "Bearer BQBUoLKFzu8eazJPBRkYP6E7o8WNUsAtxzq9T5xfKq6Xrw4gJT6jyDFEIZl"
-    );
-  },
-  success: function(data) {
-    alert(data);
-    //process the JSON data etc
-  }
+$(document).ready(function() {
+  $.get(
+    "www.googleapis.com/youtube/v3/channels", {
+      part: 'contentDetails',
+      id: 'Wj_WdivxjMg',
+      key: 'AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg' },
+    function(data) {
+      $.each(data.items, function(i, item) {
+        console.log(item);
+      });
+    }
+  );
 });
 
-$.getJSON(
-  "your-api-url/validate.php?" + $(this).serialize + "callback=?",
-  function(data) {
-    if (data) console.log(data);
-  }
-);
 
 /*======================= AJAX
 
@@ -539,5 +523,4 @@ spotifyApi.getArtistAlbums('17HsiXfqKUPoTP6Y5ebs1L:playlist:37i9dQZEVXbKAbrMR8uu
 
 ===============================================================*/
 
-
-document.querySelector("#playlist")
+document.querySelector("#playlist");
