@@ -157,7 +157,7 @@ function authenticate() {
     .getAuthInstance()
     .signIn({
       scope:
-        "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner https://www.googleapis.com/auth/youtubepartner-channel-audit https://www.googleapis.com/youtube/v3/channels"
+        "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner https://www.googleapis.com/auth/youtubepartner-channel-audit"
     })
     .then(
       function() {
@@ -194,11 +194,31 @@ function execute() {
   );
 }
 gapi.load("client:auth2", function() {
-  gapi.auth2.init({
-    client_id:
-      "522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com"
+  gapi.auth2.init({ client_id:  "522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com"
   });
+  $.ajax({
+    url: 'https://www.googleapis.com/youtube/v3/playlists',
+    dataType: 'json',
+    success: function(response) {
+      console.log(response);
+    }
+  });
+
+
 });
+
+
+function requestUserUploadsPlaylistId() {
+  // See https://developers.google.com/youtube/v3/docs/channels/list
+  var request = gapi.client.youtube.channels.list({
+    mine: true,
+    part: 'contentDetails'
+  });
+  request.execute(function(response) {
+    playlistId = response.result.items[0].contentDetails.relatedPlaylists.uploads;
+    requestVideoPlaylist(playlistId);
+  });
+}
 
 /*========================
 prueba
@@ -211,13 +231,45 @@ $(document).ready(function() {
       key: 'AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg' },
     function(data) {
       $.each(data.items, function(i, item) {
+        pid=item.contentDetails.relatedPlaylistis.uploads;
+        fetchVideo(paid);
         console.log(item);
       });
     }
   );
+function fetchVideo(pid) {
+  $.get(
+    "https://www.googleapis.com/youtube/v3/playlists", {
+      part: 'snippet',
+      maxResults:10,
+      playlistId:pid,
+      
+      key: 'AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg' },
+    function(data) {
+      $.each(data.items, function(i, item) {
+        var vid_title=item.snippet.title;
+        pid=item.contentDetails.relatedPlaylistis.uploads;
+        fetchVideo(paid);
+        console.log(item);
+      });
+    }
+  );
+}
 });
 
 
+
+   function traer() {
+    $.ajax({
+      url: 'https://www.googleapis.com/youtube/v3/playlists',
+      dataType: 'json',
+      success: function(data) {
+        console.log(data);
+      }
+    });
+      }
+
+      
 /*======================= AJAX
 
 
@@ -523,4 +575,4 @@ spotifyApi.getArtistAlbums('17HsiXfqKUPoTP6Y5ebs1L:playlist:37i9dQZEVXbKAbrMR8uu
 
 ===============================================================*/
 
-document.querySelector("#playlist");
+
