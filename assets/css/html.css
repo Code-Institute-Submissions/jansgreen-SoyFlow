@@ -619,3 +619,11 @@ border-right: 2%;
   display: inline-block;
   ;
 }
+
+/*==========================
+FLOWDESK
+============================*/
+
+#content, #authorize-button, #signout-button {
+  display: none
+}
