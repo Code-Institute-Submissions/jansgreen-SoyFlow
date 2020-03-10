@@ -53,15 +53,15 @@ function initClient() {
 // Update UI sign in state changes
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-    authorizeButton.autButton.display = 'none';
-    signoutButton.outButton.display = 'block';
-    content.content.display = 'block';
+    authorizeButton.style.display = 'none';
+    signoutButton.style.display = 'block';
+    content.style.display = 'block';
     videoContainer.style.display = 'block';
     getChannel(defaultChannel);
   } else {
-    authorizeButton.autButton.display = 'block';
-    signoutButton.outButton.display = 'none';
-    content.content.display = 'none';
+    authorizeButton.style.display = 'block';
+    signoutButton.style.display = 'none';
+    content.style.display = 'none';
     videoContainer.style.display = 'none';
   }
 }
