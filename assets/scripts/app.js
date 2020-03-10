@@ -158,7 +158,7 @@ const DISCOVERY_DOCS = [
 ];
 const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
-const authorizeButton = document.getElementById('authorize-button');
+const authorizeButton = document.getElementById('au');
 const signoutButton = document.getElementById('signout-button');
 const content = document.getElementById('content');
 const channelForm = document.getElementById('channel-form');
