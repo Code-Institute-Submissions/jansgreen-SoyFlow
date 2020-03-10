@@ -160,9 +160,6 @@ const DISCOVERY_DOCS = [
   'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
 ];
 const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
-var LoginBut = document.getElementsById('#LoginBut');
-var LogOutBut = document.getElementsById('LogOutBut');
-var UserNameBar = document.getElementsById('UserNameBar');
 
 
   function authenticate() {
@@ -191,35 +188,26 @@ var UserNameBar = document.getElementsById('UserNameBar');
         gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
         // Handle initial sign in state
         updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-        //LoginBut.onclick = handleAuthClick;
-        //LogOutBut.onclick = handleSignoutClick;
-        //UserNameBar.innerHTML = gapi.currentUser.listen(listener);
+        LoginButt.onclick = handleAuthClick;
+        LogOutBut.onclick = handleSignoutClick;
       });
   }
-  function updateSigninStatus(isSignedIn) {
-       if (isSignedIn) {
-        $( document ).ready(function() {
+  $( document ).ready(function() {
+    $( "#LoginBut" ).click(function() {
+        $('#LogOutBut').show(); 
+        $('#LoginBut').hide(); 
+        setTimeout( function() { window.location.href = "daskboard"; }, isSignedIn );
+    });
 
-          $( "#LoginBut" ).click(function() {
-              $('#LogOutBut').show();
-              $('#content').show(); 
-              $('#LoginBut').hide(); 
-          });
-      
-          $( "#LogOutBut" ).click(function() {
-              $('#LoginBut').show(); 
-              $('#LogOutBut').hide();
-              $('#content').hide();
-               
-          });
-      });
-      UserNameBar.innerHTML = gapi.currentUser.listen(listener);
-    } else {
-      UserNameBar.innerHTML = gapi.currentUser.listen("Some error");
-    }
-  }
+    $( "#LogOutBut" ).click(function() {
+        $('#LoginBut').show(); 
+        $('#LogOutBut').hide(); 
+    });
+});
+
+   
+
   
-
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: CLIENT_ID});
   });
