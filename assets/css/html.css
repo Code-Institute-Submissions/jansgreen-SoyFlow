@@ -624,7 +624,7 @@ border-right: 2%;
 FLOWDESK
 ============================*/
 
-#conten, #LogOutBut{
+#content, #LogOutBut{
   display: none;
 }
 
