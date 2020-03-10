@@ -240,13 +240,15 @@ SI DA ERROR ELIMINA ESTO ABAJO
 function pageMove(isSignedIn) {
   if (isSignedIn) {
     setTimeout(function() {
-      window.location.href = "index.html";
+      window.location.href = "daskboard.html";
     }, 500);
     getChannel(defaultChannel);
   } else {
     console.log("Hay un error");
   }
 }
+
+
 
 function handleAuthClick() {
   gapi.auth2.getAuthInstance().signIn();
