@@ -148,3 +148,80 @@ function singSendding() {
   fh.Close();
 }
 
+
+
+/*===================================
+PRUEBA
+=====================================*/
+
+var apiKay = 'AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg';
+var CLIENT_ID = '522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com';
+var DISCOVERY_DOCS = [
+  'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
+];
+var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
+
+var authorizeButton = document.getElementById('authorize-button');
+var signoutButton = document.getElementById('signout-button');
+var content = document.getElementById('content');
+var channelForm = document.getElementById('channel-form');
+var channelInput = document.getElementById('channel-input');
+var videoContainer = document.getElementById('video-container');
+var UserNameBa = document.getElementById('UserNameBarr');
+var HomAuthBut = document.getElementById('HomAuthButt');
+
+var defaultChannel = 'ovX1HloCgdA&list=PL173-xYCgMCql11IY0WFpoF_fJjqCyIh2';
+
+// Form submit and change channel
+channelForm.addEventListener('submit', e => {
+  e.preventDefault();
+
+  const channel = channelInput.value;
+
+  getChannel(channel);
+});
+
+// Load auth2 library
+function handleClientLoad() {
+  gapi.load('client:auth2', initClient);
+}
+
+// Init API client library and set up sign in listeners
+function initClient() {
+  gapi.client
+    .init({
+      discoveryDocs: DISCOVERY_DOCS,
+      clientId: CLIENT_ID,
+      scope: SCOPES
+    })
+    .then(() => {
+      // Listen for sign in state changes
+      gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+      // Handle initial sign in state
+      updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+      authorizeButton.onclick = handleAuthClick;
+      signoutButton.onclick = handleSignoutClick;
+      HomAuthBut.onclick = handleAuthClick;
+      //UserNameBa.innerHTML = 
+      console.log(gapi.forUsername);
+      
+    });
+}
+
+function handleAPILoaded(isSignedIn) {
+    $('#search-button').attr('disabled', false);
+}
+
+// Search for a specified string.
+function search() {
+  var q = $('#query').val();
+  var request = gapi.client.youtube.search.list({
+    q: q,
+    part: 'snippet'
+  });
+
+  request.execute(function(response) {
+    var str = JSON.stringify(response.result);
+    $('#search-container').html('<pre>' + str + '</pre>');
+  });
+}
