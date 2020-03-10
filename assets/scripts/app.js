@@ -114,6 +114,11 @@ $(document).ready(function() {
     } else {
       $("#alrContr").html("It look great!");
       $("#alrContr").fadeOut(1500);
+      $(document).ready(function() {
+        setTimeout(function() {
+          window.location.href = "daskboard.html";
+        }, 500);
+      });
     }
   });
 });
@@ -136,7 +141,7 @@ $(document).ready(function() {
 FORMS AND LOG 
 ===============================================================*/
 var Check = '#gridCheck'
-function singIn() {
+function lO() {
   if (Check) {
     $(document).ready(function() {
       setTimeout(function() {
@@ -149,7 +154,7 @@ function singIn() {
 }
 
 /*===================================
-PRUEBA
+YOUTUBE API
 =====================================*/
 
 var APIKAY = "AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg";
@@ -206,7 +211,7 @@ function loadClient() {
       }
     );
 }
-// Make sure the client is loaded and sign-in is complete before calling this method.
+
 function initClient() {
   gapi.client
     .init({
@@ -215,9 +220,7 @@ function initClient() {
       scope: SCOPES
     })
     .then(() => {
-      // Listen for sign in state changes
-      gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-      // Handle initial sign in state
+     gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
       updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
       LoginButt.onclick = handleAuthClick;
       LogOutBut.onclick = handleSignoutClick;
