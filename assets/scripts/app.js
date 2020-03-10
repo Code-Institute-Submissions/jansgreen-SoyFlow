@@ -227,6 +227,14 @@ function initClient() {
     });
 }
 $(document).ready(function() {
+  
+  $("#mainLoginBut").click(function() {
+    $("#LogOutBut").show();
+    $("#LoginBut").hide();
+    $("#mainLoginBut").hide();
+    $("#content").show();
+  });
+
   $("#LoginBut").click(function() {
     $("#LogOutBut").show();
     $("#LoginBut").hide();
