@@ -200,9 +200,13 @@ const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPe
     $( "#LoginBut" ).click(function() {
         $('#LogOutBut').show(); 
         $('#LoginBut').hide(); 
-        setTimeout( function() { window.location.href = "daskboard.html"; }, isSignedIn );
         $('#content').show();
-    });
+    },
+    $(`${updateSigninStatus}`).ready(function() { window.location.href = "daskboard.html";
+    $('#LoginBut').hide();
+    $('#LogOutBut').show();
+  })
+    );
 
     $( "#LogOutBut" ).click(function() {
         $('#LoginBut').show(); 
