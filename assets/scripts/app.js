@@ -196,8 +196,8 @@ const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPe
         LogOutBut.onclick = handleSignoutClick;
       }).then(()=>{
         $(document).ready(function() {
-          $(LoginButt.onclick).done(setTimeout( function() { window.location.href = "daskboard.html"; }, 500 ));
-          $(LogOutBut.onclick).done(setTimeout( function() { window.location.href = "index.html"; }, 500 ));
+          $(handleAuthClick).done(setTimeout( function() { window.location.href = "daskboard.html"; }, 500 ));
+          $(handleSignoutClick).done(setTimeout( function() { window.location.href = "index.html"; }, 500 ));
         })
       });
   }
