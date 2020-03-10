@@ -624,6 +624,12 @@ border-right: 2%;
 FLOWDESK
 ============================*/
 
-#content, #authorize-button, #signout-button {
+#content, #autButton, #outButton {
   display: none
+}
+
+.navbar-dark{
+  color: #f4f4f4f4;
+  font-size: 20px;
+  text-decoration: none;
 }
