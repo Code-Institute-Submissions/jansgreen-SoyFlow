@@ -625,7 +625,7 @@ FLOWDESK
 ============================*/
 
 #content, #autButton, #outButton {
-  display: none
+  display: none;
 }
 
 .navbar-dark{
