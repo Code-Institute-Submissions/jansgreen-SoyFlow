@@ -194,6 +194,11 @@ const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPe
         updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
         LoginButt.onclick = handleAuthClick;
         LogOutBut.onclick = handleSignoutClick;
+      }).then(()=>{
+        $(document).ready(function() {
+          $(LoginButt.onclick).done(setTimeout( function() { window.location.href = "daskboard.html"; }, 500 ));
+          $(LogOutBut.onclick).done(setTimeout( function() { window.location.href = "index.html"; }, 500 ));
+        })
       });
   }
   $( document ).ready(function() {
@@ -201,19 +206,13 @@ const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPe
         $('#LogOutBut').show(); 
         $('#LoginBut').hide(); 
         $('#content').show();
-    },
-    $(`${updateSigninStatus}`).ready(function() { window.location.href = "daskboard.html";
-    $('#LoginBut').hide();
-    $('#LogOutBut').show();
-  })
-    );
+    });
 
     $( "#LogOutBut" ).click(function() {
         $('#LoginBut').show(); 
         $('#LogOutBut').hide(); 
         $('#content').hide();
-        setTimeout( function() { window.location.href = "index.html"; }, 500 );
-    });
+      });
 });
 
   gapi.load("client:auth2", function() {
