@@ -1,23 +1,18 @@
-/*==============================================================
-API OF YOUTUBE
-===============================================================*/
-
 // Options
-var apiKay = 'AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg';
-var CLIENT_ID = '522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com';
-var DISCOVERY_DOCS = [
+const CLIENT_ID = '522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com';
+const DISCOVERY_DOCS = [
   'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
 ];
-var SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
+const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
-var authorizeButton = document.getElementById('authorize-button');
-var signoutButton = document.getElementById('signout-button');
-var content = document.getElementById('content');
-var channelForm = document.getElementById('channel-form');
-var channelInput = document.getElementById('channel-input');
-var videoContainer = document.getElementById('video-container');
+const authorizeButton = document.getElementById('authorize-button');
+const signoutButton = document.getElementById('signout-button');
+const content = document.getElementById('content');
+const channelForm = document.getElementById('channel-form');
+const channelInput = document.getElementById('channel-input');
+const videoContainer = document.getElementById('video-container');
 
-var defaultChannel = 'PL173-xYCgMCql11IY0WFpoF_fJjqCyIh2';
+const defaultChannel = 'techguyweb';
 
 // Form submit and change channel
 channelForm.addEventListener('submit', e => {
