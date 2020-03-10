@@ -207,15 +207,29 @@ const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPe
         $('#LoginBut').show(); 
         $('#LogOutBut').hide(); 
         $('#content').hide();
+        setTimeout(function() { window.location.href = "index.html"; }, 500);
       });
 });
 
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: CLIENT_ID});
   });
+/*======================================================
+SI DA ERROR ELIMINA ESTO ABAJO
+=======================================================*/
+  function updateSigninStatus(isSignedIn) {
+    if (isSignedIn) {
+      setTimeout(function() { window.location.href = "daskboard.html"; }, 500);
+      LoginButt.onclick = this.LoginButt.onclick
+      getChannel(defaultChannel);
+    } else {
+console.log("hay un error");
+
+    }
+  }
 
   function handleAuthClick() {
-    gapi.auth2.getAuthInstance().signIn().done(function() { window.location.href = "daskboard.html"; }, 500);
+    gapi.auth2.getAuthInstance().signIn()
   }
   
   // Handle logout
