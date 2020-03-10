@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--SCRIPTS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    
+    
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
@@ -65,8 +66,8 @@
                                 aria-describedby="basic-addon1" id="passwordLog">
                             <button type="submit" class="btn btn-primary" id="logSending">Login</button>
                             <div class="container my-5 text-center">
-                                <button class="btn btn-danger" id="authorize-button">Youtube</button>
-                                <button class="btn btn-danger" id="HomAuthButt" >Youtube</button>
+                                <button id= "LoginButt" onclick="authenticate().then(loadClient)">authorize and load</button>
+                                <button  onclick="execute()">execute</button>
                               
                                 
                                     

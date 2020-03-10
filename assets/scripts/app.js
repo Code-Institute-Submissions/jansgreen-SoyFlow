@@ -154,223 +154,46 @@ function singSendding() {
 PRUEBA
 =====================================*/
 
-var apiKay = 'AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg';
+var APIKAY = 'AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg';
 var CLIENT_ID = '522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com';
-var OAUTH2_CLIENT_ID = '522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com';
-var OAUTH2_SCOPES = [
-  'https://www.googleapis.com/auth/youtube'
+const DISCOVERY_DOCS = [
+  'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
 ];
+const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
 
-// Upon loading, the Google APIs JS client automatically invokes this callback.
-googleApiClientReady = function() {
-  gapi.auth.init(function() {
-    window.setTimeout(checkAuth, 1);
-  });
-}
 
-// Attempt the immediate OAuth 2.0 client flow as soon as the page loads.
-// If the currently logged-in Google Account has previously authorized
-// the client specified as the OAUTH2_CLIENT_ID, then the authorization
-// succeeds with no user intervention. Otherwise, it fails and the
-// user interface that prompts for authorization needs to display.
-function checkAuth() {
-  gapi.auth.authorize({
-    client_id: OAUTH2_CLIENT_ID,
-    scope: OAUTH2_SCOPES,
-    immediate: true
-  }, handleAuthResult);
-}
-
-// Handle the result of a gapi.auth.authorize() call.
-function handleAuthResult(authResult) {
-  if (authResult && !authResult.error) {
-    // Authorization was successful. Hide authorization prompts and show
-    // content that should be visible after authorization succeeds.
-    $('.pre-auth').hide();
-    $('.post-auth').show();
-    loadAPIClientInterfaces();
-  } else {
-    // Make the #login-link clickable. Attempt a non-immediate OAuth 2.0
-    // client flow. The current function is called when that flow completes.
-    $('#login-link').click(function() {
-      gapi.auth.authorize({
-        client_id: OAUTH2_CLIENT_ID,
-        scope: OAUTH2_SCOPES,
-        immediate: false
-        }, handleAuthResult);
-    });
+  function authenticate() {
+    return gapi.auth2.getAuthInstance()
+        .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly"})
+        .then(function() { console.log("Sign-in successful"); },
+              function(err) { console.error("Error signing in", err); });
   }
-}
-
-// Load the client interfaces for the YouTube Analytics and Data APIs, which
-// are required to use the Google APIs JS client. More info is available at
-// https://developers.google.com/api-client-library/javascript/dev/dev_jscript#loading-the-client-library-and-the-api
-function loadAPIClientInterfaces() {
-  gapi.client.load('youtube', 'v3', function() {
-    handleAPILoaded();
-  });
-}
-
-// Define some variables used to remember state.
-var playlistId, nextPageToken, prevPageToken;
-
-// After the API loads, call a function to get the uploads playlist ID.
-function handleAPILoaded() {
-  requestUserUploadsPlaylistId();
-}
-
-// Call the Data API to retrieve the playlist ID that uniquely identifies the
-// list of videos uploaded to the currently authenticated user's channel.
-function requestUserUploadsPlaylistId() {
-  // See https://developers.google.com/youtube/v3/docs/channels/list
-  var request = gapi.client.youtube.channels.list({
-    mine: true,
-    part: 'contentDetails'
-  });
-  request.execute(function(response) {
-    playlistId = response.result.items[0].contentDetails.relatedPlaylists.uploads;
-    requestVideoPlaylist(playlistId);
-  });
-}
-
-// Retrieve the list of videos in the specified playlist.
-function requestVideoPlaylist(playlistId, pageToken) {
-  $('#video-container').html('');
-  var requestOptions = {
-    playlistId: playlistId,
-    part: 'snippet',
-    maxResults: 10
-  };
-  if (pageToken) {
-    requestOptions.pageToken = pageToken;
+  function loadClient() {
+    gapi.client.setApiKey(APIKAY);
+    gapi.load('client:auth2', initClient);
+    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+        .then(function() { console.log("GAPI client loaded for API"); },
+              function(err) { console.error("Error loading GAPI client for API", err); });
   }
-  var request = gapi.client.youtube.playlistItems.list(requestOptions);
-  request.execute(function(response) {
-    // Only show pagination buttons if there is a pagination token for the
-    // next or previous page of results.
-    nextPageToken = response.result.nextPageToken;
-    var nextVis = nextPageToken ? 'visible' : 'hidden';
-    $('#next-button').css('visibility', nextVis);
-    prevPageToken = response.result.prevPageToken
-    var prevVis = prevPageToken ? 'visible' : 'hidden';
-    $('#prev-button').css('visibility', prevVis);
-
-    var playlistItems = response.result.items;
-    if (playlistItems) {
-      $.each(playlistItems, function(index, item) {
-        displayResult(item.snippet);
+  // Make sure the client is loaded and sign-in is complete before calling this method.
+  function initClient() {
+    gapi.client
+      .init({
+        discoveryDocs: DISCOVERY_DOCS,
+        clientId: CLIENT_ID,
+        scope: SCOPES
+      })
+      .then(() => {
+        // Listen for sign in state changes
+        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+        // Handle initial sign in state
+        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        LoginButt.onclick = handleAuthClick;
+        //signoutButton.onclick = handleSignoutClick;
       });
-    } else {
-      $('#video-container').html('Sorry you have no uploaded videos');
-    }
-  });
-}
-
-// Create a listing for a video.
-function displayResult(videoSnippet) {
-  var title = videoSnippet.title;
-  var videoId = videoSnippet.resourceId.videoId;
-  $('#video-container').append('<p>' + title + ' - ' + videoId + '</p>');
-}
-
-// Retrieve the next page of videos in the playlist.
-function nextPage() {
-  requestVideoPlaylist(playlistId, nextPageToken);
-}
-
-// Retrieve the previous page of videos in the playlist.
-function previousPage() {
-  requestVideoPlaylist(playlistId, prevPageToken);
-}
-
-// Define some variables used to remember state.
-var playlistId, channelId;
-
-// After the API loads, call a function to enable the playlist creation form.
-function handleAPILoaded() {
-  enableForm();
-}
-
-// Enable the form for creating a playlist.
-function enableForm() {
-  $('#playlist-button').attr('disabled', false);
-}
-
-// Create a private playlist.
-function createPlaylist() {
-  var request = gapi.client.youtube.playlists.insert({
-    part: 'snippet,status',
-    resource: {
-      snippet: {
-        title: 'Test Playlist',
-        description: 'A private playlist created with the YouTube API'
-      },
-      status: {
-        privacyStatus: 'private'
-      }
-    }
-  });
-  request.execute(function(response) {
-    var result = response.result;
-    if (result) {
-      playlistId = result.id;
-      $('#playlist-id').val(playlistId);
-      $('#playlist-title').html(result.snippet.title);
-      $('#playlist-description').html(result.snippet.description);
-    } else {
-      $('#status').html('Could not create playlist');
-    }
-  });
-}
-
-// Add a video ID specified in the form to the playlist.
-function addVideoToPlaylist() {
-  addToPlaylist($('#video-id').val());
-}
-
-// Add a video to a playlist. The "startPos" and "endPos" values let you
-// start and stop the video at specific times when the video is played as
-// part of the playlist. However, these values are not set in this example.
-function addToPlaylist(id, startPos, endPos) {
-  var details = {
-    videoId: id,
-    kind: 'youtube#video'
   }
-  if (startPos != undefined) {
-    details['startAt'] = startPos;
-  }
-  if (endPos != undefined) {
-    details['endAt'] = endPos;
-  }
-  var request = gapi.client.youtube.playlistItems.insert({
-    part: 'snippet',
-    resource: {
-      snippet: {
-        playlistId: playlistId,
-        resourceId: details
-      }
-    }
-  });
-  request.execute(function(response) {
-    $('#status').html('<pre>' + JSON.stringify(response.result) + '</pre>');
-  });
-}
-
-// After the API loads, call a function to enable the search box.
-function handleAPILoaded() {
-  $('#search-button').attr('disabled', false);
-}
-
-// Search for a specified string.
-function search() {
-  var q = $('#query').val();
-  var request = gapi.client.youtube.search.list({
-    q: q,
-    part: 'snippet'
+  gapi.load("client:auth2", function() {
+    gapi.auth2.init({client_id: CLIENT_ID});
   });
 
-  request.execute(function(response) {
-    var str = JSON.stringify(response.result);
-    $('#search-container').html('<pre>' + str + '</pre>');
-  });
-}
+
