@@ -194,12 +194,7 @@ const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPe
         updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
         LoginButt.onclick = handleAuthClick;
         LogOutBut.onclick = handleSignoutClick;
-      }).then(()=>{
-        $(document).ready(function() {
-          $(handleAuthClick).done(setTimeout( function() { window.location.href = "daskboard.html"; }, 500 ));
-          $(handleSignoutClick).done(setTimeout( function() { window.location.href = "index.html"; }, 500 ));
-        })
-      });
+      })
   }
   $( document ).ready(function() {
     $( "#LoginBut" ).click(function() {
@@ -220,12 +215,12 @@ const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPe
   });
 
   function handleAuthClick() {
-    gapi.auth2.getAuthInstance().signIn();
+    gapi.auth2.getAuthInstance().signIn().done(function() { window.location.href = "daskboard.html"; }, 500);
   }
   
   // Handle logout
   function handleSignoutClick() {
-    gapi.auth2.getAuthInstance().signOut();
+    gapi.auth2.getAuthInstance().signOut().done(function() { window.location.href = "index.html"; }, 500);
   }
   
   // Display channel data
