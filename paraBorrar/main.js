@@ -12,7 +12,7 @@ const channelForm = document.getElementById('channel-form');
 const channelInput = document.getElementById('channel-input');
 const videoContainer = document.getElementById('video-container');
 
-const defaultChannel = 'PL173-xYCgMCql11IY0WFpoF_fJjqCyIh2';
+const defaultChannel = 'ovX1HloCgdA&list=PL173-xYCgMCql11IY0WFpoF_fJjqCyIh2';
 
 // Form submit and change channel
 channelForm.addEventListener('submit', e => {

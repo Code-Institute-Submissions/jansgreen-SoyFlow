@@ -17,7 +17,7 @@ var channelForm = document.getElementById('channel-form');
 var channelInput = document.getElementById('channel-input');
 var videoContainer = document.getElementById('video-container');
 
-var defaultChannel = 'PL173-xYCgMCql11IY0WFpoF_fJjqCyIh2';
+var defaultChannel = 'ovX1HloCgdA&list=PL173-xYCgMCql11IY0WFpoF_fJjqCyIh2';
 
 // Form submit and change channel
 channelForm.addEventListener('submit', e => {
