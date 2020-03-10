@@ -165,6 +165,7 @@ const channelForm = document.getElementById('channel-form');
 const channelInput = document.getElementById('channel-input');
 const videoContainer = document.getElementById('video-container');
 const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPeI0P9OzpYK1UBbeAApBHkEXONi5K';
+const URI = "redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&"
 
   function authenticate() {
     return gapi.auth2.getAuthInstance()
@@ -213,19 +214,23 @@ const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPe
 
   gapi.load("client:auth2", function() {
     gapi.auth2.init({client_id: CLIENT_ID});
+    
   });
 /*======================================================
 SI DA ERROR ELIMINA ESTO ABAJO
 =======================================================*/
-  function updateSigninStatus(isSignedIn) {
-    if (isSignedIn) {
-      setTimeout(500);
-      window.location.href = "daskboard.html";
-      getChannel(defaultChannel);
-    } else {
-      setTimeout(function() { window.location.href = "index.html"; }, 500);
+var LOCATE = window.location = "index.html";
 
+  function pageMove(isSignedIn) {
+    if (isSignedIn ||LOCATE) {
+      setTimeout(function() { window.location.href = "index.html"; }, 500);
+      getChannel(defaultChannel);
+    } else if (isSignedIn || !LOCATE) {
+      console.log("Login read!!");
+   } else {
+    console.log("hay un error");
     }
+
   }
 
   function handleAuthClick() {
