@@ -55,13 +55,13 @@ function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.autButton.display = 'none';
     signoutButton.outButton.display = 'block';
-    content.style.display = 'block';
+    content.content.display = 'block';
     videoContainer.style.display = 'block';
     getChannel(defaultChannel);
   } else {
-    authorizeButton.style.display = 'block';
-    signoutButton.style.display = 'none';
-    content.style.display = 'none';
+    authorizeButton.autButton.display = 'block';
+    signoutButton.outButton.display = 'none';
+    content.content.display = 'none';
     videoContainer.style.display = 'none';
   }
 }
