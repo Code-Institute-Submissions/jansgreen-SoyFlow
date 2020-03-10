@@ -1,3 +1,7 @@
+/*==============================================================
+API OF YOUTUBE
+===============================================================*/
+
 // Options
 const CLIENT_ID = '522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com';
 const DISCOVERY_DOCS = [
@@ -49,8 +53,8 @@ function initClient() {
 // Update UI sign in state changes
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-    authorizeButton.style.display = 'none';
-    signoutButton.style.display = 'block';
+    authorizeButton.autButton.display = 'none';
+    signoutButton.outButton.display = 'block';
     content.style.display = 'block';
     videoContainer.style.display = 'block';
     getChannel(defaultChannel);
