@@ -140,7 +140,7 @@ $(document).ready(function() {
 /*==============================================================
 FORMS AND LOG 
 ===============================================================*/
-var Check = '#gridCheck'
+var Check = "#gridCheck";
 function lO() {
   if (Check) {
     $(document).ready(function() {
@@ -173,13 +173,13 @@ const defaultChannel =
 const URI =
   "redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&";
 
-  channelForm.addEventListener('submit', e => {
-    e.preventDefault();
-  
-    const channel = channelInput.value;
-  
-    getChannel(channel);
-  });
+channelForm.addEventListener("submit", e => {
+  e.preventDefault();
+
+  const channel = channelInput.value;
+
+  getChannel(channel);
+});
 
 function authenticate() {
   return gapi.auth2
@@ -220,7 +220,7 @@ function initClient() {
       scope: SCOPES
     })
     .then(() => {
-     gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+      gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
       updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
       LoginButt.onclick = handleAuthClick;
       LogOutBut.onclick = handleSignoutClick;
@@ -249,17 +249,22 @@ gapi.load("client:auth2", function() {
 /*======================================================
 SI DA ERROR ELIMINA ESTO ABAJO
 =======================================================*/
-    $(document).ready(function updateSigninStatus() {
-      setTimeout(function() {
-        window.location.href = "daskboard.html";
-      }, 500);
-    }).then(() => {
-      getChannel(defaultChannel);
-    });
-      
-    
-  
-
+var Winstate = window.location("daskboard.html");
+$(document)
+  .ready(function updateSigninStatus() {
+    if (! Winstate) {
+      execute_true_code(
+        setTimeout(function() {
+          window.location.href = "daskboard.html";
+        }, 500)
+      );
+    } else {
+      execute_false_code($("#LoginBut").hide());
+    }
+  })
+  .then(() => {
+    getChannel(defaultChannel);
+  });
 
 function handleAuthClick() {
   gapi.auth2.getAuthInstance().signIn();
@@ -337,7 +342,8 @@ function requestVideoPlaylist(playlistId) {
     console.log(response);
     const playListItems = response.result.items;
     if (playListItems) {
-      let output = '<div class="container"><h4 class="center-align">Latest Videos</h4></div><br>';
+      let output =
+        '<div class="container"><h4 class="center-align">Latest Videos</h4></div><br>';
 
       // Loop through videos and append output
       playListItems.forEach(item => {
