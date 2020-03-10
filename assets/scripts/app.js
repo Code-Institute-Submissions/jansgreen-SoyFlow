@@ -219,11 +219,11 @@ SI DA ERROR ELIMINA ESTO ABAJO
 =======================================================*/
   function updateSigninStatus(isSignedIn) {
     if (isSignedIn) {
-      setTimeout(function() { window.location.href = "daskboard.html"; }, 500);
-      LoginButt.onclick = this.LoginButt.onclick
+      setTimeout(500);
+      window.location.href = "daskboard.html";
       getChannel(defaultChannel);
     } else {
-console.log("hay un error");
+      setTimeout(function() { window.location.href = "index.html"; }, 500);
 
     }
   }
