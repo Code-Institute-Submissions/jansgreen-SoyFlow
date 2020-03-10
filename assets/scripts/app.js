@@ -1,4 +1,3 @@
-
 /*==============================================================
 VALIDATE LOGGIN
 ===============================================================*/
@@ -148,118 +147,139 @@ function singSendding() {
   fh.Close();
 }
 
-
-
 /*===================================
 PRUEBA
 =====================================*/
 
-var APIKAY = 'AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg';
-var CLIENT_ID = '522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com';
+var APIKAY = "AIzaSyBs-BPSMqxLUwSi9UJ27ltcNMRTxMEMOyg";
+var CLIENT_ID =
+  "522228945921-6q3pk6hsaajtphi8pj466k4sgchds5c9.apps.googleusercontent.com";
 const DISCOVERY_DOCS = [
-  'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
+  "https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest"
 ];
-const SCOPES = 'https://www.googleapis.com/auth/youtube.readonly';
-const content = document.getElementById('content');
-const channelForm = document.getElementById('channel-form');
-const channelInput = document.getElementById('channel-input');
-const videoContainer = document.getElementById('video-container');
-const defaultChannel = 'https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPeI0P9OzpYK1UBbeAApBHkEXONi5K';
-const URI = "redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&"
+const SCOPES = "https://www.googleapis.com/auth/youtube.readonly";
+const content = document.getElementById("content");
+const channelForm = document.getElementById("channel-form");
+const channelInput = document.getElementById("channel-input");
+const videoContainer = document.getElementById("video-container");
+const defaultChannel =
+  "https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPeI0P9OzpYK1UBbeAApBHkEXONi5K";
+const URI =
+  "redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&";
 
-  function authenticate() {
-    return gapi.auth2.getAuthInstance()
-        .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly"})
-        .then(function() { console.log("Sign-in successful"); },
-              function(err) { console.error("Error signing in", err); });
-  }
-  function loadClient() {
-    gapi.client.setApiKey(APIKAY);
-    gapi.load('client:auth2', initClient);
-    return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-        .then(function() { console.log("GAPI client loaded for API"); },
-              function(err) { console.error("Error loading GAPI client for API", err); });
-  }
-  // Make sure the client is loaded and sign-in is complete before calling this method.
-  function initClient() {
-    gapi.client
-      .init({
-        discoveryDocs: DISCOVERY_DOCS,
-        clientId: CLIENT_ID,
-        scope: SCOPES
-      })
-      .then(() => {
-        // Listen for sign in state changes
-        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-        // Handle initial sign in state
-        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-        LoginButt.onclick = handleAuthClick;
-        LogOutBut.onclick = handleSignoutClick;
-      })
-  }
-  $( document ).ready(function() {
-    $( "#LoginBut" ).click(function() {
-        $('#LogOutBut').show(); 
-        $('#LoginBut').hide(); 
-        $('#content').show();
+function authenticate() {
+  return gapi.auth2
+    .getAuthInstance()
+    .signIn({
+      scope:
+        "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly"
+    })
+    .then(
+      function() {
+        console.log("Sign-in successful");
+      },
+      function(err) {
+        console.error("Error signing in", err);
+      }
+    );
+}
+function loadClient() {
+  gapi.client.setApiKey(APIKAY);
+  gapi.load("client:auth2", initClient);
+  return gapi.client
+    .load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+    .then(
+      function() {
+        console.log("GAPI client loaded for API");
+      },
+      function(err) {
+        console.error("Error loading GAPI client for API", err);
+      }
+    );
+}
+// Make sure the client is loaded and sign-in is complete before calling this method.
+function initClient() {
+  gapi.client
+    .init({
+      discoveryDocs: DISCOVERY_DOCS,
+      clientId: CLIENT_ID,
+      scope: SCOPES
+    })
+    .then(() => {
+      // Listen for sign in state changes
+      gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+      // Handle initial sign in state
+      updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+      LoginButt.onclick = handleAuthClick;
+      LogOutBut.onclick = handleSignoutClick;
     });
+}
+$(document).ready(function() {
+  $("#LoginBut").click(function() {
+    $("#LogOutBut").show();
+    $("#LoginBut").hide();
+    $("#content").show();
+  });
 
-    $( "#LogOutBut" ).click(function() {
-        $('#LoginBut').show(); 
-        $('#LogOutBut').hide(); 
-        $('#content').hide();
-        setTimeout(function() { window.location.href = "index.html"; }, 500);
-      });
+  $("#LogOutBut").click(function() {
+    $("#LoginBut").show();
+    $("#LogOutBut").hide();
+    $("#content").hide();
+    setTimeout(function() {
+      window.location.href = "index.html";
+    }, 500);
+  });
 });
 
-  gapi.load("client:auth2", function() {
-    gapi.auth2.init({client_id: CLIENT_ID});
-    
-  });
+gapi.load("client:auth2", function() {
+  gapi.auth2.init({ client_id: CLIENT_ID });
+});
 /*======================================================
 SI DA ERROR ELIMINA ESTO ABAJO
 =======================================================*/
-var LOCATE = window.location = "index.html";
+function pageMove(isSignedIn) {
+  if (isSignedIn) {
+    setTimeout(function() {
+      window.location.href = "index.html";
+    }, 500);
+    getChannel(defaultChannel);
+  } else {
+    console.log("Hay un error");
+  }
+}
 
-  function pageMove(isSignedIn) {
-    if (isSignedIn ||LOCATE) {
-      setTimeout(function() { window.location.href = "index.html"; }, 500);
-      getChannel(defaultChannel);
-    } else if (isSignedIn || !LOCATE) {
-      console.log("Login read!!");
-   } else {
-    console.log("hay un error");
-    }
+function handleAuthClick() {
+  gapi.auth2.getAuthInstance().signIn();
+}
 
-  }
+// Handle logout
+function handleSignoutClick() {
+  gapi.auth2
+    .getAuthInstance()
+    .signOut()
+    .done(function() {
+      window.location.href = "index.html";
+    }, 500);
+}
 
-  function handleAuthClick() {
-    gapi.auth2.getAuthInstance().signIn()
-  }
-  
-  // Handle logout
-  function handleSignoutClick() {
-    gapi.auth2.getAuthInstance().signOut().done(function() { window.location.href = "index.html"; }, 500);
-  }
-  
-  // Display channel data
-  function showChannelData(data) {
-    const channelData = document.getElementById('channel-data');
-    channelData.innerHTML = data;
-  }
-  
-  // Get channel from API
-  function getChannel(channel) {
-    gapi.client.youtube.channels
-      .list({
-        part: 'snippet,contentDetails,statistics',
-        forUsername: channel
-      })
-      .then(response => {
-        console.log(response);
-        const channel = response.result.items[0];
-  
-        const output = `
+// Display channel data
+function showChannelData(data) {
+  const channelData = document.getElementById("channel-data");
+  channelData.innerHTML = data;
+}
+
+// Get channel from API
+function getChannel(channel) {
+  gapi.client.youtube.channels
+    .list({
+      part: "snippet,contentDetails,statistics",
+      forUsername: channel
+    })
+    .then(response => {
+      console.log(response);
+      const channel = response.result.items[0];
+
+      const output = `
           <ul class="collection">
             <li class="collection-item">Title: ${channel.snippet.title}</li>
             <li class="collection-item">Subscribers: ${numberWithCommas(
@@ -278,51 +298,49 @@ var LOCATE = window.location = "index.html";
             channel.snippet.customUrl
           }">Visit Channel</a>
         `;
-        showChannelData(output);
-  
-        const playlistId = channel.contentDetails.relatedPlaylists.uploads;
-        requestVideoPlaylist(playlistId);
-      })
-      .catch(err => alert('No Channel By That Name'));
-  }
-  
-  // Add commas to number
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
-  
-  function requestVideoPlaylist(playlistId) {
-    const requestOptions = {
-      playlistId: playlistId,
-      part: 'snippet',
-      maxResults: 10
-    };
-  
-    const request = gapi.client.youtube.playlistItems.list(requestOptions);
-  
-    request.execute(response => {
-      console.log(response);
-      const playListItems = response.result.items;
-      if (playListItems) {
-        let output = '<br><h4 class="center-align">Latest Videos</h4>';
-  
-        // Loop through videos and append output
-        playListItems.forEach(item => {
-          const videoId = item.snippet.resourceId.videoId;
-  
-          output += `
+      showChannelData(output);
+
+      const playlistId = channel.contentDetails.relatedPlaylists.uploads;
+      requestVideoPlaylist(playlistId);
+    })
+    .catch(err => alert("No Channel By That Name"));
+}
+
+// Add commas to number
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function requestVideoPlaylist(playlistId) {
+  const requestOptions = {
+    playlistId: playlistId,
+    part: "snippet",
+    maxResults: 10
+  };
+
+  const request = gapi.client.youtube.playlistItems.list(requestOptions);
+
+  request.execute(response => {
+    console.log(response);
+    const playListItems = response.result.items;
+    if (playListItems) {
+      let output = '<br><h4 class="center-align">Latest Videos</h4>';
+
+      // Loop through videos and append output
+      playListItems.forEach(item => {
+        const videoId = item.snippet.resourceId.videoId;
+
+        output += `
             <div class="col-6">
             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
           `;
-        });
-  
-        // Output videos
-        videoContainer.innerHTML = output;
-      } else {
-        videoContainer.innerHTML = 'No Uploaded Videos';
-      }
-    });
-  }
+      });
 
-
+      // Output videos
+      videoContainer.innerHTML = output;
+    } else {
+      videoContainer.innerHTML = "No Uploaded Videos";
+    }
+  });
+}
