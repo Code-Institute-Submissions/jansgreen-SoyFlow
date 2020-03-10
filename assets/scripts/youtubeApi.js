@@ -16,6 +16,8 @@ var content = document.getElementById('content');
 var channelForm = document.getElementById('channel-form');
 var channelInput = document.getElementById('channel-input');
 var videoContainer = document.getElementById('video-container');
+var UserNameBa = document.getElementById('UserNameBarr');
+var HomAuthBut = document.getElementById('HomAuthButt');
 
 var defaultChannel = 'ovX1HloCgdA&list=PL173-xYCgMCql11IY0WFpoF_fJjqCyIh2';
 
@@ -48,18 +50,22 @@ function initClient() {
       updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
       authorizeButton.onclick = handleAuthClick;
       signoutButton.onclick = handleSignoutClick;
+      HomAuthBut.onclick = handleAuthClick;
+      UserNameBa.innerHTML = `${data.forUsername}`
     });
 }
 
 // Update UI sign in state changes
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
+    HomAuthBut.style.display = 'none';
     authorizeButton.style.display = 'none';
     signoutButton.style.display = 'block';
     content.style.display = 'block';
     videoContainer.style.display = 'block';
     getChannel(defaultChannel);
   } else {
+    HomAuthBut.style.display = 'block';
     authorizeButton.style.display = 'block';
     signoutButton.style.display = 'none';
     content.style.display = 'none';
