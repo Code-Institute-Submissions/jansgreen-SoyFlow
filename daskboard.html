@@ -73,8 +73,8 @@
         <div class="nav-wrapper">
             <div class="container">
                 <div id="UserNameBar"></div>
-                <button class="btn btn-primary" id="LoginBut">Youtube</button>
-                <button class="btn btn-danger" id="LogOutBut">Youtube Sing Out</button>
+                <button class="btn btn-primary" id="LoginBut" onclick="authenticate().then(loadClient)">Youtube</button>
+                <button class="btn btn-danger" id="LogOutBut" onclick="handleSignoutClick()">Youtube Sing Out</button>
             </div>
 
         </div>

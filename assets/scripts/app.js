@@ -198,14 +198,19 @@ var UserNameBar = document.getElementsById('UserNameBar');
   }
 
   $( document ).ready(function() {
+    $('#LoginBut').hide();
+    $('#content').hide();
     $( "#LoginBut" ).click(function() {
-        $('#LogOutBut').show(); 
+        $('#LogOutBut').show();
+        $('#content').show(); 
         $('#LoginBut').hide(); 
     });
 
     $( "#LogOutBut" ).click(function() {
         $('#LoginBut').show(); 
-        $('#LogOutBut').hide(); 
+        $('#LogOutBut').hide();
+        $('#content').hide();
+         
     });
 });
 
