@@ -624,7 +624,7 @@ border-right: 2%;
 FLOWDESK
 ============================*/
 
-#content, #autButton, #outButton {
+#content {
   display: none;
 }
 
