@@ -237,17 +237,20 @@ gapi.load("client:auth2", function() {
 /*======================================================
 SI DA ERROR ELIMINA ESTO ABAJO
 =======================================================*/
-function pageMove(isSignedIn) {
-  if (isSignedIn) {
-    setTimeout(function() {
-      window.location.href = "daskboard.html";
-    }, 500);
-    getChannel(defaultChannel);
-  } else {
-    console.log("Hay un error");
-  }
-}
 
+
+function updateSigninStatus(){
+  getAuthInstance()
+  function waitForIt(){
+      if (isSignedIn) {
+        setTimeout(function() {
+          window.location.href = "daskboard.html";
+        }, 500);
+      } else {
+        console.log("Hay un error");
+      };
+  }
+};
 
 
 function handleAuthClick() {
