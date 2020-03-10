@@ -624,8 +624,8 @@ border-right: 2%;
 FLOWDESK
 ============================*/
 
-#authorize-button, #signout-button, #content, #HomAuthButt{
-  display: inline;
+#conten, #LogOutBut{
+  display: none;
 }
 
 .navbar-dark{
