@@ -135,16 +135,17 @@ $(document).ready(function() {
 /*==============================================================
 FORMS AND LOG 
 ===============================================================*/
-
-/*SignIN*/
-var sUser = sUser;
-console.log(sUser);
-
-function singSendding() {
-  var fso = CreateObject("Scripting.FileSystemObject");
-  var fh = fso.CreateTextFile("assets/users/Reg.txt", true);
-  fh.WriteLine(miCadenaDeTexto);
-  fh.Close();
+var Check = '#gridCheck'
+function singIn() {
+  if (Check) {
+    $(document).ready(function() {
+      setTimeout(function() {
+        window.location.href = "daskboard.html";
+      }, 500);
+    });
+  } else {
+    console.log("Hay un error");
+  }
 }
 
 /*===================================
@@ -166,6 +167,14 @@ const defaultChannel =
   "https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPeI0P9OzpYK1UBbeAApBHkEXONi5K";
 const URI =
   "redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&";
+
+  channelForm.addEventListener('submit', e => {
+    e.preventDefault();
+  
+    const channel = channelInput.value;
+  
+    getChannel(channel);
+  });
 
 function authenticate() {
   return gapi.auth2
@@ -237,20 +246,16 @@ gapi.load("client:auth2", function() {
 /*======================================================
 SI DA ERROR ELIMINA ESTO ABAJO
 =======================================================*/
-
-
-function updateSigninStatus(){
-  getAuthInstance()
-  function waitForIt(){
-      if (isSignedIn) {
-        setTimeout(function() {
-          window.location.href = "daskboard.html";
-        }, 500);
-      } else {
-        console.log("Hay un error");
-      };
-  }
-};
+    $(document).ready(function updateSigninStatus() {
+      setTimeout(function() {
+        window.location.href = "daskboard.html";
+      }, 500);
+    }).then(() => {
+      getChannel(defaultChannel);
+    });
+      
+    
+  
 
 
 function handleAuthClick() {
@@ -299,7 +304,7 @@ function getChannel(channel) {
           </ul>
           <p>${channel.snippet.description}</p>
           <hr>
-          <a class="btn grey darken-2" target="_blank" href="https://youtube.com/${
+          <a class="btn btn-info" target="_blank" href="https://youtube.com/${
             channel.snippet.customUrl
           }">Visit Channel</a>
         `;
@@ -329,14 +334,14 @@ function requestVideoPlaylist(playlistId) {
     console.log(response);
     const playListItems = response.result.items;
     if (playListItems) {
-      let output = '<br><h4 class="center-align">Latest Videos</h4>';
+      let output = '<div class="container"><h4 class="center-align">Latest Videos</h4></div><br>';
 
       // Loop through videos and append output
       playListItems.forEach(item => {
         const videoId = item.snippet.resourceId.videoId;
 
         output += `
-            <div class="col-6">
+            <div class="col-4">
             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
           `;
