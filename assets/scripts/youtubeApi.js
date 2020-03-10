@@ -52,6 +52,8 @@ function initClient() {
       signoutButton.onclick = handleSignoutClick;
       HomAuthBut.onclick = handleAuthClick;
       UserNameBa.innerHTML = `${data.forUsername}`
+      console.log(data);
+      
     });
 }
 
