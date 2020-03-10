@@ -51,8 +51,8 @@ function initClient() {
       authorizeButton.onclick = handleAuthClick;
       signoutButton.onclick = handleSignoutClick;
       HomAuthBut.onclick = handleAuthClick;
-      UserNameBa.innerHTML = `${data.forUsername}`
-      console.log(data);
+      //UserNameBa.innerHTML = 
+      console.log(gapi.forUsername);
       
     });
 }
@@ -106,9 +106,6 @@ function getChannel(channel) {
         <ul class="collection">
           <li class="collection-item">Title: ${channel.snippet.title}</li>
           <li class="collection-item">ID: ${channel.id}</li>
-          <li class="collection-item">Subscribers: ${numberWithCommas(
-            channel.statistics.subscriberCount
-          )}</li>
           <li class="collection-item">Views: ${numberWithCommas(
             channel.statistics.viewCount
           )}</li>
