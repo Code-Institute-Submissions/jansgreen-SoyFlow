@@ -173,7 +173,7 @@ var CLIENT_ID =
   const channelInput = document.getElementById('channel-input');
   const videoContainer = document.getElementById('video-container');
   
-  const defaultChannel = 'UCMwXzr4_lGijScJsMp-IHxw';
+  const defaultChannel = 'jansgreen';
   
   // Form submit and change channel
   channelForm.addEventListener('submit', e => {
@@ -280,7 +280,7 @@ var CLIENT_ID =
         const channel = response.result.items[0];
   
         const output = `
-
+<div class="col-4">
         <div class="card bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">${channel.snippet.title}</div>
         <div class="card-body">
@@ -299,6 +299,7 @@ var CLIENT_ID =
           <a class="btn btn-info" target="_blank" href="https://youtube.com/${
             channel.snippet.customUrl
           }">Visit Channel</a>
+        </div>
         </div> `;
         showChannelData(output);
   
@@ -334,8 +335,8 @@ var CLIENT_ID =
   
           output += `
           <div class="container">
-            <div class="col-6">
-            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <div class="row">
+            <iframe width="25%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
             </div>
           `;
