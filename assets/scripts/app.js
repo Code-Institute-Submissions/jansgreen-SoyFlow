@@ -169,22 +169,19 @@ const channelForm = document.getElementById("channel-form");
 const channelInput = document.getElementById("channel-input");
 const videoContainer = document.getElementById("video-container");
 const defaultChannel =
-  "https://www.youtube.com/watch?v=QFs3PIZb3js&list=PLcUqPeI0P9OzpYK1UBbeAApBHkEXONi5K";
+  "UCNnwYefwrkVBAbMUzLpxbEQ";
 const URI =
   "redirect_uri=https%3A%2F%2Fjansgreen.github.io%2FSoyFlow%2Fdaskboard&";
 
-channelForm.addEventListener("submit", e => {
+ 
+ channelForm.addEventListener("submit", e => {
   e.preventDefault();
-
   const channel = channelInput.value;
-
   getChannel(channel);
 });
 
 function authenticate() {
-  return gapi.auth2
-    .getAuthInstance()
-    .signIn({
+  return gapi.auth2.getAuthInstance().signIn({
       scope:
         "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly"
     })
@@ -221,24 +218,27 @@ function initClient() {
     })
     .then(() => {
       gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-      updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+      updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get()).getChannel(defaultChannel);
       LoginButt.onclick = handleAuthClick;
       LogOutBut.onclick = handleSignoutClick;
-    });
+      mainLoginBut.onclick = handleAuthClickI;
+     });
 }
+
 $(document).ready(function() {
-  
+
   $("#mainLoginBut").click(function() {
     $("#LogOutBut").show();
     $("#LoginBut").hide();
-    $("#mainLoginBut").hide();
-    $("#content").show();
+    $$("#LoginBut").hide();
+    ("#content").show();
   });
 
   $("#LoginBut").click(function() {
     $("#LogOutBut").show();
     $("#LoginBut").hide();
     $("#content").show();
+    
   });
 
   $("#LogOutBut").click(function() {
@@ -257,36 +257,20 @@ gapi.load("client:auth2", function() {
 /*======================================================
 SI DA ERROR ELIMINA ESTO ABAJO
 =======================================================*/
-var Winstate = window.location("daskboard.html");
-$(document)
-  .ready(function updateSigninStatus() {
-    if (! Winstate) {
-      execute_true_code(
-        setTimeout(function() {
-          window.location.href = "daskboard.html";
-        }, 500)
-      );
-    } else {
-      execute_false_code($("#LoginBut").hide());
-    }
-  })
-  .then(() => {
-    getChannel(defaultChannel);
-  });
+
 
 function handleAuthClick() {
   gapi.auth2.getAuthInstance().signIn();
 }
 
+function handleAuthClickI() {
+  gapi.auth2.getAuthInstance().signIn();
+}
+
 // Handle logout
 function handleSignoutClick() {
-  gapi.auth2
-    .getAuthInstance()
-    .signOut()
-    .done(function() {
-      window.location.href = "index.html";
-    }, 500);
-}
+  gapi.auth2.getAuthInstance().signOut()
+    }
 
 // Display channel data
 function showChannelData(data) {
@@ -321,7 +305,7 @@ function getChannel(channel) {
           <p>${channel.snippet.description}</p>
           <hr>
           <a class="btn btn-info" target="_blank" href="https://youtube.com/${
-            channel.snippet.customUrl
+            channel.snippet.channel.id
           }">Visit Channel</a>
         `;
       showChannelData(output);

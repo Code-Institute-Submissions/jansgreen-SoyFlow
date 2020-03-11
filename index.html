@@ -18,7 +18,7 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
-    <script type="text/javascript" src="assets/scripts/youtubeApi.js"></script>
+    
 
     <title>SoyFlow</title>
 </head>
@@ -66,7 +66,8 @@
                                 aria-describedby="basic-addon1" id="passwordLog">
                             <button type="submit" class="btn btn-primary" id="logSending">Login</button>
                             <div class="container my-5 text-center">
-                                <button class="btn btn-danger" id= "mainLoginBut" onclick="authenticate().then(loadClient)">Youtube</button>
+                                
+                                <button class="btn btn-primary" id="mainLoginBut"> <a href="daskboard.html">Youtube</a></button>
                                                              
                                 </div>
                             </div>
@@ -244,7 +245,18 @@
         </div>
         <div class="col"></div>
     </footer>
-
+     <script src="auth.js"></script>
+    <script src="playlist_updates.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script src="search.js"></script>
+    <script src="/_static/js/jquery-bundle.js"></script>
+    <script type="text/javascript" src="auth.js"></script>
+    <script type="text/javascript" src="my_uploads.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/app.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+        </script>
 </body>
 
 </html>
