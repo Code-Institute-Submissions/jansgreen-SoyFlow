@@ -173,7 +173,7 @@ const channelForm = document.getElementById("channel-form");
 const channelInput = document.getElementById("channel-input");
 const videoContainer = document.getElementById("video-container");
 
-const defaultChannel = "LAS MEJORES BACHATAS DE TODOS LOS TIEMPOS - MIX 2019 - 2020";
+const defaultChannel = "jansgreen";
 
 // Form submit and change channel
 channelForm.addEventListener("submit", e => {
@@ -345,7 +345,7 @@ function requestVideoPlaylist(playlistId) {
       playListItems.forEach(item => {
         const videoId = item.snippet.resourceId.videoId;
 
-        output += `<iframe width="30%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+        output += `<iframe width="25%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
       });
 
       // Output videos
