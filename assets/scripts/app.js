@@ -173,7 +173,7 @@ var CLIENT_ID =
   const channelInput = document.getElementById('channel-input');
   const videoContainer = document.getElementById('video-container');
   
-  const defaultChannel = 'techguyweb';
+  const defaultChannel = 'UCMwXzr4_lGijScJsMp-IHxw';
   
   // Form submit and change channel
   channelForm.addEventListener('submit', e => {
@@ -325,17 +325,15 @@ var CLIENT_ID =
       console.log(response);
       const playListItems = response.result.items;
       if (playListItems) {
-        let output = '<br><h4 class="center-align">Latest Videos</h4>';
+        let output = '<div class="conteiner"><br><h4 class="center-align">Latest Videos</h4></div>';
   
         // Loop through videos and append output
         playListItems.forEach(item => {
           const videoId = item.snippet.resourceId.videoId;
   
           output += `
-            <div class="col-4">
             <div class="row">
             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
             </div>
           `;
         });
