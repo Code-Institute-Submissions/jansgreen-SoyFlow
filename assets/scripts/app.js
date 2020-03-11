@@ -280,25 +280,26 @@ var CLIENT_ID =
         const channel = response.result.items[0];
   
         const output = `
-          <ul class="collection">
-            <li class="collection-item">Title: ${channel.snippet.title}</li>
-            <li class="collection-item">ID: ${channel.id}</li>
-            <li class="collection-item">Subscribers: ${numberWithCommas(
-              channel.statistics.subscriberCount
-            )}</li>
-            <li class="collection-item">Views: ${numberWithCommas(
-              channel.statistics.viewCount
-            )}</li>
-            <li class="collection-item">Videos: ${numberWithCommas(
-              channel.statistics.videoCount
-            )}</li>
-          </ul>
-          <p>${channel.snippet.description}</p>
+
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">${channel.snippet.title}</div>
+        <div class="card-body">
+        <li">Subscribers: ${numberWithCommas(
+          channel.statistics.subscriberCount
+        )}</li">
+        <li>Views: ${numberWithCommas(
+          channel.statistics.viewCount
+        )}</li>
+        <li>Videos: ${numberWithCommas(
+          channel.statistics.videoCount
+        )}</li>
+          <h5 class="card-title">${channel.id}</h5>
+          <p ${channel.snippet.description}</p>
           <hr>
-          <a class="btn grey darken-2" target="_blank" href="https://youtube.com/${
+          <a class="btn btn-info" target="_blank" href="https://youtube.com/${
             channel.snippet.customUrl
           }">Visit Channel</a>
-        `;
+        </div> `;
         showChannelData(output);
   
         const playlistId = channel.contentDetails.relatedPlaylists.uploads;
@@ -332,8 +333,10 @@ var CLIENT_ID =
           const videoId = item.snippet.resourceId.videoId;
   
           output += `
-            <div class="row">
+          <div class="container">
+            <div class="col-6">
             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
             </div>
           `;
         });
