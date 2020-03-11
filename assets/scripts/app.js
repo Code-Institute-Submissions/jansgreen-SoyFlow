@@ -333,7 +333,9 @@ var CLIENT_ID =
   
           output += `
             <div class="col-4">
+            <div class="row">
             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
             </div>
           `;
         });
