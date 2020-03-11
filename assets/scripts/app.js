@@ -167,6 +167,7 @@ var CLIENT_ID =
   
   const authorizeButton = document.getElementById('LoginBut');
   const signoutButton = document.getElementById('LogOutBut');
+  const LoginButMain = document.getElementById('LoginButMain');
   const content = document.getElementById('content');
   const channelForm = document.getElementById('channel-form');
   const channelInput = document.getElementById('channel-input');
@@ -214,6 +215,7 @@ var CLIENT_ID =
         updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
         authorizeButton.onclick = handleAuthClick;
         signoutButton.onclick = handleSignoutClick;
+        LoginButMain.onclick = handleAuthClickI;
       });
   }
   
@@ -230,14 +232,31 @@ var CLIENT_ID =
       signoutButton.style.display = 'none';
       content.style.display = 'none';
       videoContainer.style.display = 'none';
+      setTimeout( function() { window.location.href = "index.html"; }, 500 );
     }
   }
+
+  $(document).ready(function() {
+    $( "#LogOutBut" ).click(function() {
+      $('#LoginBut').show(); 
+      $('#LogOutBut').hide(); 
+      $('#content').hide();
+      
+  });
+});
+
+
   
   // Handle login
   function handleAuthClick() {
     gapi.auth2.getAuthInstance().signIn();
   }
-  
+ function handleAuthClickI() {
+   gapi.auth2.getAuthInstance().signIn();
+   setTimeout( function() { window.location.href = "daskboard.html"; }, 500 );
+ }  
+
+
   // Handle logout
   function handleSignoutClick() {
     gapi.auth2.getAuthInstance().signOut();
@@ -313,7 +332,7 @@ var CLIENT_ID =
           const videoId = item.snippet.resourceId.videoId;
   
           output += `
-            <div class="col s3">
+            <div class="col-4">
             <iframe width="100%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
           `;
