@@ -339,7 +339,7 @@ function requestVideoPlaylist(playlistId) {
     const playListItems = response.result.items;
     if (playListItems) {
       let output =
-        '<div class="row"><br><h4 class="center-align">Latest Videos</h4></div><br>';
+        '<div class="col-12"><br><h4 class="center-align">Latest Videos</h4></div><br>';
 
       // Loop through videos and append output
       playListItems.forEach(item => {

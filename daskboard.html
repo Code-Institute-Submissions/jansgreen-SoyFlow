@@ -12,7 +12,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
 
 
 
@@ -81,39 +81,38 @@
     <br>
     <section>
 
-        <div class="container">
+        <article class="col-6 iMar-C"></article>
+        <article class="col-6 iMar-C">
             <div class="row">
-              <div class="col-8">
-                  <form id="channel-form">
-                <div class="input-field">
-                    <input type="text" placeholder="Enter Channel Name" id="channel-input">
-                    <input type="submit" value="Get Channel Data" class="btn btn-info">
-                </div>
-            </form>
-        </div>
-              <div class="col-4"><div id="channel-data" class="col-3"></div></div>
-            </div>
-            <div class="row" id="video-container"></div>
-          </div>
-
-      <!--   <div class="container">
-            <div id="content">
-                <div class="row">
-                    <div class="col-6">
-                        <form id="channel-form">
-                            <div class="input-field">
-                                <input type="text" placeholder="Enter Channel Name" id="channel-input">
-                                <input type="submit" value="Get Channel Data" class="btn btn-info">
-                            </div>
-                        </form>
+                <form id="channel-form">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Channel Name" id="channel-input">
+                        <input type="submit" value="Get Channel Data" class="btn btn-info">
                     </div>
-                    <div id="channel-data" class="col-3"></div>
-                </div>
-                <div class="row" id="video-container"></div>
+                </form>
+                <form id="channel-form">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Channel Name" id="channel-input">
+                        <input type="submit" value="Get Channel Data" class="btn btn-info">
+                    </div>
+                </form>
+
             </div>
-        </div> -->
+        </article>
+        <article class="col-10 iMar-C">
+
+            <div class="container">
+                <div class="row">
+                    <div id="channel-data"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row" id="video-container">
+                </div>
+            </div>
+        </article>
     </section>
-    
+
     <script src="auth.js"></script>
     <script src="playlist_updates.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
