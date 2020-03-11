@@ -80,22 +80,38 @@
     </nav>
     <br>
     <section>
+
         <div class="container">
+            <div class="row">
+              <div class="col-8">
+                  <form id="channel-form">
+                <div class="input-field">
+                    <input type="text" placeholder="Enter Channel Name" id="channel-input">
+                    <input type="submit" value="Get Channel Data" class="btn btn-info">
+                </div>
+            </form>
+        </div>
+              <div class="col-4"><div id="channel-data" class="col-3"></div></div>
+            </div>
+            <div class="row" id="video-container"></div>
+          </div>
+
+      <!--   <div class="container">
             <div id="content">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-6">
                         <form id="channel-form">
-                            <div class="input-field col-8">
+                            <div class="input-field">
                                 <input type="text" placeholder="Enter Channel Name" id="channel-input">
                                 <input type="submit" value="Get Channel Data" class="btn btn-info">
                             </div>
                         </form>
                     </div>
-                    <div id="channel-data" class="col-4"></div>
+                    <div id="channel-data" class="col-3"></div>
                 </div>
                 <div class="row" id="video-container"></div>
             </div>
-        </div>
+        </div> -->
     </section>
     
     <script src="auth.js"></script>

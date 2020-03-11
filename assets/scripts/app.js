@@ -298,7 +298,7 @@ function getChannel(channel) {
 
       const output = `
 <div class="col-4">
-        <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card bg-light mb-3" style="max-width: 5rem;">
         <div class="card-header">${channel.snippet.title}</div>
         <div class="card-body">
         <li">Subscribers: ${numberWithCommas(
@@ -347,14 +347,7 @@ function requestVideoPlaylist(playlistId) {
       playListItems.forEach(item => {
         const videoId = item.snippet.resourceId.videoId;
 
-        output += `
-    <div class="container">
-    <div class="row">
-    
-    <iframe width="40%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    
-    </div>
-    </div> `;
+        output += `<iframe width="40%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
       });
 
       // Output videos
