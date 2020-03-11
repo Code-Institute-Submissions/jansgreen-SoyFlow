@@ -339,13 +339,13 @@ function requestVideoPlaylist(playlistId) {
     const playListItems = response.result.items;
     if (playListItems) {
       let output =
-        '<div class="row"><br><h4 class="center-align">Latest Videos</h4></div>';
+        '<div class="row"><br><h4 class="center-align">Latest Videos</h4></div><br>';
 
       // Loop through videos and append output
       playListItems.forEach(item => {
         const videoId = item.snippet.resourceId.videoId;
 
-        output += `<iframe width="40%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+        output += `<iframe width="35%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
       });
 
       // Output videos
