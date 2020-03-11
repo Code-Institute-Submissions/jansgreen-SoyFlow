@@ -173,7 +173,7 @@ const channelForm = document.getElementById("channel-form");
 const channelInput = document.getElementById("channel-input");
 const videoContainer = document.getElementById("video-container");
 
-const defaultChannel = "VRUjdlCynU0";
+const defaultChannel = "LAS MEJORES BACHATAS DE TODOS LOS TIEMPOS - MIX 2019 - 2020";
 
 // Form submit and change channel
 channelForm.addEventListener("submit", e => {
@@ -350,9 +350,9 @@ function requestVideoPlaylist(playlistId) {
         output += `
     <div class="container">
     <div class="row">
-    <div class="col-sm">
+    
     <iframe width="40%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+    
     </div>
     </div> `;
       });
