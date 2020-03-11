@@ -297,7 +297,7 @@ function getChannel(channel) {
       const channel = response.result.items[0];
 
       const output = `
-        <div class="Min-card bg-light mb-3" style="max-width: 5rem;">
+        <div class="card bg-light mb-3" style="max-width: 5rem;">
         <div class="card-header">${channel.snippet.title}</div>
         <div class="card-body">
         <li">Subscribers: ${numberWithCommas(
