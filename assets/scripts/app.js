@@ -297,7 +297,6 @@ function getChannel(channel) {
       const channel = response.result.items[0];
 
       const output = `
-<div class="col-4">
         <div class="card bg-light mb-3" style="max-width: 5rem;">
         <div class="card-header">${channel.snippet.title}</div>
         <div class="card-body">
@@ -312,7 +311,6 @@ function getChannel(channel) {
           <a class="btn btn-info" target="_blank" href="https://youtube.com/${
         channel.snippet.customUrl
         }">Visit Channel</a>
-        </div>
         </div> `;
       showChannelData(output);
 
@@ -341,7 +339,7 @@ function requestVideoPlaylist(playlistId) {
     const playListItems = response.result.items;
     if (playListItems) {
       let output =
-        '<div class="conteiner"><br><h4 class="center-align">Latest Videos</h4></div>';
+        '<div class="row"><br><h4 class="center-align">Latest Videos</h4></div>';
 
       // Loop through videos and append output
       playListItems.forEach(item => {
