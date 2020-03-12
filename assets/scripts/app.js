@@ -255,14 +255,18 @@ function updateSigninStatus(isSignedIn) {
 
 const WinLoc =  window.location = "index.html";
 const logOut =  signoutButton.onclick;
+const LoginButMain = LoginButMain.onclick;
+const login = authorizeButton.onclick;
 
 function jumPage(updateSigninStatus) {
-  if(updateSigninStatus == WinLoc){
+  if(LoginButMain && updateSigninStatus && WinLoc){
     setTimeout(function () {
       window.location.href = "daskboard.html";
     }, 500);
     authorizeButton.style.display = "block";
-  }else if (logOut){
+  }else if (login && !WinLoc) {
+    signoutButton.style.display = "none";
+  } else if (logOut){
     setTimeout(function () {
       window.location.href = "index.html";
     }, 500);
