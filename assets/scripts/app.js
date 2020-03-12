@@ -264,8 +264,6 @@ function jumPage(updateSigninStatus) {
       window.location.href = "daskboard.html";
     }, 500);
     authorizeButton.style.display = "block";
-  }else if (login && !WinLoc) {
-    signoutButton.style.display = "none";
   } else if (logOut){
     setTimeout(function () {
       window.location.href = "index.html";
