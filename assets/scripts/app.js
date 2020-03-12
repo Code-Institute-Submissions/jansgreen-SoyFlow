@@ -253,27 +253,13 @@ function updateSigninStatus(isSignedIn) {
   }
 }
 
-const WinLoc =  window.location.value = "index.html";
-const logOut =  signoutButton.onclick;
-const LoginButMain = LoginButMain.onclick;
-const login = authorizeButton.onclick;
-
-function jumPage(updateSigninStatus) {
-  if(updateSigninStatus && logOut){
-    setTimeout(function () {
-      window.location.href = "index.html";
-    }, 500);
-   
-  }  
-}
 
 // Handle login
 function handleAuthClick() {
   gapi.auth2.getAuthInstance().signIn();
 }
 function handleAuthClickI() {
-  gapi.auth2.getAuthInstance().signIn();
-  setTimeout(function () {
+  gapi.auth2.getAuthInstance().signIn().setTimeout(function () {
     window.location.href = "daskboard.html";
   }, 500);
 }
