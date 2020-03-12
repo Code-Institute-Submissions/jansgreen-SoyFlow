@@ -259,18 +259,12 @@ const LoginButMain = LoginButMain.onclick;
 const login = authorizeButton.onclick;
 
 function jumPage(updateSigninStatus) {
-  if(LoginButMain && updateSigninStatus && WinLoc){
-    setTimeout(function () {
-      window.location.href = "daskboard.html";
-    }, 500);
-    authorizeButton.style.display = "block";
-  } else if (logOut){
+  if(updateSigninStatus && logOut){
     setTimeout(function () {
       window.location.href = "index.html";
     }, 500);
-    authorizeButton.style.display = "none";
-  }
-  
+   
+  }  
 }
 
 // Handle login
