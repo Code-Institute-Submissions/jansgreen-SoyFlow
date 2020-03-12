@@ -259,9 +259,10 @@ const singOutBtn = signoutButton.onclick;
 function FlowDesk(updateSigninStatus) {
 if(updateSigninStatus){
   $(document).ready(function() {
-    setTimeout(function() {
-      window.location.href = 'daskboard.html';
-  }, 500);
+    $(LoginButMain.onclick)(function() {
+      signoutButton.style.display = "none";
+  });
+
   })
 } else if(singOutBtn){
   $(document).ready(function() {
