@@ -240,6 +240,7 @@ function initClient() {
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = "none";
+    LoginButMain.style.display = "none";
     signoutButton.style.display = "block";
     content.style.display = "block";
     videoContainer.style.display = "block";
@@ -249,19 +250,33 @@ function updateSigninStatus(isSignedIn) {
     signoutButton.style.display = "none";
     content.style.display = "none";
     videoContainer.style.display = "none";
-
+    LoginButMain.style.display = "block";
   }
 }
-
-
+const LoginButM = LoginButMain.onclick;
+const singOutBtn = signoutButton.onclick;
+function FlowDesk(updateSigninStatus) {
+if(updateSigninStatus){
+  $(document).ready(function() {
+    setTimeout(function() {
+      window.location.href = 'daskboard.html';
+  }, 500);
+  })
+} else if(singOutBtn){
+  $(document).ready(function() {
+    setTimeout(function() {
+      window.location.href = 'index.html';
+  }, 500);
+  })
+}
+}
+  
 // Handle login
 function handleAuthClick() {
   gapi.auth2.getAuthInstance().signIn();
 }
 function handleAuthClickI() {
-  gapi.auth2.getAuthInstance().signIn().setTimeout(function () {
-    window.location.href = "daskboard.html";
-  }, 500);
+  gapi.auth2.getAuthInstance().signIn();
 }
 
 // Handle logout
