@@ -253,7 +253,7 @@ function updateSigninStatus(isSignedIn) {
   }
 }
 
-const WinLoc =  window.location = "index.html";
+const WinLoc =  window.location.value = "index.html";
 const logOut =  signoutButton.onclick;
 const LoginButMain = LoginButMain.onclick;
 const login = authorizeButton.onclick;
