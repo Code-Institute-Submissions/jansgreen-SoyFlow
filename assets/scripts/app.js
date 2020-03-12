@@ -249,19 +249,27 @@ function updateSigninStatus(isSignedIn) {
     signoutButton.style.display = "none";
     content.style.display = "none";
     videoContainer.style.display = "none";
-    setTimeout(function () {
-      window.location.href = "index.html";
-    }, 500);
+
   }
 }
 
-$(document).ready(function () {
-  $("#LogOutBut").click(function () {
-    $("#LoginBut").show();
-    $("#LogOutBut").hide();
-    $("#content").hide();
-  });
-});
+const WinLoc =  window.location = "index.html";
+const logOut =  signoutButton.onclick;
+
+function jumPage(updateSigninStatus) {
+  if(updateSigninStatus == WinLoc){
+    setTimeout(function () {
+      window.location.href = "daskboard.html";
+    }, 500);
+    authorizeButton.style.display = "block";
+  }else if (logOut){
+    setTimeout(function () {
+      window.location.href = "index.html";
+    }, 500);
+    authorizeButton.style.display = "none";
+  }
+  
+}
 
 // Handle login
 function handleAuthClick() {
