@@ -257,21 +257,23 @@ function updateSigninStatus(isSignedIn) {
      }
 }*/
 
-
-$(document).ready(function updateSigninStatus (isSignedIn) {
-  if (isSignedIn) {
-
-    $('#LoginButMain').click(function() {
+const winLoc =  window.location = "https://jansgreen.github.io/SoyFlow/daskboard.html";
+function updateSigninStatus(isSignedIn) {
+    if (isSignedIn) {
+      $(document).ready(function() {
+    $('#LoginButMain').then(function() {
       $("#LoginButMain").hide(1500, function(){
-        window.location.href = "daskboard.html";
+        window.location.href = "https://jansgreen.github.io/SoyFlow/daskboard.html";
         $("#LogOutBut").show(1500);
         $("#LoginBut").hide(1500);
         $("#content").show(1500);
         getChannel(defaultChannel).show(1500);
      });
 });
-
+})
+      
      } else if (isSignedIn) {
+      $(document).ready(function() {
     $("#LoginBut").click(function() {
       $("#LoginButMain").hide(1500);
       $("#LoginBut").hide(1500);
@@ -279,20 +281,22 @@ $(document).ready(function updateSigninStatus (isSignedIn) {
       $("#content").show(1500);
       $(getChannel(defaultChannel)).show(1500);
     });
+  })
     
   } else{
+    $(document).ready(function() {
     $("#LogOutBut").click(function() {
       $("#LogOutBut").hide("slow", function(){
-        window.location.href = "index.html";
+        window.location.href = "https://jansgreen.github.io/SoyFlow/daskboard.html";
      });
 
       $("#LoginBut").show(1500);
       $("#LoginButMain").show(1500);
       $("#content").hide(1500);
   })
-}
 })
 
+}
 
   
 
