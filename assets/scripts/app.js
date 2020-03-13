@@ -243,14 +243,12 @@ function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = "none";
     LoginButMain.style.display = "none";
+    LoginButMain.setTimeout(function() {
+      window.location.href = "daskboard.html";
+    }, 500);
     signoutButton.style.display = "blockk";
     content.style.display = "block";
     videoContainer.style.display = "block";
-    $(document).ready(function() {
-      $("LoginButMain").setTimeout(function() {
-        window.location.href = "daskboard.html";
-      }, 500);
-    });
     getChannel(defaultChannel);
   } else {
     authorizeButton.style.display = "block";
