@@ -255,10 +255,8 @@ function updateSigninStatus(isSignedIn) {
 
 $(document).ready(function (isSignedIn) {
   if (isSignedIn) {
-    $("#LoginButMain").click(function() {
-      setTimeout(function() {
-        window.location.href = "daskboard.html";
-      }, 500);
+    $("#LoginButMain").then(function() {
+      $('#LoginButMain').hide("slow", function(){window.location.href = "daskboard.html";});
       $("#LoginButMain").hide(1500);
       $("#LoginBut").hide(1500);
       $("#LogOutBut").show(1500);
@@ -272,9 +270,7 @@ $(document).ready(function (isSignedIn) {
     
   } else{
     $("#LogOutBut").click(function() {
-      setTimeout(function() {
-        window.location.href = "index.html";
-      }, 500);
+      $('#LogOutBut').hide("slow", function(){window.location.href = "index.html";});
       $("#LoginBut").hide(1500);
       $("#LoginButMain").show(1500);
   });
