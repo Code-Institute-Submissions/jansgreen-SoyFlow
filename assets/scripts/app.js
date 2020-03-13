@@ -260,16 +260,17 @@ function updateSigninStatus(isSignedIn) {
 
 $(document).ready(function updateSigninStatus (isSignedIn) {
   if (isSignedIn) {
+    $("#LogOutBut").show(1500);
+    $("#LoginBut").hide(1500);
+    $("#content").show(1500);
     $('#LoginButMain').click(function() {
       $("#LoginButMain").hide(1500, function(){
         window.location.href = "daskboard.html";
      });
-      $("#LoginBut").hide(1500);
-      $("#LogOutBut").show(1500);
-      $("#content").show(1500);
-      $(getChannel(defaultChannel)).show(1500);
 
+      $(getChannel(defaultChannel)).show(1500);
     });
+
      } else if (isSignedIn) {
     $("#LoginBut").click(function() {
       $("#LoginButMain").hide(1500);
@@ -284,6 +285,7 @@ $(document).ready(function updateSigninStatus (isSignedIn) {
       $("#LogOutBut").hide("slow", function(){
         window.location.href = "index.html";
      });
+
       $("#LoginBut").show(1500);
       $("#LoginButMain").show(1500);
       $("#content").hide(1500);
