@@ -258,9 +258,9 @@ function updateSigninStatus(isSignedIn) {
 }*/
 
 
-$(document).ready(function (isSignedIn) {
+$(document).ready(function updateSigninStatus (isSignedIn) {
   if (isSignedIn) {
-    $('isSignedIn').then(function() {
+    $('#LoginButMain').click(function() {
       $("#LoginButMain").hide(1500, function(){
         window.location.href = "daskboard.html";
      });
