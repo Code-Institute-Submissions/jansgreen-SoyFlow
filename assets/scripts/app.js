@@ -167,7 +167,7 @@ const SCOPES = "https://www.googleapis.com/auth/youtube.readonly";
 
 const authorizeButton = document.getElementById("LoginBut");
 const signoutButton = document.getElementById("LogOutBut");
-const LoginButMain = document.getElementById("LoginButMain");
+const LoginButMains = document.getElementById("LoginButMain");
 const content = document.getElementById("content");
 const channelForm = document.getElementById("channel-form");
 const channelInput = document.getElementById("channel-input");
@@ -232,7 +232,7 @@ function initClient() {
       updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
       authorizeButton.onclick = handleAuthClick;
       signoutButton.onclick = handleSignoutClick;
-      LoginButMain.onclick = handleAuthClickI;
+      LoginButMains.onclick = handleAuthClick;
     });
 }
 
@@ -242,7 +242,6 @@ const mainLog = LoginButMain.onclick;
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = "none";
-    LoginButMain.style.display = "none";
     LoginButMain.setTimeout(function() {
       window.location.href = "daskboard.html";
     }, 500);
@@ -261,11 +260,25 @@ function updateSigninStatus(isSignedIn) {
   }
 }
 
+$(document).ready(function () {
+  $("#LoginButMain").click(function() {
+    setTimeout(function() {
+      window.location.href = "daskboard.html";
+    }, 500);
+    $("#LoginButMain").hide(1500);
+  });
+
+  $("#LogOutBut").click(function() {
+      $("#LoginButMain").show(1500);
+      setTimeout(function() {
+        window.location.href = "index.html";
+      }, 500);
+  });
+  
+})
+
 // Handle login
 function handleAuthClick() {
-  gapi.auth2.getAuthInstance().signIn();
-}
-function handleAuthClickI() {
   gapi.auth2.getAuthInstance().signIn();
 }
 
