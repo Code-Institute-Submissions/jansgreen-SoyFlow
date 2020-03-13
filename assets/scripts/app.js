@@ -1,8 +1,8 @@
 /*==============================================================
 VALIDATE LOGGIN
 ===============================================================*/
-$(document).ready(function () {
-  $("#logSending").click(function () {
+$(document).ready(function() {
+  $("#logSending").click(function() {
     var user = $("#userLog").val();
     var password = $("#passwordLog").val();
 
@@ -24,8 +24,8 @@ $(document).ready(function () {
 /*==============================================================
 VALIDATE SINGING
 ===============================================================*/
-$(document).ready(function () {
-  $("#singSendding").click(function () {
+$(document).ready(function() {
+  $("#singSendding").click(function() {
     var iUsername = $("#iUsername");
     var iFullName = $("#iFullName");
     var iEmail = $("#iEmail");
@@ -73,8 +73,8 @@ $(document).ready(function () {
 /*==============================================================
 VALIDATE CONTRACT ART
 ===============================================================*/
-$(document).ready(function () {
-  $("#ContSendding").click(function () {
+$(document).ready(function() {
+  $("#ContSendding").click(function() {
     var User_name = $("#User_name");
     var full_name = $("#full_name");
     var Address = $("#Address");
@@ -114,8 +114,8 @@ $(document).ready(function () {
     } else {
       $("#alrContr").html("It look great!");
       $("#alrContr").fadeOut(1500);
-      $(document).ready(function () {
-        setTimeout(function () {
+      $(document).ready(function() {
+        setTimeout(function() {
           window.location.href = "daskboard.html";
         }, 500);
       });
@@ -126,13 +126,13 @@ $(document).ready(function () {
 /*==============================================================
 READ MORE
 ===============================================================*/
-$(document).ready(function () {
-  $("#hParI_I").click(function () {
+$(document).ready(function() {
+  $("#hParI_I").click(function() {
     $("#secClaInf").show(1500);
     $("#hParI_I").hide(1500);
   });
 
-  $("#hParI_O").click(function () {
+  $("#hParI_O").click(function() {
     $("#secClaInf").hide();
     $("#hParI_I").show(1500);
   });
@@ -143,8 +143,8 @@ FORMS AND LOG
 var Check = "#gridCheck";
 function lO() {
   if (Check) {
-    $(document).ready(function () {
-      setTimeout(function () {
+    $(document).ready(function() {
+      setTimeout(function() {
         window.location.href = "daskboard.html";
       }, 500);
     });
@@ -191,10 +191,10 @@ function authenticate() {
         "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtubepartner"
     })
     .then(
-      function () {
+      function() {
         console.log("Sign-in successful");
       },
-      function (err) {
+      function(err) {
         console.error("Error signing in", err);
       }
     );
@@ -204,10 +204,10 @@ function loadClient() {
   return gapi.client
     .load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
     .then(
-      function () {
+      function() {
         console.log("GAPI client loaded for API");
       },
-      function (err) {
+      function(err) {
         console.error("Error loading GAPI client for API", err);
       }
     );
@@ -237,14 +237,20 @@ function initClient() {
 }
 
 // Update UI sign in state changes
+const mainLog = LoginButMain.onclick;
 
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = "none";
-    LoginButMain.setTimeout(function() {window.location.href = 'daskboard.html';}, 500);
+    LoginButMain.style.display = "none";
     signoutButton.style.display = "blockk";
     content.style.display = "block";
     videoContainer.style.display = "block";
+    $(document).ready(function() {
+      $("LoginButMain").setTimeout(function() {
+        window.location.href = "daskboard.html";
+      }, 500);
+    });
     getChannel(defaultChannel);
   } else {
     authorizeButton.style.display = "block";
@@ -252,12 +258,11 @@ function updateSigninStatus(isSignedIn) {
     content.style.display = "none";
     videoContainer.style.display = "none";
     setTimeout(function() {
-      window.location.href = 'index.html';
-  }, 500);
+      window.location.href = "index.html";
+    }, 500);
   }
 }
 
-  
 // Handle login
 function handleAuthClick() {
   gapi.auth2.getAuthInstance().signIn();
@@ -293,16 +298,16 @@ function getChannel(channel) {
         <div class="card-header">${channel.snippet.title}</div>
         <div class="card-body">
         <li">Subscribers: ${numberWithCommas(
-        channel.statistics.subscriberCount
-      )}</li">
+          channel.statistics.subscriberCount
+        )}</li">
         <li>Views: ${numberWithCommas(channel.statistics.viewCount)}</li>
         <li>Videos: ${numberWithCommas(channel.statistics.videoCount)}</li>
           <h5 class="card-title">${channel.id}</h5>
           <p ${channel.snippet.description}</p>
           <hr>
           <a class="btn btn-info" target="_blank" href="https://youtube.com/${
-        channel.snippet.customUrl
-        }">Visit Channel</a>
+            channel.snippet.customUrl
+          }">Visit Channel</a>
         </div> `;
       showChannelData(output);
 

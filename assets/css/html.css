@@ -624,9 +624,6 @@ border-right: 2%;
 FLOWDESK
 ============================*/
 
-#content, #LogOutBut, #LoginBut{
-  display: none;
-}
 
 .navbar-dark{
   color: #f4f4f4f4;
