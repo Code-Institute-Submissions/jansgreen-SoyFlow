@@ -1,6 +1,3 @@
-
-
-
 /*==============================================================
 VALIDATE LOGGIN
 ===============================================================*/
@@ -238,10 +235,8 @@ function initClient() {
       LoginButMains.onclick = handleAuthClick;
     });
 }
-
-// Update UI sign in state changes
 /*
-
+// Update UI sign in state changes/*
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = "none";
@@ -257,47 +252,34 @@ function updateSigninStatus(isSignedIn) {
      }
 }*/
 
-const winLoc =  window.location = "https://jansgreen.github.io/SoyFlow/daskboard.html";
-const logPage =  "https://jansgreen.github.io/SoyFlow/daskboard.html";
-function updateSigninStatus(isSignedIn) {
-    if (isSignedIn) {
-      $(document).ready(function() {
-    $('#LoginButMain').then(function() {
-      $("#LoginButMain").hide(1500, function(){
-        window.location.href = "https://jansgreen.github.io/SoyFlow/daskboard.html";
-        $("#LogOutBut").show(1500);
-        $("#LoginBut").hide(1500);
-        $("#content").show(1500);
-        getChannel(defaultChannel).show(1500);
-     });
-});
-})
-      
-     } else if (isSignedIn) {
-      $(document).ready(function() {
+
+$(document).ready(function (isSignedIn) {
+  if (isSignedIn) {
+    $("#LoginButMain").click(function() {
+      setTimeout(function() {
+        window.location.href = "daskboard.html";
+      }, 500);
+      $("#LoginButMain").hide(1500);
+      $("#LoginBut").hide(1500);
+      $("#LogOutBut").show(1500);
+    });
+
     $("#LoginBut").click(function() {
       $("#LoginButMain").hide(1500);
       $("#LoginBut").hide(1500);
       $("#LogOutBut").show(1500);
-      $("#content").show(1500);
-      $(getChannel(defaultChannel)).show(1500);
     });
-  })
     
   } else{
-    $(document).ready(function() {
     $("#LogOutBut").click(function() {
-      $("#LogOutBut").hide("slow", function(){
-        window.location.href = "https://jansgreen.github.io/SoyFlow/daskboard.html";
-     });
-
-      $("#LoginBut").show(1500);
+      setTimeout(function() {
+        window.location.href = "index.html";
+      }, 500);
+      $("#LoginBut").hide(1500);
       $("#LoginButMain").show(1500);
-      $("#content").hide(1500);
-  })
-})
-
+  });
 }
+})
 
   
 
@@ -378,7 +360,7 @@ function requestVideoPlaylist(playlistId) {
       playListItems.forEach(item => {
         const videoId = item.snippet.resourceId.videoId;
 
-        output += `<iframe width="25%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+        output += `<iframe width="25%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> <br>`;
       });
 
       // Output videos
