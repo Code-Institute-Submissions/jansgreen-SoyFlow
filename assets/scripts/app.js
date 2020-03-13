@@ -240,6 +240,7 @@ function initClient() {
 }
 
 // Update UI sign in state changes
+/*
 
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
@@ -254,28 +255,28 @@ function updateSigninStatus(isSignedIn) {
     content.style.display = "none";
     videoContainer.style.display = "none";
      }
-}
+}*/
 
 
 $(document).ready(function (isSignedIn) {
   if (isSignedIn) {
-
     $("#LoginButMain").click(function() {
-      setTimeout(function() {
-        window.location.href = "daskboard.html";
-      }, 1500);
       $("#LoginButMain").hide(1500);
       $("#LoginBut").hide(1500);
       $("#LogOutBut").show(1500);
       $("#content").show(1500);
-      
-    });
+      $(getChannel(defaultChannel)).show(1500);
 
+    }).hide("slow", function(){
+      window.location.href = "https://jansgreen.github.io/SoyFlow/daskboard.html";
+   });
+   } else if (isSignedIn) {
     $("#LoginBut").click(function() {
       $("#LoginButMain").hide(1500);
       $("#LoginBut").hide(1500);
       $("#LogOutBut").show(1500);
       $("#content").show(1500);
+      $(getChannel(defaultChannel)).show(1500);
     });
     
   } else{
@@ -286,7 +287,9 @@ $(document).ready(function (isSignedIn) {
       $("#LoginBut").hide(1500);
       $("#LoginButMain").show(1500);
       $("#content").hide(1500);
-  });
+  }).hide("slow", function(){
+    window.location.href = "https://jansgreen.github.io/SoyFlow/";
+ });
 }
 })
   
@@ -368,7 +371,7 @@ function requestVideoPlaylist(playlistId) {
       playListItems.forEach(item => {
         const videoId = item.snippet.resourceId.videoId;
 
-        output += `<iframe width="25%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> <br>`;
+        output += `<iframe width="25%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
       });
 
       // Output videos
