@@ -237,6 +237,7 @@ function initClient() {
 }
 
 // Update UI sign in state changes
+
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = "none";

@@ -13,12 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--SCRIPTS-->
-    
-    
+
+
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
-    
+
 
     <title>SoyFlow</title>
 </head>
@@ -41,7 +41,7 @@
                 artists, you can also make an event to get your favorite artist to be present at that event.
                 <div class="mt-5" id="data">
             </p>
-                              
+
         </article>
         <article class="col-2 iAccess">
             <div class="row">
@@ -51,7 +51,7 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="userSpan">User</span>
-                                <p class="alert alert-primary" role="alert" id="alrUser"></p> 
+                                <p class="alert alert-primary" role="alert" id="alrUser"></p>
                             </div>
                             <input type="text" class="form-control" placeholder="Username" aria-label="Username"
                                 aria-describedby="basic-addon1" id="userLog">
@@ -66,17 +66,17 @@
                                 aria-describedby="basic-addon1" id="passwordLog">
                             <button type="submit" class="btn btn-primary" id="logSending">Login</button>
                             <div class="container my-5 text-center">
-                               
-                                
-                                <button class="btn btn-primary" id="LoginButMain" onclick="authenticate().then(loadClient).then(FlowDesk)">Youtube</button>
-                                                             
-                                </div>
-                            </div>
 
-                            
+
+                                <button class="btn btn-primary" id="LoginButMain" onclick="authenticate().then(loadClient)">Youtube</button>
+
+                            </div>
                         </div>
+
+
                     </div>
                 </div>
+            </div>
             </div>
 
         </article>
@@ -85,9 +85,9 @@
         <aside class="col-4  iMar aCont">
 
             <!--USER LOGIN AND SING IN-->
-           <form id="SignIN" class="row" method="post" action="php/InfUser.php">
+            <form id="SignIN" class="row" method="post" action="php/InfUser.php">
                 <div class="iReg">
-                    <div class="mTitle"><label for="basic-url">Sing in</label> 
+                    <div class="mTitle"><label for="basic-url">Sing in</label>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -167,13 +167,13 @@
                                         with the policies</a> and standards.
                                 </label>
                             </div>
-                           
+
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary"id="singSendding" onclick="singIn()">Sign in</button>
+                    <button type="submit" class="btn btn-primary" id="singSendding" onclick="singIn()">Sign in</button>
                     <p class="alert alert-primary" role="alert" id="alrReg"></p>
                 </div>
-          </form>
+            </form>
 
 
         </aside>
@@ -246,7 +246,7 @@
         </div>
         <div class="col"></div>
     </footer>
-     <script src="auth.js"></script>
+    <script src="auth.js"></script>
     <script src="playlist_updates.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
     <script src="search.js"></script>
