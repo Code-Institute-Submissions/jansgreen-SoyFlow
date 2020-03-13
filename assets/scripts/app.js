@@ -242,9 +242,6 @@ const mainLog = LoginButMain.onclick;
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = "none";
-    LoginButMain.setTimeout(function() {
-      window.location.href = "daskboard.html";
-    }, 500);
     signoutButton.style.display = "blockk";
     content.style.display = "block";
     videoContainer.style.display = "block";
@@ -254,28 +251,27 @@ function updateSigninStatus(isSignedIn) {
     signoutButton.style.display = "none";
     content.style.display = "none";
     videoContainer.style.display = "none";
-    setTimeout(function() {
-      window.location.href = "index.html";
-    }, 500);
-  }
+     }
 }
 
+function logged(isSignedIn) {
 $(document).ready(function () {
-  $("#LoginButMain").click(function() {
-    setTimeout(function() {
-      window.location.href = "daskboard.html";
-    }, 500);
-    $("#LoginButMain").hide(1500);
-  });
-
-  $("#LogOutBut").click(function() {
+  if (updateSigninStatus) {
+    $("#LoginButMain").click(function() {
+      setTimeout(function() {
+        window.location.href = "daskboard.html";
+      }, 500);
+      $("#LoginButMain").hide(1500);
+    });
+  } else {
+    $("#LogOutBut").click(function() {
       $("#LoginButMain").show(1500);
       setTimeout(function() {
         window.location.href = "index.html";
       }, 500);
   });
-  
-})
+  }
+
 
 // Handle login
 function handleAuthClick() {
@@ -353,7 +349,7 @@ function requestVideoPlaylist(playlistId) {
       playListItems.forEach(item => {
         const videoId = item.snippet.resourceId.videoId;
 
-        output += `<iframe width="25%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+        output += `<iframe width="25%" height="auto" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> <br>`;
       });
 
       // Output videos
