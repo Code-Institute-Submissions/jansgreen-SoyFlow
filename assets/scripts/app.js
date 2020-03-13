@@ -257,12 +257,16 @@ function updateSigninStatus(isSignedIn) {
      }
 }*/
 
-function updateSigninStatus(isSignedIn) {
-$(document).ready(function () {
+
+$(document).ready(function updateSigninStatus (isSignedIn) {
+  $("#LoginButMain").show();
+  $("#LoginBut").show();
+  $("#LogOutBut").hide();
+  $("#content").hide();
   if (isSignedIn) {
-    $("#LoginButMain").click(function() {
-      $("#LoginButMain").hide("slow", function(){
-        window.location.href = "https://jansgreen.github.io/SoyFlow/daskboard.html";
+    $("#LoginButMain").load(function() {
+      $("#LoginButMain").hide(1500, function(){
+        window.location.href = "daskboard.html";
      });
       $("#LoginBut").hide(1500);
       $("#LogOutBut").show(1500);
@@ -282,7 +286,7 @@ $(document).ready(function () {
   } else{
     $("#LogOutBut").click(function() {
       $("#LogOutBut").hide("slow", function(){
-        window.location.href = "https://jansgreen.github.io/SoyFlow/";
+        window.location.href = "index.html";
      });
       $("#LoginBut").show(1500);
       $("#LoginButMain").show(1500);
@@ -290,7 +294,8 @@ $(document).ready(function () {
   })
 }
 })
-}
+
+
   
 
 
