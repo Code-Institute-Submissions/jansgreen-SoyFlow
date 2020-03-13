@@ -1,3 +1,6 @@
+
+
+
 /*==============================================================
 VALIDATE LOGGIN
 ===============================================================*/
@@ -237,7 +240,6 @@ function initClient() {
 }
 
 // Update UI sign in state changes
-const mainLog = LoginButMain.onclick;
 
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
@@ -254,23 +256,40 @@ function updateSigninStatus(isSignedIn) {
      }
 }
 
-function logged(isSignedIn) {
-$(document).ready(function () {
-  if (updateSigninStatus) {
+
+$(document).ready(function (isSignedIn) {
+  if (isSignedIn) {
+
     $("#LoginButMain").click(function() {
       setTimeout(function() {
         window.location.href = "daskboard.html";
-      }, 500);
+      }, 1500);
       $("#LoginButMain").hide(1500);
+      $("#LoginBut").hide(1500);
+      $("#LogOutBut").show(1500);
+      $("#content").show(1500);
+      
     });
-  } else {
+
+    $("#LoginBut").click(function() {
+      $("#LoginButMain").hide(1500);
+      $("#LoginBut").hide(1500);
+      $("#LogOutBut").show(1500);
+      $("#content").show(1500);
+    });
+    
+  } else{
     $("#LogOutBut").click(function() {
-      $("#LoginButMain").show(1500);
       setTimeout(function() {
         window.location.href = "index.html";
-      }, 500);
+      }, 1500);
+      $("#LoginBut").hide(1500);
+      $("#LoginButMain").show(1500);
+      $("#content").hide(1500);
   });
-  }
+}
+})
+  
 
 
 // Handle login
