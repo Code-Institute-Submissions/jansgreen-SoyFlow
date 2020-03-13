@@ -258,6 +258,7 @@ function updateSigninStatus(isSignedIn) {
 }*/
 
 const winLoc =  window.location = "https://jansgreen.github.io/SoyFlow/daskboard.html";
+const logPage =  "https://jansgreen.github.io/SoyFlow/daskboard.html";
 function updateSigninStatus(isSignedIn) {
     if (isSignedIn) {
       $(document).ready(function() {
