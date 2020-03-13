@@ -259,10 +259,6 @@ function updateSigninStatus(isSignedIn) {
 
 
 $(document).ready(function updateSigninStatus (isSignedIn) {
-  $("#LoginButMain").show();
-  $("#LoginBut").show();
-  $("#LogOutBut").hide();
-  $("#content").hide();
   if (isSignedIn) {
     $("#LoginButMain").load(function() {
       $("#LoginButMain").hide(1500, function(){
