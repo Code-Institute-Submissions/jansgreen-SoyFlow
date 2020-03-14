@@ -260,6 +260,8 @@ function updateSigninStatus(isSignedIn) {
           $("#LoginButMain").hide(1500);
           $("#LoginBut").hide(1500);
           $("#LogOutBut").show(1500);
+          $("#content").show(1500);
+          getChannel(defaultChannel);
            });
         });
     }else if(isSignedIn){
@@ -268,6 +270,8 @@ function updateSigninStatus(isSignedIn) {
           $("#LoginButMain").hide(1500);
           $("#LoginBut").hide(1500);
           $("#LogOutBut").show(1500);
+          $("#content").show(1500);
+          getChannel(defaultChannel);
          });
      });
         
@@ -277,6 +281,7 @@ function updateSigninStatus(isSignedIn) {
           $('#LogOutBut').hide("slow", function(){window.location.href = "https://jansgreen.github.io/SoyFlow/index.html";});
           $("#LoginBut").hide(1500);
           $("#LoginButMain").show(1500);
+          $("#content").hide(1500);
         });
       });
       }
