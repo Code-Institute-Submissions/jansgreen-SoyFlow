@@ -251,34 +251,38 @@ function updateSigninStatus(isSignedIn) {
     videoContainer.style.display = "none";
      }
 }*/
+function updateSigninStatus(isSignedIn) {
 
-
-$(document).ready(function (isSignedIn) {
-  if (isSignedIn) {
-    $("#LoginButMain").then(function() {
-      $('#LoginButMain').hide("slow", function(){window.location.href = "daskboard.html";});
-      $("#LoginButMain").hide(1500);
-      $("#LoginBut").hide(1500);
-      $("#LogOutBut").show(1500);
-    });
-
-    $("#LoginBut").click(function() {
-      $("#LoginButMain").hide(1500);
-      $("#LoginBut").hide(1500);
-      $("#LogOutBut").show(1500);
-    });
-    
-  } else{
-    $("#LogOutBut").click(function() {
-      $('#LogOutBut').hide("slow", function(){window.location.href = "index.html";});
-      $("#LoginBut").hide(1500);
-      $("#LoginButMain").show(1500);
-  });
-}
-})
+  if(isSignedIn){
+    $(document).ready(function () {
+        $("#LoginButMain").ready(function() {
+          $('#LoginButMain').hide("slow", function(){window.location.href = "https://jansgreen.github.io/SoyFlow/daskboard.html";});
+          $("#LoginButMain").hide(1500);
+          $("#LoginBut").hide(1500);
+          $("#LogOutBut").show(1500);
+           });
+        });
+    }else if(isSignedIn){
+    $(document).ready(function () {
+        $("#LoginBut").ready(function() {
+          $("#LoginButMain").hide(1500);
+          $("#LoginBut").hide(1500);
+          $("#LogOutBut").show(1500);
+         });
+     });
+        
+      }else{
+      $(document).ready(function () {
+        $("#LogOutBut").ready(function() {
+          $('#LogOutBut').hide("slow", function(){window.location.href = "https://jansgreen.github.io/SoyFlow/index.html";});
+          $("#LoginBut").hide(1500);
+          $("#LoginButMain").show(1500);
+        });
+      });
+      }
+  }
 
   
-
 
 // Handle login
 function handleAuthClick() {
