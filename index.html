@@ -13,8 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--SCRIPTS-->
-    
-    
+
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
@@ -85,7 +84,8 @@
         <aside class="col-4  iMar aCont">
 
             <!--USER LOGIN AND SING IN-->
-           <form id="SignIN" class="row" method="post" action="php/InfUser.php">
+           <form  method="POST">
+            <div class="row">
                 <div class="iReg">
                     <div class="mTitle"><label for="basic-url">Sing in</label> 
                     </div>
@@ -110,7 +110,7 @@
                         <input type="text" class="form-control" placeholder="Recipient's username" id="iEmail"
                             aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">@example.com</span>
+                            <span class="input-group-text" id="basic-addon2">@Gmail.com</span>
                         </div>
                     </div>
 
@@ -170,9 +170,10 @@
                            
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary"id="singSendding" onclick="singIn()">Sign in</button>
+                    <button type="submit" class="btn btn-primary"id="singSendding">Sign in</button>
                     <p class="alert alert-primary" role="alert" id="alrReg"></p>
                 </div>
+            </div>
           </form>
 
 
@@ -258,6 +259,7 @@
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
         </script>
+            
 </body>
 
 </html>

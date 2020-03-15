@@ -13,6 +13,12 @@
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_Oqsg60rcrUd7Iqtg8SvvS");
+          })();
+    </script>
     
    <!--  <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.min.js"></script>
@@ -86,42 +92,46 @@
                               <img src="/assets/images/contract.jpg" alt="" id="cImg" style="width: 35rem;">
                     </div>
                     <div class="card-body">
-                        <form method="POST">
+                        <form id="ContractEmail" method="post">
                         <div>
             
                                 
                                     <div class="col-5 contract-form-1">
                                             <label class="row f-inpu-lb"  for="User-name" class="label">User or Company name</label>
                                             <p class="alert alert-primary" role="alert" id="alrContrUname"></p>
-                                            <input class="row f-inpu"  type="text" id="User_name"   placeholder="User or Company name">
+                                            <input class="row f-inpu"  type="text" id="UserName" placeholder="User or Company name" name="CompName">
             
-                                            <label class="row f-inpu-lb"  for="full-name" class="label">Full Name</label>
+                                            <label class="row f-inpu-lb"  for="full-name" class="label">Your Full Name</label>
                                             <p class="alert alert-primary" role="alert" id="alrContrFname"></p>
-                                            <input class="row f-inpu"  type="text" id="full_name" placeholder="Full Name">
+                                            <input class="row f-inpu"  type="text" id="full_name" placeholder="Full Name" name="UserName">
             
-                                            <label class="row f-inpu-lb"  for="Addres" class="label">Address</label>
+                                            <label class="row f-inpu-lb"  for="Addres" class="label">Your Address</label>
                                             <p class="alert alert-primary" role="alert" id="alrContrAddress"></p>
-                                            <input class="row f-inpu"  type="address" id="Address" placeholder="Your Addres">
+                                            <input class="row f-inpu"  type="address" id="Address"placeholder="Your Addres" name="UserAddress" >
             
                                             <label class="row f-inpu-lb"  for="E-Addres" class="label">Event Address</label>
                                             <p class="alert alert-primary" role="alert" id="alrContrEaddress"></p>
-                                            <input class="row f-inpu"  type="addres" id="E_Address"placeholder="the address where the event will take place.">
+                                            <input class="row f-inpu"  type="addres" id="E_Address" placeholder="the address where the event will take place." name="EventName">
             
                                         </div>
             
                                     <div class=" col-5 contract-form-2">
             
-                                            <label class="row f-inpu-lb" for="email" class="label">Email</label>
+                                            <label class="row f-inpu-lb" for="email" class="label">Your Email</label>
                                             <p class="alert alert-primary" role="alert" id="alrContrEmail"></p>
-                                            <input class="row f-inpu" type="email" id="Email" placeholder="your or company Email">
+                                            <input class="row f-inpu" type="email" id="Email" placeholder="your or company Email" name="UserEmail">
             
-                                            <label class="row f-inpu-lb" for="Password" class="label">Password</label>
+                                            <label class="row f-inpu-lb" for="Password" class="label">How many people will attend the event?</label>
                                             <p class="alert alert-primary" role="alert" id="alrContrPassword"></p>
-                                            <input  class="row f-inpu"type="password" id="Password" placeholder="Confirmed Password">
+                                            <input  class="row f-inpu" type="number" id="Peoble" placeholder="People" name="Peaple">
             
-                                            <label class="row f-inpu-lb" for="phone" class="label">Phone Number</label>
+                                            <label class="row f-inpu-lb" for="phone" class="label">Your Phone Number</label>
                                             <p class="alert alert-primary" role="alert" id="alrContrPhone"></p>
-                                            <input class="row f-inpu" type="number" id="phone"  placeholder="Your number phone">
+                                            <input class="row f-inpu" type="number" id="phone" placeholder="Your number phone" name="Phone">
+
+                                            <label class="row f-inpu-lb" for="phone" class="label">Note</label>
+                                            <p class="alert alert-primary" role="alert" id="alrContrPhone"></p>
+                                            <input class="row f-inpu" type="text" id="note" placeholder="any extra information?" name="note" >
                                             
                                 </div>
             
@@ -135,7 +145,7 @@
                                         <label class="form-check-label" for="conditions">By checking this box you are accepting
                                             the terms and conditions.</label>
                                     </div>
-                                    <button type="button" class="btn btn-primary" name="submit" id="ContSendding">submit</button>
+                                    <button type="submit" class="btn btn-primary" id="ContSendding">submit</button>
                                 </div>
                             
                 
@@ -223,6 +233,7 @@
         </div>
         <div class="col"></div>
     </footer>
+    <script src="assets/scripts/sendEmail.js"></script>
 </body>
 
 </html>
