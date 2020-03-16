@@ -34,9 +34,8 @@ const content = document.getElementById("content");
 const channelForm = document.getElementById("channel-form");
 const channelInput = document.getElementById("channel-input");
 const videoContainer = document.getElementById("video-container");
-const videoArt = document.getElementById("video-Art");
 
-const defaultChannel = "M7lc1UVf-VE";
+const defaultChannel = "jansgreen";
 
 // Form submit and change channel
 channelForm.addEventListener("submit", e => {
@@ -218,7 +217,6 @@ function requestVideoPlaylist(playlistId) {
 
       // Output videos
       videoContainer.innerHTML = output;
-      videoArt.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/i74bWwG6NMU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     } else {
       videoContainer.innerHTML = "No Uploaded Videos";
     }
