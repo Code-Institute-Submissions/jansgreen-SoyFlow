@@ -13,6 +13,7 @@
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
+    <script type="text/javascript" src="assets/scripts/sendEmail.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
@@ -109,9 +110,9 @@
                                             <p class="alert alert-primary" role="alert" id="alrContrAddress"></p>
                                             <input class="row f-inpu"  type="address" id="Address"placeholder="Your Addres" name="UserAddress" >
             
-                                            <label class="row f-inpu-lb"  for="E-Addres" class="label">Event Address</label>
+                                            <label class="row f-inpu-lb"  for="E-adress" class="label">Event Address</label>
                                             <p class="alert alert-primary" role="alert" id="alrContrEaddress"></p>
-                                            <input class="row f-inpu"  type="addres" id="E_Address" placeholder="the address where the event will take place." name="EventName">
+                                            <input class="row f-inpu"  type="address" id="E_Address" placeholder="the address where the event will take place." name="EventAddress">
             
                                         </div>
             
@@ -139,6 +140,7 @@
             
                                 <div class="col-12 card-footer">
                                     <div class=" text-muted">
+                                        <p id="ArtName">hola mundo</p>
                                         <small id="safe" class="form-text">We'll never share your email with anyone
                                             else.</small>
                                         <input type="checkbox" class="form-check-input" id="conditions">
@@ -147,8 +149,6 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary" id="ContSendding">submit</button>
                                 </div>
-                            
-                
                 </form>
                     </div>
                   </div>
@@ -233,7 +233,7 @@
         </div>
         <div class="col"></div>
     </footer>
-    <script src="assets/scripts/sendEmail.js"></script>
+    
 </body>
 
 </html>

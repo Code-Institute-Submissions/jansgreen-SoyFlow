@@ -1,30 +1,39 @@
 /*==============================================================
 EMAILING
 ===============================================================*/
+$(document).ready(function() {
+    $("#RomeoSantos").click(function() {
+    $("#ArtName").text("Romeo Santos");
+    $(window.location.href = "contract.html");
+  });
+});
 
-  var ContractEmail = $("form#ContractEmail");
-  ContractEmail.submit(function(event){
-    event.preventDefault();
-  
-    // Change to your service ID, or keep using the default service
-    var service_id = "default_service";
-    var template_id = "soyflow";
-  
-    ContractEmail.find("button").text("Sending...");
-    emailjs.sendForm(service_id,template_id,ContractEmail[0])
-      .then(function(){ 
-        $(document).ready(function() {
-          $('#ContSendding').ready("slow", function(){window.location.href = "https://jansgreen.github.io/SoyFlow/artist.html";});
-              });
-     
+var ContractEmail = $("form#ContractEmail");
+ContractEmail.submit(function(event) {
+  event.preventDefault();
+
+  // Change to your service ID, or keep using the default service
+  var service_id = "default_service";
+  var template_id = "soyflow";
+
+  ContractEmail.find("button").text("Sending...");
+  emailjs
+    .sendForm(service_id, template_id, ContractEmail[0])
+    .then(
+      function() {
         alert("Sent!");
         ContractEmail.find("button").text("Send");
-      }, function(err) {
-         alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-         ContractEmail.find("button").text("Send");
-      });
-    return false;
-  });
+      },
+      function(err) {
+        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+        ContractEmail.find("button").text("Send");
+      }
+    )
+    .then(function() {
+      window.location.href = "https://jansgreen.github.io/SoyFlow/artist.html";
+    });
+  return false;
+});
 
 /*
 $('#contractForm').on('submit', function(event) {
@@ -149,9 +158,8 @@ var templateParams = {
         
       })
     }*/
-    
 
-    /*==============================================================
+/*==============================================================
 VALIDATE LOGGIN
 ===============================================================*/
 /*$(document).ready(function() {
@@ -173,7 +181,6 @@ VALIDATE LOGGIN
     }
   });
 });*/
-
 
 /*==============================================================
 VALIDATE CONTRACT ART
