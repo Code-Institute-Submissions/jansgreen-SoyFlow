@@ -520,7 +520,7 @@ ARTIST
 /*=======================================================================
 CSS FOR JS
 =========================================================================*/
-#alrUser {
+#alrUser, #alrReg, #artfieldUserName, #artfieldFullName, #artfieldAddress, #artfieldEvenAddress, #userEmail, #Peaplo, #Nphone, #ContNote, #Artselect{
   display: none;
   margin-right: 80%;
   position: absolute;
@@ -532,21 +532,18 @@ CSS FOR JS
   z-index: 1;
 }
 
-#colorGreen {
-  background-color: #18861d;
-}
-#alrReg {
+#colorGreen, #allfields {
   display: none;
-  margin-top: 2%;
   margin-right: 80%;
   position: absolute;
-  background-color: #cc05056e;
+  background-color: #18861d75;
   color: #ffffff;
   text-decoration: solid;
   height: 45px;
   width: 200px;
   z-index: 1;
 }
+
 #alrContr, #alrContrPhone, #alrContrEmail, #alrContrPassword, #alrContrEaddress, #alrContrAddress, #alrContrFname, #alrContrUname {
  display: none;
   margin-top: 2%;
@@ -631,4 +628,8 @@ display: none;
   color: #f4f4f4f4;
   font-size: 20px;
   text-decoration: none;
+}
+
+#ContSendding{
+  display: none;
 }

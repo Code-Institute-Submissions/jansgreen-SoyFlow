@@ -12,14 +12,9 @@
   
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/app.js"></script>
-    <script type="text/javascript" src="assets/scripts/sendEmail.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("user_Oqsg60rcrUd7Iqtg8SvvS");
-          })();
-    </script>
+   
+    
+    
     
    <!--  <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.min.js"></script>
@@ -99,18 +94,22 @@
                                 
                                     <div class="col-5 contract-form-1">
                                             <label class="row f-inpu-lb"  for="User-name" class="label">User or Company name</label>
+                                            <div id="artfieldUserName"></div>
                                             <p class="alert alert-primary" role="alert" id="alrContrUname"></p>
                                             <input class="row f-inpu"  type="text" id="UserName" placeholder="User or Company name" name="CompName">
             
                                             <label class="row f-inpu-lb"  for="full-name" class="label">Your Full Name</label>
+                                            <div id="artfieldFullName"></div>
                                             <p class="alert alert-primary" role="alert" id="alrContrFname"></p>
                                             <input class="row f-inpu"  type="text" id="full_name" placeholder="Full Name" name="UserName">
             
                                             <label class="row f-inpu-lb"  for="Addres" class="label">Your Address</label>
+                                            <div id="artfieldAddress"></div>
                                             <p class="alert alert-primary" role="alert" id="alrContrAddress"></p>
-                                            <input class="row f-inpu"  type="address" id="Address"placeholder="Your Addres" name="UserAddress" >
+                                            <input class="row f-inpu"  type="address" id="Address" placeholder="Your Addres" name="UserAddress" >
             
                                             <label class="row f-inpu-lb"  for="E-adress" class="label">Event Address</label>
+                                            <div id="artfieldEvenAddress"></div>
                                             <p class="alert alert-primary" role="alert" id="alrContrEaddress"></p>
                                             <input class="row f-inpu"  type="address" id="E_Address" placeholder="the address where the event will take place." name="EventAddress">
             
@@ -119,18 +118,22 @@
                                     <div class=" col-5 contract-form-2">
             
                                             <label class="row f-inpu-lb" for="email" class="label">Your Email</label>
+                                            <div id="userEmail"></div>
                                             <p class="alert alert-primary" role="alert" id="alrContrEmail"></p>
                                             <input class="row f-inpu" type="email" id="Email" placeholder="your or company Email" name="UserEmail">
             
                                             <label class="row f-inpu-lb" for="Password" class="label">How many people will attend the event?</label>
+                                            <div id="Peaplo"></div>
                                             <p class="alert alert-primary" role="alert" id="alrContrPassword"></p>
                                             <input  class="row f-inpu" type="number" id="Peoble" placeholder="People" name="Peaple">
             
                                             <label class="row f-inpu-lb" for="phone" class="label">Your Phone Number</label>
+                                            <div id="Nphone"></div>
                                             <p class="alert alert-primary" role="alert" id="alrContrPhone"></p>
                                             <input class="row f-inpu" type="number" id="phone" placeholder="Your number phone" name="Phone">
 
                                             <label class="row f-inpu-lb" for="phone" class="label">Note</label>
+                                            <div id="ContNote"></div>
                                             <p class="alert alert-primary" role="alert" id="alrContrPhone"></p>
                                             <input class="row f-inpu" type="text" id="note" placeholder="any extra information?" name="note" >
                                             
@@ -140,12 +143,27 @@
             
                                 <div class="col-12 card-footer">
                                     <div class=" text-muted">
-                                        <p id="ArtName">hola mundo</p>
-                                        <small id="safe" class="form-text">We'll never share your email with anyone
-                                            else.</small>
+                                        <div id="Artselect"></div>
+                                        <small id="safe" class="form-text">Please Select the Artist</small>
+                                        <select placeholder="Select Artist" id="ArtSelect" class="form-control" name="ArtistNameCont">
+                                            <option></option>
+                                            <option>Romeo Santos</option>
+                                            <option>Antony Santos</option>
+                                            <option>Raulin Rodriguez</option>
+                                            <option>Frank Reyes</option>
+                                            <option>Zacarias Ferreira</option>
+                                            <option>Prince Royce</option>
+                                            <option>Yoskal Sarante</option>
+                                            <option>Luis Vargas</option>
+                                            <option>Juan Luis Guerra</option>
+                                            <option>El Torito</option>
+                                          </select>
+                                          
+                                        <small id="safe" class="form-text">you can write "N/A" in the fields that do not apply</small>
+                                            <div id="allfields"></div>
                                         <input type="checkbox" class="form-check-input" id="conditions">
                                         <label class="form-check-label" for="conditions">By checking this box you are accepting
-                                            the terms and conditions.</label>
+                                            the <a href="https://www.termsandconditionstemplate.net/live.php?token=rpbrQoMvL90Srgla0TF2VbW0mmC8cuBZ">terms and conditions</a>.</label>
                                     </div>
                                     <button type="submit" class="btn btn-primary" id="ContSendding">submit</button>
                                 </div>
@@ -233,7 +251,14 @@
         </div>
         <div class="col"></div>
     </footer>
-    
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript" src="assets/scripts/sendEmail.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_Oqsg60rcrUd7Iqtg8SvvS");
+   })();
+</script>
 </body>
 
 </html>
