@@ -17,8 +17,7 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
-    
-
+  
     <title>SoyFlow</title>
 </head>
 
@@ -40,7 +39,7 @@
                 artists, you can also make an event to get your favorite artist to be present at that event.
                 <div class="mt-5" id="data">
             </p>
-                              
+
         </article>
         <article class="col-2 iAccess">
             <div class="row">
@@ -50,7 +49,7 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="userSpan">User</span>
-                                <p class="alert alert-primary" role="alert" id="alrUser"></p> 
+                                <p class="alert alert-primary" role="alert" id="alrUser"></p>
                             </div>
                             <input type="text" class="form-control" placeholder="Username" aria-label="Username"
                                 aria-describedby="basic-addon1" id="userLog">
@@ -65,17 +64,18 @@
                                 aria-describedby="basic-addon1" id="passwordLog">
                             <button type="submit" class="btn btn-primary" id="logSending">Login</button>
                             <div class="container my-5 text-center">
-                               
-                                
-                                <button class="btn btn-primary" id="LoginButMain" onclick="authenticate().then(loadClient)">Youtube</button>
-                                                                                          
-                                </div>
-                            </div>
 
-                            
+
+                                <button class="btn btn-primary" id="LoginButMain"
+                                    onclick="authenticate().then(loadClient)">Youtube</button>
+
+                            </div>
                         </div>
+
+
                     </div>
                 </div>
+            </div>
             </div>
 
         </article>
@@ -84,97 +84,112 @@
         <aside class="col-4  iMar aCont">
 
             <!--USER LOGIN AND SING IN-->
-           <form  method="POST">
-            <div class="row">
-                <div class="iReg">
-                    <div class="mTitle"><label for="basic-url">Sing in</label> 
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="sUser">User</span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                            id="iUsername" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Full Name</span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Full Name" aria-label="Username"
-                            id="iFullName" aria-describedby="basic-addon1">
-                    </div>
-
-
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Recipient's username" id="iEmail"
-                            aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">@Gmail.com</span>
-                        </div>
-                    </div>
-
-                    <div class="mTitle"><label for="basic-url">URL bussiness</label></div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                        </div>
-                        <input type="text" class="form-control" id="basicUrl" aria-describedby="basic-addon3">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Cell Phone</span>
-                        </div>
-                        <input type="number" class="form-control" aria-label="Your number phone">
-                        <div class="input-group-append" id="Nphone">
-                            <span class="input-group-text">777-777-7777</span>
-                        </div>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Address</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Your Address" id="iAddress">
-                        <div class="input-group-append">
+            <form onsubmit="return false;" method="post">
+                <div class="row">
+                    <div class="iReg">
+                        <div class="mTitle"><label for="basic-url">Sing in</label>
                         </div>
                         <div class="input-group mb-3">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <div class="mTitle"> <label for="inputCity">City</label></div>
-                                    <input type="text" class="form-control" id="iCity">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <div class="mTitle"> <label for="inputState">State</label></div>
-                                    <select id="iState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <div class="mTitle"><label for="inputZip">Zip</label></div>
-                                    <input type="text" class="form-control" id="iZip">
-                                </div>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="sUser">User</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                id="iUsername" aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Full Name</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Full Name" aria-label="Username"
+                                id="iFullName" aria-describedby="basic-addon1">
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" id="iEmail"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">@Gmail.com</span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    I have read and <a
-                                        href="https://page-one.springer.com/pdf/preview/10.1007/3-540-36467-6_10">agree
-                                        with the policies</a> and standards.
-                                </label>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Your Password please" id="password"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">Password</span>
                             </div>
-                           
                         </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Can you repeate your password?"
+                                id="RepPassword" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">Password</span>
+                            </div>
+                        </div>
+
+                        <div class="mTitle"><label for="basic-url">URL bussiness</label></div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                            </div>
+                            <input type="text" class="form-control" id="basicUrl" aria-describedby="basic-addon3">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Cell Phone</span>
+                            </div>
+                            <input type="number" class="form-control" aria-label="Your number phone">
+                            <div class="input-group-append" id="Nphone">
+                                <span class="input-group-text">777-777-7777</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Address</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Your Address" id="iAddress">
+                            <div class="input-group-append">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <div class="mTitle"> <label for="inputCity">City</label></div>
+                                        <input type="text" class="form-control" id="iCity">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <div class="mTitle"> <label for="inputState">State</label></div>
+                                        <select id="iState" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <div class="mTitle"><label for="inputZip">Zip</label></div>
+                                        <input type="text" class="form-control" id="iZip">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        I have read and <a
+                                            href="https://page-one.springer.com/pdf/preview/10.1007/3-540-36467-6_10">agree
+                                            with the policies</a> and standards.
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button onclick="singIn()" type="submit" class="btn btn-primary" id="btn-signup">Sign
+                            in</button>
+                        <p class="alert alert-primary" role="alert" id="alrReg"></p>
                     </div>
-                    <button type="submit" class="btn btn-primary"id="singSendding">Sign in</button>
-                    <p class="alert alert-primary" role="alert" id="alrReg"></p>
                 </div>
-            </div>
-          </form>
+            </form>
 
 
         </aside>
@@ -247,7 +262,7 @@
         </div>
         <div class="col"></div>
     </footer>
-     <script src="auth.js"></script>
+    <script src="auth.js"></script>
     <script src="playlist_updates.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
     <script src="search.js"></script>
@@ -256,10 +271,37 @@
     <script type="text/javascript" src="my_uploads.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="assets/scripts/app.js"></script>
+    <script type="text/javascript" src="assets/scripts/sendEmail.js"></script>
     <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
         </script>
-            
+    <script src="https://cdn.auth0.com/js/auth0/9.12/auth0.min.js"></script>
+    <script src="https://cdn.auth0.com/js/polyfills/1.0/object-assign.min.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDVa0S8skREg8q_Hyd9IM9LZzSN-QZF4Pg",
+    authDomain: "soyflow-cf964.firebaseapp.com",
+    databaseURL: "https://soyflow-cf964.firebaseio.com",
+    projectId: "soyflow-cf964",
+    storageBucket: "soyflow-cf964.appspot.com",
+    messagingSenderId: "883496458352",
+    appId: "1:883496458352:web:053a8874ae67393520fcb5",
+    measurementId: "G-LRZ1S2BSMQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
 </body>
 
 </html>

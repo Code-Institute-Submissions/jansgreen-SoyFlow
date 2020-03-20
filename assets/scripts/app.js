@@ -1,3 +1,30 @@
+/*==============================================================
+REGISTRER
+===============================================================*/
+function singIn(){
+
+var RegUsername = document.getElementById('#iUsername'); 
+var RegiFullName = document.getElementById("#iFullName");
+var Regpassword = document.getElementById("#password");
+var RegiEmail = document.getElementById("#iEmail");
+var RegbasicUrl = document.getElementById("#basicUrl");
+var RegNphone = document.getElementById("#Nphone");
+var RegiAddress = document.getElementById("#iAddress");
+var RegiCity = document.getElementById("#iCity");
+var RegiState = document.getElementById("#iState");
+var RegiZip = document.getElementById("#iZip");
+
+firebase.auth().createUserWithEmailAndPassword(RegiEmail, Regpassword)
+.catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+  console.log(errorCode);
+  console.log(errorMessage);
+   console.log("Imprimiendo");
+})
+}
 
 
 /*==============================================================
