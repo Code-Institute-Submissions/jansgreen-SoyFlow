@@ -520,7 +520,9 @@ ARTIST
 /*=======================================================================
 CSS FOR JS
 =========================================================================*/
-#alrUser, #alrReg, #artfieldUserName, #artfieldFullName, #artfieldAddress, #artfieldEvenAddress, #userEmail, #Peaplo, #Nphone, #ContNote, #Artselect{
+#alrUser, #artfieldUserName, #artfieldFullName, #artfieldAddress, #artfieldEvenAddress, #userEmail,
+#Peaplo, #Nphone, #ContNote, #Artselect, #labUsername, #labIfullName, #labIEmail, #labPassword, #labConPassword,
+#labNphone, #labICity, #labIstate, #labIzip, #labIaddress{
   display: none;
   margin-right: 80%;
   position: absolute;
@@ -532,7 +534,7 @@ CSS FOR JS
   z-index: 1;
 }
 
-#colorGreen, #allfields {
+#alrReg, #colorGreen, #allfields {
   display: none;
   margin-right: 80%;
   position: absolute;
@@ -630,6 +632,6 @@ display: none;
   text-decoration: none;
 }
 
-#ContSendding{
+#btn-signup, #ContSendding{
   display: none;
 }

@@ -1,29 +1,139 @@
+/*================================================================================
+REGI BUTTON
+==================================================================================*/
+$(document).ready(function(){
+  $("#gridCheck").click(function(){
+    var UsersName = $("#iUsername").val();//
+    var fullName = $("#iFullName").val();//
+    var Address = $("#iAddress").val();//
+    var City = $("#iCity").val();//
+    var usersEmail = $("#iEmail").val();//
+    var password = $("#password").val();//
+    var Numberphone = $("#Iphone").val();//
+    var State = $("#iState").val();//
+    var Zip = $("#iZip").val();//
+
+    if (UsersName == "") {
+      $("#labUsername").fadeIn();
+      $("#labUsername").html("Your User Name is empy!!");
+      return false;
+    } else if (fullName == "") {
+      $("#labIfullName").fadeIn();
+      $("#labIfullName").html("Your Full Name is empy!!");
+      return false;
+    } else if (Address == "") {
+      $("#labIaddress").fadeIn();
+      $("#labIaddress").html("Your address is empy!!");
+      return false;
+    } else if (City == "") {
+      $("#labICity").fadeIn();
+      $("#labICity").html("The City is empy!!");
+      return false;
+    } else if (usersEmail == "") {
+      $("#labIEmail").fadeIn();
+      $("#labIEmail").html("Your Email is empy!!");
+      return false;
+    }  else if (password == "") {
+      $("#labPassword").fadeIn();
+      $("#labPassword").html("Your Password");
+      return false;
+    }  else if (Numberphone == "") {
+      $("#labNphone").fadeIn();
+      $("#labNphone").html("your number phone is empty!!");
+      return false;
+    } else if (State == "") {
+      $("#labIstate").fadeIn();
+      $("#labIstate").html("your labIstate is empty!!");
+      return false;
+    }  else if (Zip == "") {
+      $("#labIzip").fadeIn();
+      $("#labIzip").html("your zide code!");
+      return false;
+    } else {
+      $("#btn-signup").fadeIn();
+      $("#alrReg").fadeIn();
+      $("#labIfullName").hide();
+      $("#labIaddress").hide();
+      $("#labICity").hide();
+      $("#labIEmail").hide();
+      $("#labPassword").hide();
+      $("#labNphone").hide();
+      $("#labIstate").hide();
+      $("#labIzip").hide();
+      $("#alrReg").html("Look great!!!");
+      return false;
+    }
+   
+  });
+});
+
+
+/*==============================================================
+EMAILING
+===============================================================*/
+var myform = $("form#ContractEmail");
+myform.submit(function(event){
+	event.preventDefault();
+
+  // Change to your service ID, or keep using the default service
+  var service_id = "default_service";
+  var template_id = "soyflow";
+
+  myform.find("button").text("Sending...");
+  emailjs.sendForm(service_id,template_id,myform[0])
+  	.then(function(){ 
+    	alert("please confirm that you want to send the form");
+       myform.find("button").text("Send");
+    }, function(err) {
+       alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+       myform.find("button").text("Send");
+    }).then(function() {
+      window.location.href = "https://jansgreen.github.io/SoyFlow/artist.html";
+    });
+  return false;
+});
+
+
 /*==============================================================
 REGISTRER
 ===============================================================*/
-function singIn(){
-
-var RegUsername = document.getElementById('#iUsername'); 
-var RegiFullName = document.getElementById("#iFullName");
-var Regpassword = document.getElementById("#password");
-var RegiEmail = document.getElementById("#iEmail");
-var RegbasicUrl = document.getElementById("#basicUrl");
-var RegNphone = document.getElementById("#Nphone");
-var RegiAddress = document.getElementById("#iAddress");
-var RegiCity = document.getElementById("#iCity");
-var RegiState = document.getElementById("#iState");
-var RegiZip = document.getElementById("#iZip");
-
-firebase.auth().createUserWithEmailAndPassword(RegiEmail, Regpassword)
-.catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // ...
-  console.log(errorCode);
-  console.log(errorMessage);
-   console.log("Imprimiendo");
-})
+function handleSignUp() {
+var email = document.getElementById('iEmail').value;
+var password = document.getElementById('password').value;
+var RegUsername = document.getElementById("iUsername").value; //
+var RegiFullName = document.getElementById("iFullName").value; //
+var RegbasicUrl = document.getElementById("basicUrl").value;//
+var RegNphone = document.getElementById("Nphone").value;
+var RegiAddress = document.getElementById("iAddress").value;
+var RegiCity = document.getElementById("iCity").value;
+var RegiState = document.getElementById("iState").value;
+var RegiZip = document.getElementById("iZip").value;
+  if (email.length < 4) {
+    alert('Please enter an email address.');
+    return;
+  }
+  if (password.length < 4) {
+    alert('Please enter a password.');
+    return;
+  }
+  // Sign in with email and pass.
+  // [START createwithemail]
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // [START_EXCLUDE]
+    if (errorCode == 'auth/weak-password') {
+      alert('The password is too weak.');
+    } else {
+      alert(errorMessage);
+    }
+    console.log(error);
+    // [END_EXCLUDE]
+  }).then(function() {
+    window.location.href = "/daskboard.html";
+  });
+  // [END createwithemail]
 }
 
 
