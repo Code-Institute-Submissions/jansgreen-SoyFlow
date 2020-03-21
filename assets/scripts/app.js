@@ -43,14 +43,16 @@ firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error
      $(document).ready(function () {
       $("#LogButton").html("you are logged ready");
       $("#LogButton").fadeIn();
-      $("#LogButton").hide(1500, window.location.href = "/daskboard.html");
+      $("#LogButton").hide(1500, window.location.href = "/SoyFlow/daskboard.html");
+      $("#UserSignOut").show();
      })
       // ...
     } else {
       $(document).ready(function () {
         $("#LogButton").hide();
-        $("#UserSignOut").fadeOut();
-        $("#LogButton").hide("slow", window.location.href = "/index.html");
+        $("#UserSignOut").hide();
+        $("#LogButton").hide("slow", window.location.href = "/SoyFlow/index.html");
+       
         
        })
     }
@@ -199,7 +201,7 @@ var RegiZip = document.getElementById("iZip").value;
     console.log(error);
     // [END_EXCLUDE]
   }).then(function() {
-    window.location.href = "/daskboard.html";
+    window.location.href = "/SoyFlow/daskboard.html";
   });
   // [END createwithemail]
 }
