@@ -167,27 +167,8 @@ myform.submit(function(event){
   return false;
 });
 
-/*==============================================================
-VALIDATE LOGGIN
-===============================================================*/
-$(document).ready(function() {
-  $("#logSending").click(function() {
-    var user = $("#userLog").val();
-    var password = $("#passwordLog").val();
 
-    if (user == "") {
-      $("#alrUser").html("User is empy!!!");
-      $("#alrUser").show();
-      return false;
-    } else if (password == "") {
-      $("#alrUser").html("Password is empy!!!");
-      $("#alrUser").show();
-      return false;
-    } else {
-      $("#alrUser").html("It look great!");
-      $("#alrUser").fadeOut(1500);
-    }
-  });
-});
+
+
 
 

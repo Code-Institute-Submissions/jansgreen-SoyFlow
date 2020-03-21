@@ -522,7 +522,7 @@ CSS FOR JS
 =========================================================================*/
 #alrUser, #artfieldUserName, #artfieldFullName, #artfieldAddress, #artfieldEvenAddress, #userEmail,
 #Peaplo, #Nphone, #ContNote, #Artselect, #labUsername, #labIfullName, #labIEmail, #labPassword, #labConPassword,
-#labNphone, #labICity, #labIstate, #labIzip, #labIaddress{
+#labNphone, #labICity, #labIstate, #labIzip, #labIaddress, #alrEmail, #alrPassword{
   display: none;
   margin-right: 80%;
   position: absolute;
@@ -530,11 +530,11 @@ CSS FOR JS
   color: #ffffff;
   text-decoration: solid;
   height: 45px;
-  width: 200px;
+  width: 190px;
   z-index: 1;
 }
 
-#alrReg, #colorGreen, #allfields {
+#alrReg, #colorGreen, #allfields, #LogButton {
   display: none;
   margin-right: 80%;
   position: absolute;

@@ -73,14 +73,14 @@
             <div class="row">
                 <div class="sAccess">
                     <div class="">
-                        <div class="mTitle"><label for="basic-url mTitle">Loging</label></div>
+                        <div class="mTitle"><label for="basic-url mTitle">Log In</label></div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="userSpan">User</span>
-                                <p class="alert alert-primary" role="alert" id="alrUser"></p>
+                                <span class="input-group-text" id="spEmail">Email</span>
+                                <div class="alert alert-primary" role="alert" id="alrEmail"></div>
                             </div>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                aria-describedby="basic-addon1" id="userLog">
+                            <input type="email" class="form-control" placeholder="Your Email" aria-label="email"
+                                aria-describedby="basic-addon1" id="lEmail">
 
                         </div>
 
@@ -88,15 +88,18 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="passwordSpan">Password</span>
                             </div>
+                            <div class="alert alert-primary" role="alert" id="alrPassword"></div>
                             <input type="password" class="form-control" placeholder="Password" aria-label="Username"
                                 aria-describedby="basic-addon1" id="passwordLog">
-                            <button type="submit" class="btn btn-primary" id="logSending">Login</button>
+                            <button onclick="LocalLogIn()" type="submit" class="btn btn-primary" id="logSending">Login</button>
                             <div class="container my-5 text-center">
 
-
-                                <button class="btn btn-primary" id="LoginButMain"
+                               <button class="btn btn-primary" id="LoginButMain"
                                     onclick="authenticate().then(loadClient)">Youtube</button>
-
+                                    
+                            </div>
+                            <div class="row">
+                                <div class="alert alert-primary" role="alert" id="LogButton"></div>
                             </div>
                         </div>
 

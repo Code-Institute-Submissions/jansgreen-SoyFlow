@@ -12,14 +12,32 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- FIREBASE -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
 
-
-
-    <!--  <script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine-html.js"></script> -->
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDiUDA_H8rt3CXkqTpltKcXjY_qDUzEcPQ",
+    authDomain: "soyflow-5ca78.firebaseapp.com",
+    databaseURL: "https://soyflow-5ca78.firebaseio.com",
+    projectId: "soyflow-5ca78",
+    storageBucket: "soyflow-5ca78.appspot.com",
+    messagingSenderId: "981536576305",
+    appId: "1:981536576305:web:171b9fda6302314904d610",
+    measurementId: "G-DTT3VCNZB5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  firebase.auth();
+</script>
 
     <title>SoyFlow</title>
 </head>
@@ -74,6 +92,7 @@
                 <div id="UserNameBar"></div>
                 <button class="btn btn-primary" id="LoginBut" onclick="authenticate().then(loadClient)">Youtube</button>
                 <button class="btn btn-danger" id="LogOutBut" onclick="handleSignoutClick()">Youtube Sing Out</button>
+                <button onclick="FireSignOut()" type="submit" class="btn btn-dark" id="UserSignOut">Local Sign Out</button>
             </div>
 
         </div>

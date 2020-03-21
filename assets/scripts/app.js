@@ -1,5 +1,73 @@
+/*==============================================================
+VALIDATE LOGGIN
+===============================================================*/
+$(document).ready(function() {
+  $("#logSending").click(function() {
+    var user = $("#lEmail").val();
+    var password = $("#passwordLog").val();
+
+    if (user == "") {
+      $("#alrEmail").html("Your Email is empy!!!");
+      $("#alrEmail").show();
+      return false;
+    } else if (password == "") {
+      $("#alrPassword").html("Password is empy!!!");
+      $("#alrPassword").show();
+      return false;
+    } else {
+      $("#LogButton").html("It look great!");
+      $("#LogButton").fadeIn();
+      $("#alrEmail").hide();
+      $("#alrPassword").hide();
+    }
+  });
+});
+function LocalLogIn() {
+var email = document.getElementById('lEmail').value;
+var password = document.getElementById('passwordLog').value;
+firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  $(document).ready(function() {
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  $("#alrEmail").html(errorCode);
+  $("#alrEmail").show();
+  $("#alrPassword").html(errorMessage);
+  $("#alrPassword").show();
+  })
+  // ...
+}).then(function() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+     $(document).ready(function () {
+      $("#LogButton").html("you are logged ready");
+      $("#LogButton").fadeIn();
+      $("#LogButton").hide(1500, window.location.href = "/daskboard.html");
+     })
+      // ...
+    } else {
+      $(document).ready(function () {
+        $("#LogButton").hide();
+        $("#UserSignOut").fadeOut();
+        $("#LogButton").hide("slow", window.location.href = "/index.html");
+        
+       })
+    }
+  });
+});
+}
+
+
+function FireSignOut(){
+   firebase.auth().signOut().then(function() {
+    window.location.href = "index.html";
+    });
+}
+
+
 /*================================================================================
-REGI BUTTON
+SIGN IN  BUTTON
 ==================================================================================*/
 $(document).ready(function(){
   $("#gridCheck").click(function(){
@@ -95,7 +163,7 @@ myform.submit(function(event){
 
 
 /*==============================================================
-REGISTRER
+SIGN IN 
 ===============================================================*/
 function handleSignUp() {
 var email = document.getElementById('iEmail').value;
