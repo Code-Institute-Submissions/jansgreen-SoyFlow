@@ -456,16 +456,16 @@ function search() {
 
   request.execute(function(response) {
     var str = response.result.items;
-    console.log(str.item.snippet.resourceId.videoId);
+    console.log(str.item);
     if (str) {
       let output =
         '<div class="col-xl-10"><br><h4 class="center-align">Last Videos</h4></div><br>';
 
       // Loop through videos and append output
       str.forEach(item => {
-        const videosId = item.snippet.resourceId.videoId;
+        const videoId = item.snippet.resourceId.videoId;
 
-        output += `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videosId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
+        output += `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
       });
 
       // Output videos
