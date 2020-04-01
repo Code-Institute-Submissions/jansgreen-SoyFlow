@@ -368,7 +368,6 @@ function getChannel(channel) {
       forUsername: channel
     })
     .then(response => {
-      console.log(response);
       const channel = response.result.items[0];
 
       const output = 
@@ -415,10 +414,10 @@ function requestVideoPlaylist(playlistId) {
     maxResults: 10
   };
 
-  const request = gapi.client.youtube.playlistItems.list(requestOptions); search.list
+  const request = gapi.client.youtube.playlistItems.list(requestOptions);
 
   request.execute(response => {
-    const playListItems = response.result.items;
+    const playListItems = JSON.stringify(response.result.items);
     if (playListItems) {
       let output =
         '<div class="col-xl-10"><br><h4 class="center-align">Last Videos</h4></div><br>';
@@ -457,7 +456,7 @@ function search() {
 
   request.execute(function(response) {
     var str = JSON.stringify(response.result.items);
-    searchContainer.innerHTML = `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${str.item.snippet.resourceId.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
+    searchContainer.innerHTML = 'str.item.snippet.resourceId.videoId';
   
     if (str) {
       let output =
@@ -467,7 +466,7 @@ function search() {
       str.forEach(item => {
         const videosId = item.snippet.resourceId.videoId;
 
-        output += `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videosId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
+        output += '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videosId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>';
       });
 
       // Output videos
