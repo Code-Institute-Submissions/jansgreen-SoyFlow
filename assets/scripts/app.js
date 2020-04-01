@@ -394,7 +394,7 @@ function getChannel(channel) {
 
       showChannelData(output);
 
-const playlistId = channel;
+const playlistId = channel.contentDetails.relatedPlaylists.uploads;
 requestVideoPlaylist(playlistId);
     })
 .catch(err => alert("No Channel By That Name"));
@@ -436,41 +436,3 @@ function requestVideoPlaylist(playlistId) {
 }
 
 
-/*===================================
-ARTIST MIN CARDS
-=====================================*/
-// After the API loads, call a function to enable the search box.
-function handleAPILoaded() {
-  $('#search-button').attr('disabled', false);
-}
-
-// Search for a specified string.
-function search() {
-  var q = $('#search-container').val();
-  var request = gapi.client.youtube.search.list({
-    q: q,
-    part: 'snippet'
-  });
-
-  request.execute(function(response) {
-    var str = response.result.items;
-    console.log(str.item);
-    if (str) {
-      let output =
-        '<div class="col-xl-10"><br><h4 class="center-align">Last Videos</h4></div><br>';
-
-      // Loop through videos and append output
-      str.forEach(item => {
-        const videoId = item.snippet.resourceId.videoId;
-
-        output += `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
-      });
-
-      // Output videos
-      searchContainer.innerHTML = output;
-    } else {
-      searchContainer.innerHTML = "No Uploaded Videos";
-    }
-  });
-    
-  }
