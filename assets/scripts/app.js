@@ -429,3 +429,13 @@ function requestVideoPlaylist(playlistId) {
     }
   });
 }
+
+
+/*===================================
+ARTIST MIN CARDS
+=====================================*/
+var artMinCardCont = document.getElementsById("artistMinCar");
+
+
+
+artMinCardCont.innerHTML = `Hola mundo`;

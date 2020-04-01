@@ -53,27 +53,27 @@
 
     <header></header>
     <!--HE TERMINADO EN EL DISEÑO AHORA TENGO QUE TRABAJARLE EL JS DEL FORMULARIO, TAMBIEN LE CREE UN CSS APARTE PARA LIMPIAL MAS EL CODIGO, TENGO QUE RESOLVER EL GRILD DEJA UN MARJE A LA DERECHA Y ESTOY USANDO BOOSTRAP, PARA SUBIR EL MUNTO UI-->
+    <div class="container mycontainer">
     <nav class="row ui-header">
-        <div class="col-12 col-xs-12 logo ui-logo"></div>
-        <div class="col ui-logo"></div>
-        <div class="col ui-logo"></div>
-        <div class="col ui-logo"></div>
+        <div class="col-xl-12 col-xs-12 logo ui-logo"></div>
+
     </nav>
-
-
+ </div>
+<div class="container mycontainer">
     <section class="row ap8">
-        <article class="col-5 iMar-C">
+        <article class="col-xl-4 mx-auto iMar-C">
             <p>Welcome to SoyFlow, This is a musical portal where you can freely learn more about your favorite
                 artists, you can also make an event to get your favorite artist to be present at that event.
                 <div class="mt-5" id="data">
             </p>
 
         </article>
-        <article class="col-2 iAccess">
+
+        <article class="col-xl-4 iMar-C">
             <div class="row">
-                <div class="sAccess">
-                    <div class="">
+                   <form class="iReg">
                         <div class="mTitle"><label for="basic-url mTitle">Log In</label></div>
+                       
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="spEmail">Email</span>
@@ -81,7 +81,6 @@
                             </div>
                             <input type="email" class="form-control" placeholder="Your Email" aria-label="email"
                                 aria-describedby="basic-addon1" id="lEmail">
-
                         </div>
 
                         <div class="input-group mb-3">
@@ -91,9 +90,15 @@
                             <div class="alert alert-primary" role="alert" id="alrPassword"></div>
                             <input type="password" class="form-control" placeholder="Password" aria-label="Username"
                                 aria-describedby="basic-addon1" id="passwordLog">
+
+
+
                             <button onclick="LocalLogIn()" type="submit" class="btn btn-primary" id="logSending">Login</button>
                             <div class="container my-5 text-center">
 
+
+
+                                
                                <button class="btn btn-primary" id="LoginButMain"
                                     onclick="authenticate().then(loadClient)">Youtube</button>
                                     
@@ -102,17 +107,13 @@
                                 <div class="alert alert-primary" role="alert" id="LogButton"></div>
                             </div>
                         </div>
-
-
-                    </div>
-                </div>
-            </div>
-            </div>
+                    </form>
+                 </div>
+            
 
         </article>
-        <article class="col-1 iBor"></article>
 
-        <aside class="col-4  iMar aCont">
+        <aside class="col-xl-4 mx-auto iMar-C">
 
             <!--USER LOGIN AND SING IN-->
             <form onsubmit="return false;" method="post">
@@ -120,6 +121,7 @@
                     <div class="iReg">
                         <div class="mTitle"><label for="basic-url">Sing in</label>
                         </div>
+
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="sUser">User</span>
@@ -143,26 +145,22 @@
                             <div id="labIEmail"></div>
                             <input type="text" class="form-control" placeholder="Recipient's username" id="iEmail"
                                 aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon2">@Gmail.com</span>
-                            </div>
+
                         </div>
                         <div class="input-group mb-3">
                             <div id="labPassword"></div>
                             <input type="password" class="form-control" placeholder="Your Password please" id="password"
                                 aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon2">Password</span>
-                            </div>
+ 
                         </div>
                         <div class="input-group mb-3">
                             <div id="labConPassword"></div>
                             <input type="password" class="form-control" placeholder="Can you repeate your password?"
                                 id="RepPassword" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
                                 <span class="input-group-text" id="basic-addon2">Password</span>
-                            </div>
-                        </div>
+                         </div>
 
                         <div class="mTitle"><label for="basic-url">URL bussiness</label></div>
                         <div class="input-group mb-3">
@@ -194,17 +192,17 @@
                             </div>
                             <div class="input-group mb-3">
                                 <div class="form-row">
-                                    <div class="form-group col-md-5">
+                                    <div class="form-group col-md-3">
                                         <div id="labICity"></div>
                                         <div class="mTitle"> <label for="inputCity">City</label></div>
                                         <input type="text" class="form-control" id="iCity">
                                     </div>
-                                    <div class="form-group col-md-5">
+                                    <div class="form-group col-md-3">
                                         <div class="mTitle"> <label for="inputCity">State</label></div>
                                         <div id="labIstate"></div>
                                         <input type="text" class="form-control" id="iState">
                                     </div>
-                                    <div class="form-group col-md-2">
+                                    <div class="form-group col-md-3">
                                         <div id="labIzip"></div>
                                         <div class="mTitle"><label for="inputZip">Zip</label></div>
                                         <input type="text" class="form-control" id="iZip">
@@ -237,11 +235,12 @@
 
         </aside>
     </section>
+</div>
 
+<div class="container mycontainer"> 
     <footer class="row ui-footer">
-
-        <div class="col"></div>
-        <div class="col">
+        <div class="col-xl"></div>
+        <div class="col-xl">
             <ul class="sMar">
                 <li>
                     <h5>SOY FLOW ©</h5>
@@ -253,7 +252,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col">
+        <div class="col-xl">
 
             <ul class="social-links sMar social-links">
                 <h5>Social</h5>
@@ -303,8 +302,9 @@
                 </li>
             </ul>
         </div>
-        <div class="col"></div>
-    </footer>
+        <div class="col-xl"></div>
+       </footer>
+    </div>
     <script src="auth.js"></script>
     <script src="playlist_updates.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>

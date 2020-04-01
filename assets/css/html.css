@@ -19,15 +19,11 @@ ul {
   color: #5aa1fd;
 }
 
-.sTitle {
+.mycontainer{
+  min-width: 100%;
+  min-height: auto;
+  max-height: max-content;
 }
-
-.cTitle {
-}
-
-/*====================================================
-     forms
-      ====================================================*/
 
 /*====================================================
      NAV/MENU AND SUBMENU
@@ -42,10 +38,10 @@ ul {
 .ui-menu {
   margin-top: 15px;
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   display: table;
-  margin-left: 2%;
+
 }
 .ui-menu > a {
   text-decoration: none;
@@ -139,21 +135,22 @@ ul {
   background-color: #5b5b5b;
   border-bottom: 2px solid #8f8f8f;
   border-top: 2px solid #8f8f8f;
-  height: 750px;
   color: #ffffff;
+  min-height: 708px;
 }
 
 .iMar {
   margin-top: 2%;
   margin-bottom: 2%;
+
 }
 
 .iMar-C {
   margin-top: auto;
   margin-bottom: auto;
+
   text-align: center;
-  padding-left: 2%;
-  padding-right: 2%;
+
 }
 
 .iAccess {
@@ -220,6 +217,7 @@ ul {
 .iReg {
   padding-left: 3%;
   padding-right: 3%;
+  min-width: 100%;
 }
 
 /*====================================================
@@ -231,6 +229,7 @@ ul {
   background-color: #000000;
   color: #fafafa;
   min-height: 200px;
+  
 }
 
 .footer-social {
@@ -341,7 +340,7 @@ h6 {
 }
 
 .album-card {
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 .alb-header {
@@ -352,7 +351,7 @@ h6 {
 }
 
 .alb-list > ul {
-  margin-left: 20px;
+  margin-left: -8%;
 }
 
 .alb-footer {
@@ -370,7 +369,7 @@ h6 {
   background: #94b9fc;
   color: #fafafa;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 /*====================================================
@@ -381,7 +380,7 @@ h6 {
   text-align: justify;
   margin-left: 2%;
   margin-right: 2%;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .iPar > h4 {
@@ -498,8 +497,10 @@ ARTIST
   box-shadow: 10px 10px 5px -5px rgba(207, 240, 170, 1);
 }
 
+
+
 .alCard {
-  width: 30rem;
+  width: 20rem;
   background-color: #ffffce;
 
   border-radius: 5%;
@@ -513,9 +514,6 @@ ARTIST
   box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.75);
 }
 
-#alImg {
-  width: 30rem;
-}
 
 /*=======================================================================
 CSS FOR JS
@@ -616,7 +614,7 @@ border-right: 2%;
 
 .BCreate{
   display: inline-block;
-  ;
+  
 }
 
 /*==========================
@@ -635,3 +633,5 @@ display: none;
 #btn-signup, #ContSendding{
   display: none;
 }
+
+.album-card
