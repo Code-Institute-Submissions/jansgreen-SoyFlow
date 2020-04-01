@@ -148,7 +148,6 @@ ul {
 .iMar-C {
   margin-top: auto;
   margin-bottom: auto;
-
   text-align: center;
 
 }
@@ -632,5 +631,3 @@ display: none;
 #btn-signup, #ContSendding{
   display: none;
 }
-
-.album-card

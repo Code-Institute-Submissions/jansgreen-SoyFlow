@@ -370,8 +370,32 @@ function getChannel(channel) {
       console.log(response);
       const channel = response.result.items[0];
 
-      const output = `
-        <div class="card bg-light mb-3">
+      const output = 
+      `<article class="col-xl-3">
+      <div class=" iPar">
+          <div class="Min-card">${channel.snippet.title}
+              <div class="card-body">
+              <li">Subscribers: ${numberWithCommas(
+                channel.statistics.subscriberCount
+              )}</li">
+              <li>Views: ${numberWithCommas(channel.statistics.viewCount)}</li>
+              <li>Videos: ${numberWithCommas(channel.statistics.videoCount)}</li>
+                <h5 class="card-title">${channel.id}</h5>
+                <p ${channel.snippet.description}</p>
+                <hr>
+                <a class="btn btn-info" target="_blank" href="https://youtube.com/${
+                  channel.snippet.customUrl
+                }">Visit Channel</a>
+              </div>
+          </div>
+
+      </div>
+  </article> `;
+      
+      
+      /*`
+      <div class="col-xl">
+        <div class="card bg-light">
         <div class="card-header">${channel.snippet.title}</div>
         <div class="card-body">
         <li">Subscribers: ${numberWithCommas(
@@ -385,7 +409,13 @@ function getChannel(channel) {
           <a class="btn btn-info" target="_blank" href="https://youtube.com/${
             channel.snippet.customUrl
           }">Visit Channel</a>
-        </div> `;
+        </div> 
+        </div> 
+        `;*/
+
+
+
+
       showChannelData(output);
 
       const playlistId = channel.contentDetails.relatedPlaylists.uploads;
@@ -434,8 +464,21 @@ function requestVideoPlaylist(playlistId) {
 /*===================================
 ARTIST MIN CARDS
 =====================================*/
-var artMinCardCont = document.getElementsById("artistMinCar");
+// After the API loads, call a function to enable the search box.
+function handleAPILoaded() {
+  $('#search-button').attr('disabled', false);
+}
 
+// Search for a specified string.
+function search() {
+  var q = $('#query').val();
+  var request = gapi.client.youtube.search.list({
+    q: q,
+    part: 'snippet'
+  });
 
-
-artMinCardCont.innerHTML = `Hola mundo`;
+  request.execute(function(response) {
+    var str = JSON.stringify(response.result);
+    $('#search-container').html('<pre>' + str + '</pre>');
+  });
+}
