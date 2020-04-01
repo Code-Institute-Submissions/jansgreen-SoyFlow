@@ -240,7 +240,8 @@ const LoginButMains = document.getElementById("LoginButMain");
 const content = document.getElementById("content");
 const channelForm = document.getElementById("channel-form");
 const channelInput = document.getElementById("channel-input");
-const videoContainer = document.getElementById("video-container");
+const videoContainer = document.getElementById("video-container"); 
+const searchContainer = document.getElementById("search-container");
 
 const defaultChannel = "jansgreen";
 
@@ -417,7 +418,6 @@ function requestVideoPlaylist(playlistId) {
   const request = gapi.client.youtube.playlistItems.list(requestOptions);
 
   request.execute(response => {
-    console.log(response);
     const playListItems = response.result.items;
     if (playListItems) {
       let output =
@@ -456,9 +456,25 @@ function search() {
   });
 
   request.execute(function(response) {
-    var str = JSON.stringify(response.result);
-    $('#search-container').html('<pre>' + str + '</pre>');
-    console.log(str.kind.pageInfo);
-    
+    var str = JSON.stringify(response.result.items);
+    searchContainer.innerHTML = '<pre>' + str + '</pre>';
+  
+    if (str) {
+      let output =
+        '<div class="col-xl-10"><br><h4 class="center-align">Last Videos</h4></div><br>';
+
+      // Loop through videos and append output
+      str.forEach(item => {
+        const videoId = item.snippet.resourceId.videoId;
+
+        output += `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
+      });
+
+      // Output videos
+      searchContainer.innerHTML = output;
+    } else {
+      searchContainer.innerHTML = "No Uploaded Videos";
+    }
   });
-}
+    
+  }
