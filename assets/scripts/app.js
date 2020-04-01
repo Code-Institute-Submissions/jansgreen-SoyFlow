@@ -362,9 +362,9 @@ function showChannelData(data) {
 
 // Get channel from API
 function getChannel(channel) {
-  gapi.client.youtube.search
+  gapi.client.youtube.channels
     .list({
-      part: "snippet",
+      part: "snippet,contentDetails,statistics",
       forUsername: channel
     })
     .then(response => {
@@ -384,9 +384,7 @@ function getChannel(channel) {
                 <h5 class="card-title">${channel.id}</h5>
                 <p ${channel.snippet.description}</p>
                 <hr>
-                <a class="btn btn-info" target="_blank" href="https://youtube.com/${
-                  channel.snippet.customUrl
-                }">Visit Channel</a>
+                <a class="btn btn-info" target="_blank" href="https://youtube.com/${channel.id}">Visit Channel</a>
               </div>
           </div>
 
@@ -396,10 +394,10 @@ function getChannel(channel) {
 
       showChannelData(output);
 
-      const playlistId = channel.contentDetails.relatedPlaylists.uploads;
-      requestVideoPlaylist(playlistId);
+const playlistId = channel;
+requestVideoPlaylist(playlistId);
     })
-    .catch(err => alert("No Channel By That Name"));
+.catch(err => alert("No Channel By That Name"));
 }
 
 // Add commas to number
