@@ -456,8 +456,7 @@ function search() {
 
   request.execute(function(response) {
     var str = response.result.items;
-    searchContainer.innerHTML = str.item.snippet.resourceId.videoId;
-  
+    console.log(str.item.snippet.resourceId.videoId);
     if (str) {
       let output =
         '<div class="col-xl-10"><br><h4 class="center-align">Last Videos</h4></div><br>';
