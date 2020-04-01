@@ -415,7 +415,7 @@ function requestVideoPlaylist(playlistId) {
     maxResults: 10
   };
 
-  const request = gapi.client.youtube.playlistItems.list(requestOptions);
+  const request = gapi.client.youtube.playlistItems.list(requestOptions); search.list
 
   request.execute(response => {
     const playListItems = response.result.items;
@@ -449,7 +449,7 @@ function handleAPILoaded() {
 
 // Search for a specified string.
 function search() {
-  var q = $('#channel-input').val();
+  var q = $('#search-container').val();
   var request = gapi.client.youtube.search.list({
     q: q,
     part: 'snippet'
@@ -457,7 +457,7 @@ function search() {
 
   request.execute(function(response) {
     var str = JSON.stringify(response.result.items);
-    searchContainer.innerHTML = '<pre>' + str.item.snippet.resourceId.videoId + '</pre>';
+    searchContainer.innerHTML = `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${str.item.snippet.resourceId.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
   
     if (str) {
       let output =
