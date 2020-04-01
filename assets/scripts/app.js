@@ -449,7 +449,7 @@ function handleAPILoaded() {
 
 // Search for a specified string.
 function search() {
-  var q = $('#query').val();
+  var q = $('#channel-input').val();
   var request = gapi.client.youtube.search.list({
     q: q,
     part: 'snippet'
@@ -465,9 +465,9 @@ function search() {
 
       // Loop through videos and append output
       str.forEach(item => {
-        const videoId = item.snippet.resourceId.videoId;
+        const videosId = item.snippet.resourceId.videoId;
 
-        output += `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
+        output += `<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/${videosId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>`;
       });
 
       // Output videos
