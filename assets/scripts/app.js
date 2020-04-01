@@ -371,7 +371,7 @@ function getChannel(channel) {
       const channel = response.result.items[0];
 
       const output = 
-      `<article class="col-xl-3">
+      `<article class="col-xl-12">
       <div class=" iPar">
           <div class="Min-card">${channel.snippet.title}
               <div class="card-body">
@@ -391,29 +391,6 @@ function getChannel(channel) {
 
       </div>
   </article> `;
-      
-      
-      /*`
-      <div class="col-xl">
-        <div class="card bg-light">
-        <div class="card-header">${channel.snippet.title}</div>
-        <div class="card-body">
-        <li">Subscribers: ${numberWithCommas(
-          channel.statistics.subscriberCount
-        )}</li">
-        <li>Views: ${numberWithCommas(channel.statistics.viewCount)}</li>
-        <li>Videos: ${numberWithCommas(channel.statistics.videoCount)}</li>
-          <h5 class="card-title">${channel.id}</h5>
-          <p ${channel.snippet.description}</p>
-          <hr>
-          <a class="btn btn-info" target="_blank" href="https://youtube.com/${
-            channel.snippet.customUrl
-          }">Visit Channel</a>
-        </div> 
-        </div> 
-        `;*/
-
-
 
 
       showChannelData(output);
@@ -480,5 +457,7 @@ function search() {
   request.execute(function(response) {
     var str = JSON.stringify(response.result);
     $('#search-container').html('<pre>' + str + '</pre>');
+    console.log(str);
+    
   });
 }
