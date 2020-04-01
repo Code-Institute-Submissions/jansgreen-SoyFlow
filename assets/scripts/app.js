@@ -373,8 +373,9 @@ function getChannel(channel) {
       const output = 
       `<article class="col-xl-12">
       <div class=" iPar">
-          <div class="Min-card">${channel.snippet.title}
+          <div class="Min-card"><h5 class="card-title uppercase">${channel.snippet.title}</h5>
               <div class="card-body">
+              <hr>
               <li">Subscribers: ${numberWithCommas(
                 channel.statistics.subscriberCount
               )}</li">
@@ -457,7 +458,7 @@ function search() {
   request.execute(function(response) {
     var str = JSON.stringify(response.result);
     $('#search-container').html('<pre>' + str + '</pre>');
-    console.log(str);
+    console.log(str.kind.pageInfo);
     
   });
 }
