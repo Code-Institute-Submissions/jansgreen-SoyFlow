@@ -457,7 +457,7 @@ function search() {
 
   request.execute(function(response) {
     var str = JSON.stringify(response.result.items);
-    searchContainer.innerHTML = '<pre>' + str + '</pre>';
+    searchContainer.innerHTML = '<pre>' + str.item.snippet.resourceId.videoId + '</pre>';
   
     if (str) {
       let output =
